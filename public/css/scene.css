@@ -4,8 +4,33 @@ body {
   font-family: sans-serif;
   text-align: center;
   overflow: hidden;
-  font-family: 'Rubik';
+  font-family: 'Coustard';
   background-color: #333;
+  color: white;
+}
+
+.logo {
+  position: absolute;
+  z-index: 10;
+  top: 1rem;
+  left: 1rem;
+  width: 300px;
+  height: 100px;
+  background-image: url(/img/monogram.png);
+  background-repeat: no-repeat;
+}
+
+.logo h1 {
+  text-align: left;
+  margin-left: 6.5rem;
+  margin-bottom: 0;
+}
+
+.logo h6 {
+  text-align: left;
+  margin-left: 6.75rem;
+  margin-top: 0;
+  line-height: 0;
 }
 
 .scene {
@@ -29,28 +54,39 @@ body {
 
 .carousel__cell {
   position: absolute;
-  width: 80vw;
+  padding: 2rem;
+  padding-top: 5rem;
+  width: 90vw;
   height: 90vh;
   left: 10px;
   top: 10px;
   border: 5px solid #333;
-  line-height: 116px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   color: white;
-  text-align: center;
+  text-align: left;
   transition: transform 1s, opacity 1s;
 }
 
-.carousel__cell:nth-child(9n+1) { background: #e11d74; }
-.carousel__cell:nth-child(9n+2) { background: #cf1b1b; }
-.carousel__cell:nth-child(9n+3) { background: #394989; }
-.carousel__cell:nth-child(9n+4) { background: #2b580c; }
-.carousel__cell:nth-child(9n+5) { background: #3b6978; }
-.carousel__cell:nth-child(9n+6) { background: #596157; }
-.carousel__cell:nth-child(9n+7) { background: #6f5a7e; }
-.carousel__cell:nth-child(9n+8) { background: #5b5656; }
-.carousel__cell:nth-child(9n+0) { background: #3e206d; }
+.carousel__cell h1 {
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.carousel__cell p {
+  font-weight: 200;
+}
+
+.carousel__cell:nth-child(9n+1) { background-color: #e11d74; }
+.carousel__cell:nth-child(9n+2) { background-color: #cf1b1b; }
+.carousel__cell:nth-child(9n+3) { background-color: #394989; }
+.carousel__cell:nth-child(9n+4) { background-color: #2b580c; }
+.carousel__cell:nth-child(9n+5) { background-color: #3b6978; }
+.carousel__cell:nth-child(9n+6) { background-color: #596157; }
+.carousel__cell:nth-child(9n+7) { background-color: #6f5a7e; }
+.carousel__cell:nth-child(9n+8) { background-color: #5b5656; }
+.carousel__cell:nth-child(9n+0) { background-color: #3e206d; }
 
 .carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(15vh); }
 .carousel__cell:nth-child(2) { transform: rotateY( 40deg) translateZ(15vh); }

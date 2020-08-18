@@ -11,8 +11,6 @@ var radius, theta;
 
 function rotateCarousel() {
   var angle = theta * selectedIndex * -1;
-  console.log(radius)
-  console.log(rotateFn)
   carousel.style.transform = 'translateZ(' + -radius + 'px) ' + 
     rotateFn + '(' + angle + 'deg)';
 }
