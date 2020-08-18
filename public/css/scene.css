@@ -1,0 +1,69 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  overflow: hidden;
+  font-family: 'Rubik';
+  background-color: #333;
+}
+
+.scene {
+  margin: 2rem 0;
+  position: relative;
+  transform: scale(1) perspective(1040px) rotateY(11deg) rotateX(2deg) rotate(2deg) translateX(1em);
+  width: 90vw;
+  height: 90vh;
+  margin: 1rem auto;
+  perspective: 1000px;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translateZ(-15vh);
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.carousel__cell {
+  position: absolute;
+  width: 80vw;
+  height: 90vh;
+  left: 10px;
+  top: 10px;
+  border: 5px solid #333;
+  line-height: 116px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  transition: transform 1s, opacity 1s;
+}
+
+.carousel__cell:nth-child(9n+1) { background: #e11d74; }
+.carousel__cell:nth-child(9n+2) { background: #cf1b1b; }
+.carousel__cell:nth-child(9n+3) { background: #394989; }
+.carousel__cell:nth-child(9n+4) { background: #2b580c; }
+.carousel__cell:nth-child(9n+5) { background: #3b6978; }
+.carousel__cell:nth-child(9n+6) { background: #596157; }
+.carousel__cell:nth-child(9n+7) { background: #6f5a7e; }
+.carousel__cell:nth-child(9n+8) { background: #5b5656; }
+.carousel__cell:nth-child(9n+0) { background: #3e206d; }
+
+.carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(15vh); }
+.carousel__cell:nth-child(2) { transform: rotateY( 40deg) translateZ(15vh); }
+.carousel__cell:nth-child(3) { transform: rotateY( 80deg) translateZ(15vh); }
+.carousel__cell:nth-child(4) { transform: rotateY(120deg) translateZ(15vh); }
+.carousel__cell:nth-child(5) { transform: rotateY(160deg) translateZ(15vh); }
+.carousel__cell:nth-child(6) { transform: rotateY(200deg) translateZ(15vh); }
+.carousel__cell:nth-child(7) { transform: rotateY(240deg) translateZ(15vh); }
+.carousel__cell:nth-child(8) { transform: rotateY(280deg) translateZ(15vh); }
+.carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(15vh); }
+
+.carousel-options {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
