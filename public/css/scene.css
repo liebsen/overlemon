@@ -1,38 +1,5 @@
 * { box-sizing: border-box; }
 
-body {
-  font-family: sans-serif;
-  text-align: center;
-  overflow: hidden;
-  font-family: 'Coustard';
-  background-color: #333;
-  color: white;
-}
-
-.logo {
-  position: absolute;
-  z-index: 10;
-  top: 1rem;
-  left: 1rem;
-  width: 300px;
-  height: 100px;
-  background-image: url(/img/monogram.png);
-  background-repeat: no-repeat;
-}
-
-.logo h1 {
-  text-align: left;
-  margin-left: 6.5rem;
-  margin-bottom: 0;
-}
-
-.logo h6 {
-  text-align: left;
-  margin-left: 6.75rem;
-  margin-top: 0;
-  line-height: 0;
-}
-
 .scene {
   margin: 2rem 0;
   position: relative;
@@ -53,6 +20,7 @@ body {
 }
 
 .carousel__cell {
+  opacity: 0.25;
   position: absolute;
   padding: 2rem;
   padding-top: 5rem;
@@ -61,6 +29,7 @@ body {
   left: 10px;
   top: 10px;
   border: 5px solid #333;
+  border-radius: 3px;
   font-size: 18px;
   font-weight: bold;
   color: white;
@@ -68,10 +37,20 @@ body {
   transition: transform 1s, opacity 1s;
 }
 
+.carousel__cell.active {
+  opacity: 1;
+}
+
+.carousel__cell__content {
+  max-width: 600px;
+}
+
 .carousel__cell h1 {
-  font-size: 5rem;
+  font-family: 'Calistoga';
+  font-size: 4rem;
   margin-bottom: 0.5rem;
   line-height: 1;
+  letter-spacing: -1px;
 }
 
 .carousel__cell p {

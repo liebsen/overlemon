@@ -1,0 +1,46 @@
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  overflow: hidden;
+  font-family: 'Rubik';
+  background-color: #333;
+  color: white;
+}
+
+.logo {
+  position: absolute;
+  z-index: 10;
+  top: 1rem;
+  left: 1rem;
+  width: 200px;
+  height: 75px;
+  background-image: url(/img/monogram.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.logo h1 {
+  font-family: 'Calistoga';
+  text-align: left;
+  margin-left: 5.5rem;
+  margin-bottom: 0;
+  letter-spacing: -1px;
+}
+
+.logo h6 {
+  text-align: left;
+  margin-left: 6.25rem;
+  margin-top: 0;
+  line-height: 0;
+}
+
+
+button, input {
+	background-color: #3e206d;
+	border: 2px solid white;
+	padding: 0.5rem 1rem;
+	border-radius: 2rem;
+	color: white;
+	cursor: pointer;
+}

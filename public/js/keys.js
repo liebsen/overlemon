@@ -1,16 +1,14 @@
 document.onkeydown = (e) => {
   switch (e.which) {
     case 37: // left
-  selectedIndex--;
-  rotateCarousel();
+      prevButton.click()
       break
 
     case 38: // up
       break
 
     case 39: // right
-  selectedIndex++;
-  rotateCarousel();
+      nextButton.click()
       break
 
     case 40: // down

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="/css/scene.css" />
+  <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="manifest" href="/dist/js/pwa.webmanifest">
   <link rel="apple-touch-icon" href="/dist/img/apple-touch.png">
   <meta name="theme-color" content="#0779e4"/>
@@ -13,7 +13,9 @@
   <meta property="og:url" content="https://hub.overlemon.com" />
   <meta property="og:image" content="https://hub.overlemon.com/dist/img/splash-share.jpg" />
   <meta property="og:description" content="Your private meeting hub" /> 
-  <link href="https://fonts.googleapis.com/css2?family=Coustard&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/app.css" />
+  <link rel="stylesheet" type="text/css" href="/css/scene.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Calistoga&display=swap" rel="stylesheet">
   <title>Overlemon</title>
 </head>
 <body>
@@ -24,49 +26,63 @@
   <div class="scene" id="gestureZone">
     <div class="carousel">
       <div class="carousel__cell">
-        <h6>The digital agency</h6>
-        <h1>Who makes the difference</h1>
+        <div class="carousel__cell__content">
+          <h4>The digital agency</h4>
+          <h1>Who makes the difference</h1>
+        </div>
       </div>
       <div class="carousel__cell">
-        <h1>Strategy</h1>
-        <p>There is a deep analysis stage every project we undertake. This involves mainly listening to the client and understand what they need. Afterwards, we focus on the right architecture for the solution to be built.</p>
+        <div class="carousel__cell__content">
+          <h1>Strategy</h1>
+          <p>There is a deep analysis stage every project we undertake. This involves mainly listening to the client and understand what they need. Afterwards, we focus on the right architecture for the solution to be built.</p>
+        </div>
       </div>
       <div class="carousel__cell">
-        <h1>Design</h1>
-        <p>We start with a pencil and paper in order to understand the big picture. From there, we keep an open communication with the client to ensure that each iteration get us closer to the desired outcome</p>
+        <div class="carousel__cell__content">
+          <h1>Design</h1>
+          <p>We start with a pencil and paper in order to understand the big picture. From there, we keep an open communication with the client to ensure that each iteration get us closer to the desired outcome</p>
+        </div>
       </div>
       <div class="carousel__cell">
-        <h1>Code</h1>
-        <p>The engineering team takes the lead here. With a high degree of professionalism, collaborating with each other they apply their knowledge combined with best industry practices to to fulfill the client’s expectations and deliver high quality software.</p>
+        <div class="carousel__cell__content">
+          <h1>Code</h1>
+          <p>The engineering team takes the lead here. With a high degree of professionalism, collaborating with each other they apply their knowledge combined with best industry practices to to fulfill the client’s expectations and deliver high quality software.</p>
+        </div>
       </div>
       <div class="carousel__cell">
-        <h1>Our Work</h1>
-        <p>Welcome to overlemon.com</p>
+        <div class="carousel__cell__content">
+          <h1>Our Work</h1>
+          <p>Welcome to overlemon.com</p>
+        </div>
       </div>
       <div class="carousel__cell">
-        <h1>Let’s work together!</h1>
-        <p>Tell us a little about you and your project</p>
-        <form onsubmit="return sendQuote()">
-          <div class="field">
-            <input type="text" class="input" name="name" placeholder="Your name" />
-          </div>
-          <div class="field">
-            <input type="text" class="input" name="phone" placeholder="Your phone" />
-          </div>
-          <div class="field">
-            <input type="text" class="input" name="email" placeholder="Your email" />
-          </div>
-          <div class="field">
-            <textarea class="textarea" name="comment" placeholder="Tell us abut your project"></textarea>
-          </div>
-          <div class="field">
-            <input type="submit" class="button" value="Send" />
-          </div>
-        </form>
+        <div class="carousel__cell__content">
+          <h1>Let’s work together!</h1>
+          <p>Tell us a little about you and your project</p>
+          <form onsubmit="return sendQuote()">
+            <div class="field">
+              <input type="text" class="input" name="name" placeholder="Your name" />
+            </div>
+            <div class="field">
+              <input type="text" class="input" name="phone" placeholder="Your phone" />
+            </div>
+            <div class="field">
+              <input type="text" class="input" name="email" placeholder="Your email" />
+            </div>
+            <div class="field">
+              <textarea class="textarea" name="comment" placeholder="Tell us abut your project"></textarea>
+            </div>
+            <div class="field">
+              <input type="submit" class="button" value="Send" />
+            </div>
+          </form>
+        </div>
       </div>
       <div class="carousel__cell">
-        <h1>Never stop dreaming</h1>
-        <p>Welcome to overlemon.com</p>
+        <div class="carousel__cell__content">
+          <h1>Never stop dreaming</h1>
+          <p>Welcome to overlemon.com</p>
+        </div>
       </div>
     </div>
   </div>

@@ -13,6 +13,16 @@ function rotateCarousel() {
   var angle = theta * selectedIndex * -1;
   carousel.style.transform = 'translateZ(' + -radius + 'px) ' + 
     rotateFn + '(' + angle + 'deg)';
+  let i = selectedIndex%cellCount
+
+  if (i < 0) {
+    i+= cellCount
+  }
+
+  cells.forEach(e => {
+    e.classList.remove('active')
+  })
+  cells[i].classList.add('active')
 }
 
 var prevButton = document.querySelector('.previous-button');
@@ -42,12 +52,12 @@ function changeCarousel() {
     var cell = cells[i];
     if ( i < cellCount ) {
       // visible cell
-      cell.style.opacity = 1;
+      // cell.style.opacity = 1;
       var cellAngle = theta * i;
       cell.style.transform = rotateFn + '(' + cellAngle + 'deg) translateZ(' + radius + 'px)';
     } else {
       // hidden cell
-      cell.style.opacity = 0;
+      // cell.style.opacity = 0;
       cell.style.transform = 'none';
     }
   }
