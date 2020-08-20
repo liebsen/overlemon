@@ -12,12 +12,41 @@ body {
   color: white;
 }
 
+h1,
+h2,
+h3 {
+  font-family: 'Calistoga';
+}
+
+input,
+textarea {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 1rem;
+  min-width: 300px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  padding: 0.25rem;
+  border-radius: 0;
+  color: white;
+  cursor: text;
+}
+
+.is-transparent {
+  opacity: 0;
+}
+
+.is-hidden {
+  display: none;
+}
+
 .logo {
   position: absolute;
+  top: 2vh;
+  left: 4vh;
   z-index: 10;
   transform: scale(1) perspective(1040px) rotateY(2deg) rotateX(2deg) rotate(-1deg) translateX(1em);
-  top: 8vh;
-  left: 12vh;
   width: 200px;
   height: 75px;
   background-image: url(/img/monogram.png);
@@ -26,7 +55,6 @@ body {
 }
 
 .logo h1 {
-  font-family: 'Calistoga';
   text-align: left;
   margin-left: 5.5rem;
   margin-bottom: 0;
@@ -40,30 +68,40 @@ body {
   line-height: 0;
 }
 
-input,
-textarea {
-  font-family: 'Rubik';
-  font-weight: 400;
-  font-size: 1rem;
-  min-width: 300px;
-	background-color: transparent;
-  border: none;
-	border-bottom: 2px solid white;
-	padding: 0.25rem;
-	border-radius: 0;
-	color: white;
-	cursor: pointer;
-}
 
 .field {
 	padding: 0.5rem;
 }
 
 .button {
-	background-color: #3e206d;
-	border: 2px solid white;
+	background-color: white;
+	border: 2px solid #3e206d;
 	padding: 0.5rem 1rem;
 	border-radius: 2rem;
-	color: white;
+	color: #3e206d;
 	cursor: pointer;
+}
+
+.is-mobile, 
+.is-desktop {
+  display: none;
+}
+
+@media screen and (max-width:768px) {
+  .is-mobile {
+    display: block;
+  }
+  .is-desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width:769px) {
+  .is-desktop {
+    display: block;
+  }
+  .logo {
+    top: 6vh;
+    left: 12vh;
+  }
 }

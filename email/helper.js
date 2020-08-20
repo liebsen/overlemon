@@ -26,7 +26,7 @@ var defaultSMTPConfig = {
 }
 
 var defaultEmailConfig = {
-  from:'"FletsApp" <no-reply@fletsapp.com>',
+  from:'"Overlemon" <no-reply@overlemon.com>',
 	subject:'',
 	template:'',
   data:{}

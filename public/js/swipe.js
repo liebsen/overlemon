@@ -4,7 +4,6 @@ let touchendX = 0;
 let touchendY = 0;
 
 const gestureZone = document.getElementById('gestureZone');
-
 gestureZone.addEventListener('touchstart', function(event) {
     touchstartX = event.changedTouches[0].screenX;
     touchstartY = event.changedTouches[0].screenY;
@@ -19,10 +18,12 @@ gestureZone.addEventListener('touchend', function(event) {
 function handleGesture() {
     if (touchendX <= touchstartX) {
         console.log('Swiped left');
+        carouselNext()
     }
     
     if (touchendX >= touchstartX) {
         console.log('Swiped right');
+        carouselPrev()
     }
     
     if (touchendY <= touchstartY) {
