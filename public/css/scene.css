@@ -1,12 +1,9 @@
-* { box-sizing: border-box; }
-
 .scene {
-  margin: 2rem 0;
+  margin: 2rem auto;
   position: relative;
-  transform: scale(1) perspective(1040px) rotateY(11deg) rotateX(2deg) rotate(2deg) translateX(1em);
+  transform: scale(1) perspective(1040px) rotateY(2deg) rotateX(2deg) rotate(-1deg) translateX(1em);
   width: 90vw;
   height: 90vh;
-  margin: 1rem auto;
   perspective: 1000px;
 }
 
@@ -16,25 +13,25 @@
   position: absolute;
   transform: translateZ(-15vh);
   transform-style: preserve-3d;
-  transition: transform 1s;
+  transition: transform 0.75s;
 }
 
 .carousel__cell {
   opacity: 0.25;
   position: absolute;
-  padding: 2rem;
+  padding: 3rem;
   padding-top: 5rem;
   width: 90vw;
   height: 90vh;
-  left: 10px;
-  top: 10px;
-  border: 5px solid #333;
-  border-radius: 3px;
+  /*left: 10px;
+  top: 10px; */
+  border: 8px solid #333;
+  border-radius: 1rem;
   font-size: 18px;
   font-weight: bold;
   color: white;
   text-align: left;
-  transition: transform 1s, opacity 1s;
+  transition: transform 0.75s, opacity 1s;
 }
 
 .carousel__cell.active {
@@ -62,7 +59,7 @@
 .carousel__cell:nth-child(9n+3) { background-color: #394989; }
 .carousel__cell:nth-child(9n+4) { background-color: #2b580c; }
 .carousel__cell:nth-child(9n+5) { background-color: #3b6978; }
-.carousel__cell:nth-child(9n+6) { background-color: #596157; }
+.carousel__cell:nth-child(9n+6) { background-color: #8105d8; }
 .carousel__cell:nth-child(9n+7) { background-color: #6f5a7e; }
 .carousel__cell:nth-child(9n+8) { background-color: #5b5656; }
 .carousel__cell:nth-child(9n+0) { background-color: #3e206d; }
@@ -78,6 +75,7 @@
 .carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(15vh); }
 
 .carousel-options {
+  display: none;
   text-align: center;
   position: relative;
   z-index: 2;

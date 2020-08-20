@@ -1,3 +1,7 @@
+* { 
+  box-sizing: border-box; 
+  cursor: default;
+}
 
 body {
   font-family: sans-serif;
@@ -11,8 +15,9 @@ body {
 .logo {
   position: absolute;
   z-index: 10;
-  top: 1rem;
-  left: 1rem;
+  transform: scale(1) perspective(1040px) rotateY(2deg) rotateX(2deg) rotate(-1deg) translateX(1em);
+  top: 8vh;
+  left: 12vh;
   width: 200px;
   height: 75px;
   background-image: url(/img/monogram.png);
@@ -35,8 +40,26 @@ body {
   line-height: 0;
 }
 
+input,
+textarea {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 1rem;
+  min-width: 300px;
+	background-color: transparent;
+  border: none;
+	border-bottom: 2px solid white;
+	padding: 0.25rem;
+	border-radius: 0;
+	color: white;
+	cursor: pointer;
+}
 
-button, input {
+.field {
+	padding: 0.5rem;
+}
+
+.button {
 	background-color: #3e206d;
 	border: 2px solid white;
 	padding: 0.5rem 1rem;

@@ -61,16 +61,16 @@
           <p>Tell us a little about you and your project</p>
           <form onsubmit="return sendQuote()">
             <div class="field">
-              <input type="text" class="input" name="name" placeholder="Your name" />
+              <input type="text" class="input" name="name" placeholder="Your name" required />
             </div>
             <div class="field">
-              <input type="text" class="input" name="phone" placeholder="Your phone" />
+              <input type="text" class="input" name="phone" placeholder="Your phone" required />
             </div>
             <div class="field">
-              <input type="text" class="input" name="email" placeholder="Your email" />
+              <input type="text" class="input" name="email" placeholder="Your email" required />
             </div>
             <div class="field">
-              <textarea class="textarea" name="comment" placeholder="Tell us abut your project"></textarea>
+              <textarea class="textarea" name="comment" placeholder="Tell us abut your project" required></textarea>
             </div>
             <div class="field">
               <input type="submit" class="button" value="Send" />
@@ -89,12 +89,18 @@
 
   <div class="carousel-options">
     <p>
-      <button class="previous-button">Previous</button>
-      <button class="next-button">Next</button>
+      <span class="button previous-button">Previous</span>
+      <span class="button next-button">Next</span>
     </p>
   </div>
   <script src="/js/scene.js"></script>
   <script src="/js/swipe.js"></script>
   <script src="/js/keys.js"></script>
+  <script>
+    var sendQuote = form => {
+      
+      return false
+    }
+  </script>
 </body>
 </html>
