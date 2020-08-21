@@ -1,6 +1,5 @@
 * { 
   box-sizing: border-box; 
-  cursor: default;
 }
 
 body {
@@ -85,6 +84,26 @@ textarea {
 .is-mobile, 
 .is-desktop {
   display: none;
+}
+
+#works {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#works li {
+  float: left;
+  width: 100px;
+  height: 100px;
+  display: inline-grid;
+}
+
+#works li a {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover;
 }
 
 @media screen and (max-width:768px) {

@@ -21,7 +21,7 @@
   <title>Overlemon</title>
 </head>
 <body>
-  <lottie-player id="spinner" src="/json/26965-loading-charging.json" background="transparent" speed="1" style="width: 100vw; height: 100vh;" loop autoplay></lottie-player>
+  <lottie-player id="spinner" src="/json/loading-charging.json" background="transparent" speed="1" style="height: 100vh;" loop autoplay></lottie-player>
   <div id="app" class="is-transparent">
     <div class="logo">
       <h1>Overlemon</h1>
@@ -56,7 +56,8 @@
         <div class="carousel__cell">
           <div class="carousel__cell__content">
             <h1 class="is-desktop">Our Work</h1>
-            <p>Welcome to overlemon.com</p>
+            <p>These are some of our works which we are proud of.</p>
+            <ul id="works"></ul>
           </div>
         </div>
         <div class="carousel__cell">
@@ -107,6 +108,7 @@
       </div>
     </div>
   </div>
+  <div class="ui-snackbar ui-snackbar--is-inactive"></div>
   <script src="/js/app.js"></script>
   <script src="/js/lottie.js"></script>
   <script src="/js/scene.js"></script>
@@ -115,7 +117,13 @@
   <script src="/js/axios.min.js"></script>
   <script src="/js/status.js"></script>
   <script src="/js/snackbar.js"></script>
+  <script src="/js/sweetalert.min.js"></script>
   <script>
+
+    let showWork = work => {
+      swal('Work')
+    }
+
     let sendMessage = form => {
       form.style.opacity = 0.5
       form.querySelector('input[type="submit"]').value = 'Sending...'
