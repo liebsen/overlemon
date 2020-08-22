@@ -5,7 +5,7 @@
     "url": "https://festive.com.ar",
     "image": "\/img\/works\/festive.png",
     "country": "🇦🇷",
-    "techno": ["NodeJS", "MongoDB", "VueJS"],
+    "techno": "NodeJS, MongoDB, VueJS",
     "text": "Festive is a platform oriented to event professionals"
   },{
     "title": "FletsApp",
@@ -13,7 +13,7 @@
     "url": "https://fletsapp.com",
     "image": "\/img\/works\/fletsapp.png",
     "country": "🇦🇷",
-    "techno": ["NodeJS", "MongoDB", "VueJS", "Google Maps", "Mapbox"],
+    "techno": "NodeJS, MongoDB, VueJS, Google Maps, Mapbox",
     "text": "FletsApp is a platform for door-to-door delivering services."
   },{    
     "title": "Flitz",
@@ -21,15 +21,15 @@
     "url": "https://flitz.herokuapp.com",
     "image": "\/img\/works\/flitz.png",
     "country": "🇧🇶",
-    "techno": ["NodeJS", "MongoDB", "VueJS", "StockfishJS"],
+    "techno": "NodeJS, MongoDB, VueJS, StockfishJS",
     "text": "Flitz is an platform for playing chess online"
   },{
     "title": "Refocus",
     "slogan": "Change your focus, change your life",
     "url": "https://puntoweberplast.com/",
-    "image": "\/img\/works\/refocus.png",
+    "image": "\/img\/works\/refocus.jpg",
     "country": "🇧🇪",
-    "techno": ["PHP", "MySQL", "VueJS"],
+    "techno": "PHP, MySQL, VueJS",
     "text": "Would you like to make a change in your life, but can’t seem to make it happen? This tool will help you get unstuck"
   },{
     "title": "SkyHub",
@@ -37,15 +37,15 @@
     "url": "https://puntoweberplast.com/",
     "image": "\/img\/works\/skyhub.png",
     "country": "🇧🇶",
-    "techno": ["WebRTC", "Javascript", "Coturn"],
+    "techno": "WebRTC, Javascript, Coturn",
     "text": "SkyHub is a platform for making video calls completely free and private."
   },{
     "title": "Verusados",
     "slogan": "Your event at one click",
     "url": "https://puntoweberplast.com/",
-    "image": "\/img\/works\/verusados.png",
+    "image": "\/img\/works\/verusados.jpg",
     "country": "🇦🇷",
-    "techno": ["PHP", "MySQL", "Javascript", "Offers", "Alerts"],
+    "techno": "PHP, MySQL, Javascript",
     "text": "Verified cars with mechanical guarantee"
   },{
     "title": "Puntoweberplast",
@@ -53,7 +53,7 @@
     "url": "https://puntoweberplast.com/",
     "image": "\/img\/works\/weberplast.png",
     "country": "🇬🇧",
-    "techno": ["PHP", "MySQL", "VueJS", "Tintometrics"],
+    "techno": "PHP, MySQL, VueJS, Tintometrics",
     "text": "Puntoweberplast is a private managment and selling tool built especially for Weber company"
   }
 ]

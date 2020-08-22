@@ -40,6 +40,10 @@ textarea {
   display: none;
 }
 
+.has-text-left {
+  text-align: left;
+}
+
 .logo {
   position: absolute;
   top: 2vh;
@@ -104,6 +108,15 @@ textarea {
   background-repeat: no-repeat;
   background-position: center; 
   background-size: cover;
+}
+
+
+.swal-title {
+  font-family: 'Calistoga'
+}
+
+.swal-content {
+  color: rgba(0,0,0,.65);
 }
 
 @media screen and (max-width:768px) {

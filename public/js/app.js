@@ -16,37 +16,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* works */
   axios.get('/json/works.json').then(res => {
-    console.log(res.data)
     res.data.forEach(work => {
       let works = document.getElementById('works')
       let li = document.createElement('li')
       let a = document.createElement('a')
       a.href = '#'
-      a.style.backgroundImage = work.image
-
+      a.style.backgroundImage = `url('${work.image}')`
       li.append(a)
       works.append(li)
 
-      a.click = e => {
+      a.onclick = e => {
         const template = (`
-  <div class="content">
-    <div class="field">
-      <h3>${work.title}</h3>
-    </div>
-    <div class="field">
-      <p>${work.slogan}</p>
-    </div>
-    <div class="field">
-      <p>${work.text}</p>
-    </div>
+  <div class="content has-text-left">
+    <p>${work.slogan}</p>
+    <p>Country: ${work.country}</p>
+    <p>Tech: ${work.techno}</p>
+    <p>Description: ${work.text}</p>
   </div>`)
         swal({
           title: work.title,
+          buttons: ['Cancel', 'Go to app'],
           content: {
             element: 'div',
             attributes: {
               innerHTML: `${template}`
             }
+          }
+        }).then(accept => {
+          if (accept) {
+            window.open(work.url, '_blank')
+            /*
+            let link = document.createElement('a')
+            a.classList.add('is-hidden')
+            a.href = work.url
+            a._target = 'blank'
+            document.getElementById('app').append(a)
+            a.click()
+            */
           }
         })
         e.preventDefault()
