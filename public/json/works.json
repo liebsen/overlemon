@@ -4,56 +4,70 @@
     "slogan": "Your event at one click",
     "url": "https://festive.com.ar",
     "image": "\/img\/works\/festive.png",
+    "screen": "\/img\/works\/screen\/festive.jpg",
+    "company": "Festive",
     "country": "🇦🇷",
-    "techno": "NodeJS, MongoDB, VueJS",
+    "tech": ["NodeJS", "MongoDB", "VueJS"],
     "text": "Festive is a platform oriented to event professionals"
   },{
     "title": "FletsApp",
     "slogan": "Deliver it in no-time",
     "url": "https://fletsapp.com",
     "image": "\/img\/works\/fletsapp.png",
+    "screen": "\/img\/works\/screen\/fletsapp.jpg",
+    "company": "FletsApp",
     "country": "🇦🇷",
-    "techno": "NodeJS, MongoDB, VueJS, Google Maps, Mapbox",
+    "tech": ["NodeJS", "MongoDB", "VueJS", "Google Maps", "Mapbox"],
     "text": "FletsApp is a platform for door-to-door delivering services."
   },{    
     "title": "Flitz",
     "slogan": "Play Online Chess",
     "url": "https://flitz.herokuapp.com",
+    "company": "Overlemon",
     "image": "\/img\/works\/flitz.png",
+    "screen": "\/img\/works\/screen\/flitz.jpg",
     "country": "🇧🇶",
-    "techno": "NodeJS, MongoDB, VueJS, StockfishJS",
+    "tech": ["NodeJS", "MongoDB", "VueJS", "StockfishJS"],
     "text": "Flitz is an platform for playing chess online"
   },{
     "title": "Refocus",
     "slogan": "Change your focus, change your life",
+    "company": "The Blue Ocean Company",
     "url": "https://puntoweberplast.com/",
     "image": "\/img\/works\/refocus.jpg",
+    "screen": "\/img\/works\/screen\/refocus.jpg",
     "country": "🇧🇪",
-    "techno": "PHP, MySQL, VueJS",
+    "tech": ["PHP", "MySQL", "VueJS"],
     "text": "Would you like to make a change in your life, but can’t seem to make it happen? This tool will help you get unstuck"
   },{
     "title": "SkyHub",
     "slogan": "Your private meeting hub",
+    "company": "Overlemon",
     "url": "https://puntoweberplast.com/",
     "image": "\/img\/works\/skyhub.png",
+    "screen": "\/img\/works\/screen\/skyhub.jpg",
     "country": "🇧🇶",
-    "techno": "WebRTC, Javascript, Coturn",
+    "tech": ["WebRTC", "Javascript", "Coturn"],
     "text": "SkyHub is a platform for making video calls completely free and private."
   },{
     "title": "Verusados",
     "slogan": "Verified cars with mechanical guarantee",
+    "company": "Klasse",
     "url": "https://puntoweberplast.com/",
     "image": "\/img\/works\/verusados.jpg",
+    "screen": "\/img\/works\/screen\/verusados.jpg",
     "country": "🇦🇷",
-    "techno": "PHP, MySQL, Javascript",
+    "tech": ["PHP", "MySQL", "Javascript"],
     "text": "In Verusados you'll find verified cars with mechanical guarantee"
   },{
     "title": "Puntoweberplast",
-    "slogan": "Solutions for construction ",
+    "slogan": "Solutions for construction",
+    "company": "Weber",
     "url": "https://puntoweberplast.com/",
     "image": "\/img\/works\/weberplast.png",
+    "screen": "\/img\/works\/screen\/weberplast.jpg",
     "country": "🇬🇧",
-    "techno": "PHP, MySQL, VueJS, Tintometrics",
+    "tech": ["PHP", "MySQL", "VueJS", "Tintometrics"],
     "text": "Puntoweberplast is a private managment and selling tool built especially for Weber company"
   }
 ]

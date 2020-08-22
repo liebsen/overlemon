@@ -32,6 +32,16 @@ textarea {
   cursor: text;
 }
 
+.tag {
+  font-size: 0.75rem;
+  background-color: #333;
+  color: white;
+  font-weight: 500;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+}
+
 .is-transparent {
   opacity: 0;
 }
@@ -42,6 +52,13 @@ textarea {
 
 .has-text-left {
   text-align: left;
+}
+
+.is-background-img {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .logo {
@@ -66,7 +83,7 @@ textarea {
 
 .logo h6 {
   text-align: left;
-  margin-left: 6.25rem;
+  margin-left: 6rem;
   margin-top: 0;
   line-height: 0;
 }
@@ -110,8 +127,12 @@ textarea {
   background-size: cover;
 }
 
+.work .is-background-img {
+  height: 115px;
+}
 
 .swal-title {
+  margin: 0;
   font-family: 'Calistoga'
 }
 

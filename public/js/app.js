@@ -27,10 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       a.onclick = e => {
         const template = (`
-  <div class="content has-text-left">
+  <div class="work has-text-left">
+    <div class="is-background-img" style="background-image: url(${work.screen})"></div>
+    <p><span class="tag">${work.tech.join('</span><span class="tag">')}</span></p>
     <p>${work.slogan}</p>
+    <p>Company: ${work.company}</p>
     <p>Country: ${work.country}</p>
-    <p>Tech: ${work.techno}</p>
     <p>Description: ${work.text}</p>
   </div>`)
         swal({
