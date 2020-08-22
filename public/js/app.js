@@ -1,6 +1,12 @@
 let spinner = document.getElementById('spinner')
 let app = document.getElementById('app')
+
 document.addEventListener('DOMContentLoaded', () => {
+
+  document.getElementById('menu').addEventListener('click', () => {
+    document.getElementById('menu').classList.toggle('fs')
+    document.getElementById('menu').querySelector('.burger').classList.toggle('cross')
+  })
 
   /* preload */
   setTimeout(() => {
@@ -58,3 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
 window.onerror = function (msg, url, lineNo, columnNo, error) {
   alert(`error: ${msg}:${lineNo}`)
 }
+
+
+

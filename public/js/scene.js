@@ -7,7 +7,6 @@ var cellHeight = carousel.offsetHeight
 var isHorizontal = true
 var rotateFn = isHorizontal ? 'rotateY' : 'rotateX'
 var radius, theta
-// console.log( cellWidth, cellHeight )
 
 function rotateCarousel() {
   var angle = theta * selectedIndex * -1
@@ -35,26 +34,19 @@ let carouselNext = () => {
   rotateCarousel()
 }
 
-/*
-var prevButton = document.querySelector('.previous-button')
-prevButton.addEventListener( 'click', function() {
-  selectedIndex--
-  rotateCarousel()
-})
+let elemIndex = e => {
+  return [...e.parentElement.children].indexOf(e)
+}
 
-var nextButton = document.querySelector('.next-button')
-nextButton.addEventListener( 'click', function() {
-  selectedIndex++
-  rotateCarousel()
-})
+let onHashChange = () => {
+  let section = location.hash.replace('#', '.')
+  if (section.length && document.querySelector(section)) {
+    selectedIndex = elemIndex(document.querySelector(section))
+    rotateCarousel()
+  }
+}
 
-var cellsRange = document.querySelector('.cells-range')
-cellsRange.addEventListener( 'change', changeCarousel )
-cellsRange.addEventListener( 'input', changeCarousel )*/
-
-
-
-function changeCarousel() {
+let changeCarousel = () => {
   //cellCount = cellsRange.value
   theta = 360 / cellCount
   var cellSize = isHorizontal ? cellWidth : cellHeight
@@ -66,25 +58,6 @@ function changeCarousel() {
   }
   rotateCarousel()
 }
-/*
-var orientationRadios = document.querySelectorAll('input[name="orientation"]')
-( function() {
-  for ( var i=0 i < orientationRadios.length i++ ) {
-    var radio = orientationRadios[i]
-    radio.addEventListener( 'change', onOrientationChange )
-  }
-})()
-
-function onOrientationChange() {
-  var checkedRadio = document.querySelector('input[name="orientation"]:checked')
-  isHorizontal = checkedRadio.value == 'horizontal'
-  rotateFn = isHorizontal ? 'rotateY' : 'rotateX'
-  changeCarousel()
-}
-
-// set initials
-onOrientationChange()
-*/
 
 document.onkeydown = e => {
   switch (e.which) {
@@ -111,4 +84,8 @@ window.onresize = e => {
   console.log('resize')
   changeCarousel()  
 }
+
+window.addEventListener('hashchange', onHashChange, false)
+
+onHashChange()
 changeCarousel()

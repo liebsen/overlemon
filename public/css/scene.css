@@ -58,10 +58,10 @@
 .carousel__cell:nth-child(9n+3) { background-color: #394989; }
 .carousel__cell:nth-child(9n+4) { background-color: #2b580c; }
 .carousel__cell:nth-child(9n+5) { background-color: #3b6978; }
-.carousel__cell:nth-child(9n+6) { background-color: #8105d8; }
-.carousel__cell:nth-child(9n+7) { background-color: #6f5a7e; }
-.carousel__cell:nth-child(9n+8) { background-color: #5b5656; }
-.carousel__cell:nth-child(9n+0) { background-color: #3e206d; }
+.carousel__cell:nth-child(9n+6) { background-color: #3e206d; }
+.carousel__cell:nth-child(9n+7) { background-color: #5b5656; }
+.carousel__cell:nth-child(9n+8) { background-color: #6f5a7e; }
+.carousel__cell:nth-child(9n+0) { background-color: #8105d8; }
 
 .carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(15vh); }
 .carousel__cell:nth-child(2) { transform: rotateY( 40deg) translateZ(15vh); }
@@ -75,9 +75,11 @@
 
 .carousel-options {
   text-align: center;
-  position: relative;
-  bottom: 1.5rem;
   z-index: 2;
+}
+
+.carousel-options .is-mobile {
+  margin-top: -1rem;
 }
 
 .carousel-options span {

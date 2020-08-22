@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  margin: 0;
   text-align: center;
   overflow: hidden;
   font-family: 'Rubik';
@@ -30,6 +30,11 @@ textarea {
   border-radius: 0;
   color: white;
   cursor: text;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 
 .tag {
@@ -88,18 +93,172 @@ textarea {
   line-height: 0;
 }
 
+/* menu */
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 98;
+  height: 5rem;
+  transition: background-color 0.25 linear;
+}
+
+#menu .burger {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  right: 2px;
+  top: -2px;
+  z-index: 100;
+  color: white;
+  -webkit-user-select: none;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+#menu .burger svg {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+#menu .burger path {
+  fill: none;
+  -webkit-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+  -moz-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+  -o-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+  -ms-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+  transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+  stroke-width: 40px;
+  stroke-linecap: round;
+  stroke: white;
+  stroke-dashoffset: 0px;
+}
+#menu .burger path#top,
+#menu .burger path#bottom {
+  stroke-dasharray: 240px 950px;
+}
+
+#menu .burger path#middle {
+  stroke-dasharray: 240px 240px;
+}
+
+#menu .burger.cross path#top,
+#menu .burger.cross path#bottom {
+  stroke-dashoffset: -650px;
+  stroke-dashoffset: -650px;
+}
+
+#menu .burger.cross path#middle {
+  stroke-dashoffset: -115px;
+  stroke-dasharray: 1px 220px;
+}
+
+#menu .bg {
+  background-color: transparent;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 100%;
+  right: 10px;
+  top: 16px;
+  z-index: 99;
+  pointer-events: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  right: 30px;
+  top: 30px;
+  -webkit-transform: translate3d(50%, -50%, 0);
+          transform: translate3d(50%, -50%, 0);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+#menu .items {
+  background-color: #2c3534;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  opacity: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+  padding: 1rem;
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
+  pointer-events: none;
+  position: relative;
+  z-index: 99;
+}
+
+#menu .items div {
+  margin: auto;
+}
+
+#menu .items img {
+  max-height: 5rem;
+  height: 5rem;
+}
+
+#menu .links {
+  padding-bottom: 1.5rem;
+}
+
+#menu .links a {
+  font-size: 1.25rem;
+  margin: 0 0.5rem;
+  display: block;
+}
+
+#menu.fs .bg {
+  -webkit-transform: translate3d(50%, -50%, 0);
+          transform: translate3d(50%, -50%, 0);
+  width: 300vw;
+  height: 300vw;
+}
+
+#menu.fs .items {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  pointer-events: auto;
+  opacity: 1;
+}
+
+#menu.fs .items div {
+  opacity: 1;
+}
 
 .field {
 	padding: 0.5rem;
 }
 
 .button {
-	background-color: white;
-	border: 2px solid #3e206d;
 	padding: 0.5rem 1rem;
 	border-radius: 2rem;
-	color: #3e206d;
 	cursor: pointer;
+  background-color: #333;
+  border: 2px solid white;
+  color: white;
+  transition: background-color 0.25 linear;
+}
+
+.button:hover {
+  background-color: white;
+  border: 2px solid #333;
+  color: #333;
 }
 
 .is-mobile, 
@@ -129,6 +288,20 @@ textarea {
 
 .work .is-background-img {
   height: 115px;
+}
+
+#links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+#links li {
+  float: left;
+  width: 20px;
+  height: 20px;
+  display: inline-grid;
 }
 
 .swal-title {

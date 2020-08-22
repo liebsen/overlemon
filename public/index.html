@@ -20,46 +20,111 @@
   <title>Overlemon</title>
 </head>
 <body>
-  <lottie-player id="spinner" src="/json/loading-charging.json" background="transparent" speed="1" style="height: 100vh;" loop autoplay></lottie-player>
+  <lottie-player id="spinner" src="/json/loading-charging.json" background="transparent" speed="1" style="height: 100vh;" loop autoplay></lottie-player>    
   <div id="app" class="is-transparent">
+    <div id="menu">
+      <div class="burger">
+        <svg viewBox="0 0 800 600">
+          <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
+          <path d="M300,320 L540,320" id="middle"></path>
+          <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318)"></path>
+        </svg>
+      </div>
+      <div class="bg"></div>
+      <div class="items">
+        <div>
+          <div class="links has-text-left preservefilter">
+            <a href="#landing">
+              <span class="icon">
+                <span class="mdi mdi-checkbox-blank-circle"></span>
+              </span>
+              <span>Landing</span>
+            </a>
+            <a href="#strategy">
+              <span class="icon">
+                <span class="mdi mdi-checkbox-blank-circle"></span>
+              </span>
+              <span>Strategy</span>
+            </a>
+            <a href="#design">
+              <span class="icon">
+                <span class="mdi mdi-checkbox-blank-circle"></span>
+              </span>
+              <span>Design</span>
+            </a>
+            <a href="#code">
+              <span class="icon">
+                <span class="mdi mdi-checkbox-blank-circle"></span>
+              </span>
+              <span>Code</span>
+            </a>
+            <a href="#works">
+              <span class="icon">
+                <span class="mdi mdi-checkbox-blank-circle"></span>
+              </span>
+              <span>Works</span>
+            </a>
+            <a href="#specialtasks">
+              <span class="icon">
+                <span class="mdi mdi-checkbox-blank-circle"></span>
+              </span>
+              <span>Special tasks</span>
+            </a>
+            <a href="#letsworktogether">
+              <span class="icon">
+                <span class="mdi mdi-checkbox-blank-circle"></span>
+              </span>
+              <span>Let's work together</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="logo">
       <h1>Overlemon</h1>
       <h6>Your Digital Agency</h6>
     </div>
     <div class="scene" id="gestureZone">
       <div class="carousel">
-        <div class="carousel__cell">
+        <div class="carousel__cell landing">
           <div class="carousel__cell__content">
             <h4>The digital agency</h4>
             <h1>Who makes the difference</h1>
           </div>
         </div>
-        <div class="carousel__cell">
+        <div class="carousel__cell strategy">
           <div class="carousel__cell__content">
             <h1>Strategy</h1>
             <p>There is a deep analysis stage in every project we undertake. This involves mainly listening to the client and understand what they need. Afterwards, we focus on the right architecture for the solution to be built.</p>
           </div>
         </div>
-        <div class="carousel__cell">
+        <div class="carousel__cell design">
           <div class="carousel__cell__content">
             <h1>Design</h1>
             <p>We start with a pencil and paper in order to understand the big picture. From there, we keep an open communication with the client to ensure that each iteration get us closer to the desired outcome</p>
           </div>
         </div>
-        <div class="carousel__cell">
+        <div class="carousel__cell code">
           <div class="carousel__cell__content">
             <h1>Code</h1>
             <p>The engineering team takes the lead here. With a high degree of professionalism, collaborating with each other they apply their knowledge combined with best industry practices to fulfill the client’s expectations and deliver high quality software.</p>
           </div>
         </div>
-        <div class="carousel__cell">
+        <div class="carousel__cell works">
           <div class="carousel__cell__content">
             <h1 class="is-desktop">Our Work</h1>
             <p>These are some of our works which we are proud of.</p>
             <ul id="works"></ul>
           </div>
         </div>
-        <div class="carousel__cell">
+        <div class="carousel__cell specialtasks">
+          <div class="carousel__cell__content">
+            <h1>Special tasks</h1>
+            <p>We deliver special services like server installs and configurations, mailservers, turnservers, automatizations and webops.</p>
+            <p>We work hard everyday to improve our skills and make the web simpler and easier to browse.</p>
+          </div>
+        </div>
+        <div class="carousel__cell letsworktogether">
           <div class="carousel__cell__content">
             <h2>Let’s work together!</h2>
             <p>Tell us a little about you and your project</p>
@@ -82,13 +147,6 @@
             </form>
           </div>
         </div>
-        <div class="carousel__cell">
-          <div class="carousel__cell__content">
-            <h1>Special tasks</h1>
-            <p>We deliver special services like server installs and configurations, mailservers, turnservers, automatizations and webops.</p>
-            <p>We work hard everyday to improve our skills and make the web simpler and easier to browse.</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -99,12 +157,63 @@
         </span>
       </div>
       <div class="is-desktop">
-        <span class="icon" onclick="carouselPrev()">
+        <ul id="links">
+          <li>
+            <a href="#landing" title="Landing">
+              <span class="icon">
+                <span class="mdi mdi-checkbox-blank-circle"></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#strategy" title="Strategy">
+              <span class="icon">
+                <span class="mdi mdi-checkbox-blank-circle"></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#design" title="Design">
+              <span class="icon">
+                <span class="mdi mdi-checkbox-blank-circle"></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#code" title="Code">
+              <span class="icon">
+                <span class="mdi mdi-checkbox-blank-circle"></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#works" title="Our work">
+              <span class="icon">
+                <span class="mdi mdi-checkbox-blank-circle"></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#specialtasks" title="Special tasks">
+              <span class="icon">
+                <span class="mdi mdi-checkbox-blank-circle"></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#letsworktogether" title="Let's work together">
+              <span class="icon">
+                <span class="mdi mdi-checkbox-blank-circle"></span>
+              </span>
+            </a>
+          </li>
+        </ul>
+        <!--span class="icon" onclick="carouselPrev()">
           <span class="mdi mdi-chevron-double-left mdi-48px"></span>
         </span>
         <span class="icon" onclick="carouselNext()">
           <span class="mdi mdi-chevron-double-right mdi-48px"></span>
-        </span>
+        </span-->
       </div>
     </div>
   </div>
