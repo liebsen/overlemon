@@ -45,14 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }).then(accept => {
           if (accept) {
             window.open(work.url, '_blank')
-            /*
-            let link = document.createElement('a')
-            a.classList.add('is-hidden')
-            a.href = work.url
-            a._target = 'blank'
-            document.getElementById('app').append(a)
-            a.click()
-            */
           }
         })
         e.preventDefault()
