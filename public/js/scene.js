@@ -39,9 +39,15 @@ let elemIndex = e => {
 }
 
 let onHashChange = () => {
-  let section = location.hash.replace('#', '.')
-  if (section.length && document.querySelector(section)) {
-    selectedIndex = elemIndex(document.querySelector(section))
+  let section = location.hash.replace('#', '')
+  if (section.length && document.querySelector(`.${section}`)) {
+    document.querySelectorAll(`a`).forEach(a => {
+      a.classList.remove('active')
+    })
+    document.querySelectorAll(`a[href="#${section}"]`).forEach(a => {
+      a.classList.toggle('active')
+    })
+    selectedIndex = elemIndex(document.querySelector(`.${section}`))
     rotateCarousel()
   }
 }

@@ -37,6 +37,10 @@ a {
   text-decoration: none;
 }
 
+a.active {
+  color: #666;
+}
+
 .tag {
   font-size: 0.75rem;
   background-color: #333;
@@ -299,8 +303,8 @@ a {
 
 #links li {
   float: left;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   display: inline-grid;
 }
 
