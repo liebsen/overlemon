@@ -65,17 +65,32 @@ let changeCarousel = () => {
   rotateCarousel()
 }
 
+var simulateClick = (elem) => {
+  // Create our event (with options)
+  var evt = new MouseEvent('click', {
+    bubbles: true,
+    cancelable: true,
+    view: window
+  });
+  // If cancelled, don't dispatch our event
+  var canceled = !elem.dispatchEvent(evt);
+};
+
 document.onkeydown = e => {
   switch (e.which) {
     case 37: // left
-      carouselPrev()
+      if (document.querySelector('.wrapper.active').previousElementSibling) {
+        document.querySelector('.wrapper.active').previousElementSibling.click()
+      }
       break
 
     case 38: // up
       break
 
     case 39: // right
-      carouselNext()
+      if (document.querySelector('.wrapper.active').nextElementSibling) {
+        document.querySelector('.wrapper.active').nextElementSibling.click()
+      }
       break
 
     case 40: // down

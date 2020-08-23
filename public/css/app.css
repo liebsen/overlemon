@@ -306,14 +306,9 @@ footer p {
 }
 
 #links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: inline-block;
 }
 
-#links li {
-  float: left;
+#links a {
   width: 30px;
   height: 30px;
   display: inline-grid;
