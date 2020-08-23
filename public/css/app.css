@@ -41,6 +41,17 @@ a.active {
   color: #666;
 }
 
+
+footer {
+  position: absolute;
+  right: 1rem;
+  bottom: 0;
+}
+
+footer p {
+  font-size: 13px;
+}
+
 .tag {
   font-size: 0.75rem;
   background-color: #333;
