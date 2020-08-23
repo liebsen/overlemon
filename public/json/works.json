@@ -7,7 +7,7 @@
     "screen": "\/img\/works\/screen\/festive.jpg",
     "company": "Festive",
     "country": "🇦🇷",
-    "tech": ["NodeJS", "MongoDB", "VueJS"],
+    "tech": ["NodeJS", "MongoDB", "VueJS", "Webpack"],
     "text": "Festive is a platform oriented to event professionals"
   },{
     "title": "FletsApp",
@@ -17,7 +17,7 @@
     "screen": "\/img\/works\/screen\/fletsapp.jpg",
     "company": "FletsApp",
     "country": "🇦🇷",
-    "tech": ["NodeJS", "MongoDB", "VueJS", "Google Maps", "Mapbox"],
+    "tech": ["NodeJS", "MongoDB", "VueJS", "Webpack", "Google Maps", "Mapbox"],
     "text": "FletsApp is a platform for door-to-door delivering services."
   },{    
     "title": "Flitz",
@@ -27,7 +27,7 @@
     "image": "\/img\/works\/flitz.png",
     "screen": "\/img\/works\/screen\/flitz.jpg",
     "country": "🇧🇶",
-    "tech": ["NodeJS", "MongoDB", "VueJS", "StockfishJS"],
+    "tech": ["NodeJS", "MongoDB", "VueJS", "Webpack", "StockfishJS"],
     "text": "Flitz is an platform for playing chess online"
   },{
     "title": "Refocus",
@@ -67,7 +67,7 @@
     "image": "\/img\/works\/weberplast.png",
     "screen": "\/img\/works\/screen\/weberplast.jpg",
     "country": "🇬🇧",
-    "tech": ["PHP", "MySQL", "VueJS", "Tintometrics"],
+    "tech": ["PHP", "MySQL", "VueJS", "Tinting"],
     "text": "Puntoweberplast is a private managment and selling tool built especially for Weber company"
   }
 ]
