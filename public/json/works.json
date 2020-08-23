@@ -28,7 +28,7 @@
     "company": "Overlemon",
     "image": "\/img\/works\/flitz.png",
     "screen": "\/img\/works\/screen\/flitz.jpg",
-    "country": "🇧🇶",
+    "country": "",
     "arch": ["app", "api"],
     "tech": ["NodeJS", "MongoDB", "VueJS", "Webpack", "StockfishJS"],
     "text": "Flitz is an platform for playing chess online"
@@ -50,7 +50,7 @@
     "url": "https://hub.overlemon.com/",
     "image": "\/img\/works\/skyhub.png",
     "screen": "\/img\/works\/screen\/skyhub.jpg",
-    "country": "🇧🇶",
+    "country": "",
     "arch": ["app"],
     "tech": ["WebRTC", "Javascript", "Coturn"],
     "text": "SkyHub is a platform for making video calls completely free and private."
