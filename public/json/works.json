@@ -7,6 +7,7 @@
     "screen": "\/img\/works\/screen\/festive.jpg",
     "company": "Festive",
     "country": "🇦🇷",
+    "arch": ["app", "api", "panel"],
     "tech": ["NodeJS", "MongoDB", "VueJS", "Webpack"],
     "text": "Festive is a platform oriented to event professionals"
   },{
@@ -17,6 +18,7 @@
     "screen": "\/img\/works\/screen\/fletsapp.jpg",
     "company": "FletsApp",
     "country": "🇦🇷",
+    "arch": ["app", "api", "panel"],
     "tech": ["NodeJS", "MongoDB", "VueJS", "Webpack", "Google Maps", "Mapbox"],
     "text": "FletsApp is a platform for door-to-door delivering services."
   },{    
@@ -27,46 +29,51 @@
     "image": "\/img\/works\/flitz.png",
     "screen": "\/img\/works\/screen\/flitz.jpg",
     "country": "🇧🇶",
+    "arch": ["app", "api"],
     "tech": ["NodeJS", "MongoDB", "VueJS", "Webpack", "StockfishJS"],
     "text": "Flitz is an platform for playing chess online"
   },{
     "title": "Refocus",
     "slogan": "Change your focus, change your life",
     "company": "The Blue Ocean Company",
-    "url": "https://puntoweberplast.com/",
+    "url": "https://refocus.the-blue-ocean-company.com",
     "image": "\/img\/works\/refocus.jpg",
     "screen": "\/img\/works\/screen\/refocus.jpg",
     "country": "🇧🇪",
+    "arch": ["app", "admin"],
     "tech": ["PHP", "MySQL", "VueJS"],
     "text": "Would you like to make a change in your life, but can’t seem to make it happen? This tool will help you get unstuck"
   },{
     "title": "SkyHub",
     "slogan": "Your private meeting hub",
     "company": "Overlemon",
-    "url": "https://puntoweberplast.com/",
+    "url": "https://hub.overlemon.com/",
     "image": "\/img\/works\/skyhub.png",
     "screen": "\/img\/works\/screen\/skyhub.jpg",
     "country": "🇧🇶",
+    "arch": ["app"],
     "tech": ["WebRTC", "Javascript", "Coturn"],
     "text": "SkyHub is a platform for making video calls completely free and private."
   },{
     "title": "Verusados",
     "slogan": "Verified cars with mechanical guarantee",
     "company": "Klasse",
-    "url": "https://puntoweberplast.com/",
+    "url": "https://verusados.com",
     "image": "\/img\/works\/verusados.jpg",
     "screen": "\/img\/works\/screen\/verusados.jpg",
     "country": "🇦🇷",
+    "arch": ["app", "admin"],
     "tech": ["PHP", "MySQL", "Javascript"],
     "text": "In Verusados you'll find verified cars with mechanical guarantee"
   },{
     "title": "Puntoweberplast",
     "slogan": "Solutions for construction",
     "company": "Weber",
-    "url": "https://puntoweberplast.com/",
+    "url": "https://puntoweberplast.com",
     "image": "\/img\/works\/weberplast.png",
     "screen": "\/img\/works\/screen\/weberplast.jpg",
     "country": "🇬🇧",
+    "arch": ["app", "admin"],
     "tech": ["PHP", "MySQL", "VueJS", "Tinting"],
     "text": "Puntoweberplast is a private managment and selling tool built especially for Weber company"
   }
