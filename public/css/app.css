@@ -94,7 +94,7 @@ footer p {
   left: 4vh;
   z-index: 10;
   transform: scale(1) perspective(1040px) rotateY(2deg) rotateX(2deg) rotate(-1deg) translateX(1em);
-  width: 200px;
+  width: 300px;
   height: 75px;
   background-image: url(/img/monogram.png);
   background-repeat: no-repeat;
@@ -323,15 +323,19 @@ footer p {
   display: inline-grid;
 }
 
+#team > li > span {
+  padding-top: 0.25rem;
+}
+#team > li > small {
+  font-size: 13px;
+}
+
 #team > li > div {
   background-color: white;
   background-repeat: no-repeat;
   background-position: center; 
   background-size: cover;
   height: 150px;
-}
-
-#links {
 }
 
 #links a {
@@ -355,6 +359,23 @@ footer p {
   }
   .is-desktop {
     display: none;
+  }
+  #works > li {
+    width: 80px;
+    height: 80px;
+  }
+  #team > li {
+    width: 120px;
+    height: 180px;
+  }
+  #team > li > div {
+    height: 120px!important;
+  }
+  #team > li > span {
+    font-size: 14px;
+  }
+  #team > li > small {
+    font-size: 10px;
   }
 }
 

@@ -102,8 +102,7 @@ document.onkeydown = e => {
 }
 
 window.onresize = e => {
-  console.log('resize')
-  changeCarousel()  
+  location.href = location.href
 }
 
 window.addEventListener('hashchange', onHashChange, false)

@@ -85,7 +85,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-height:500px) {
+@media screen and (max-width:768px) {
   .carousel__cell {
     padding: 1rem;
     padding-top: 5rem;
