@@ -13,8 +13,9 @@ app.use(express.json())
 app.use(express.urlencoded())
 
 const allowedOrigins = [
-  'http://lemon.com',
-  'https://overlemon.com'
+  'http://ol.com',
+  'https://overlemon.com',
+  'https://hub.overlemon.com'
 ]
 
 app.use(cors({

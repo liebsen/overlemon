@@ -1,0 +1,16 @@
+{
+  "name": "Overlemon",
+  "short_name": "overlemon",
+  "description": "Your Digital Agency",
+  "icons": [
+    {
+      "src": "/img/splash-screen.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "fullscreen",
+  "theme_color": "#0779e4",
+  "background_color": "#0779e4"
+}

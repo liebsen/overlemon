@@ -292,14 +292,14 @@ footer p {
   margin: 0;
 }
 
-#works li {
+#works > li {
   float: left;
   width: 100px;
   height: 100px;
   display: inline-grid;
 }
 
-#works li a {
+#works > li > a {
   background-color: white;
   background-repeat: no-repeat;
   background-position: center; 
@@ -308,6 +308,27 @@ footer p {
 
 .work .is-background-img {
   height: 115px;
+}
+
+#team {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#team > li {
+  float: left;
+  width: 150px;
+  height: 150px;
+  display: inline-grid;
+}
+
+#team > li > div {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover;
+  height: 150px;
 }
 
 #links {
