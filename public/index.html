@@ -283,7 +283,7 @@
       formData.forEach(function(value, key){
         json[key] = value
       })
-      axios.post(`${location.origin}:4000/contact`, json).then(res => {
+      axios.post(`${location.origin}:5000/contact`, json).then(res => {
         form.reset()
         form.style.opacity = 1
         form.querySelector('input[type="submit"]').value = 'Send'

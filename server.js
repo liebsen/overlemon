@@ -15,7 +15,6 @@ app.use(express.urlencoded())
 const allowedOrigins = [
   'http://ol.com',
   'https://overlemon.com',
-  'https://overlemon.com:4000',
   'https://hub.overlemon.com'
 ]
 
@@ -58,4 +57,4 @@ app.post('/contact', (req, res) => {
   })
 })
 
-server.listen(process.env.PORT || 4000)
+server.listen(process.env.PORT || 5000)
