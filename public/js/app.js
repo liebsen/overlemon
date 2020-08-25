@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     spinner.classList.add('animated', 'fadeOut')
     setTimeout(() => {
       spinner.remove()
-      app.classList.add('animated', 'rotateInDownLeft')
+      app.classList.add('animated', 'flipInX')
       setTimeout(() => {
         changeCarousel()
       }, 1000)
@@ -34,12 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
       a.onclick = e => {
         const template = (`
   <div class="work has-text-left">
-    <div class="is-background-img" style="background-image: url(${work.screen})"></div>
     <p>${work.slogan}</p>
     <p><strong>Technologies</strong> <span class="tag">${work.tech.join('</span><span class="tag">')}</span></p>
     <p><strong>Architecture</strong> <span class="tag">${work.arch.join('</span><span class="tag">')}</span></p>
     <p><strong>Company</strong> ${work.company} ${work.country}</p>
     <p><strong>Description</strong> ${work.text}</p>
+    <div class="is-background-img" style="background-image: url(${work.screen})"></div>
   </div>`)
         swal({
           title: work.title,

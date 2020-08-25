@@ -294,8 +294,8 @@ footer p {
 
 #works > li {
   float: left;
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
   display: inline-grid;
 }
 
@@ -307,7 +307,7 @@ footer p {
 }
 
 .work .is-background-img {
-  height: 115px;
+  height: 125px;
 }
 
 #team {
@@ -318,8 +318,8 @@ footer p {
 
 #team > li {
   float: left;
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   display: inline-grid;
 }
 
@@ -335,7 +335,7 @@ footer p {
   background-repeat: no-repeat;
   background-position: center; 
   background-size: cover;
-  height: 150px;
+  height: 160px;
 }
 
 #links a {

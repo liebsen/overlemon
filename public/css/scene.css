@@ -39,7 +39,7 @@
 }
 
 .carousel__cell__content {
-  max-width: 600px;
+  max-width: 640px;
 }
 
 .carousel__cell h1 {
@@ -59,7 +59,7 @@
 .carousel__cell:nth-child(9n+5) { background-color: #3b6978; }
 .carousel__cell:nth-child(9n+6) { background-color: #3e206d; }
 .carousel__cell:nth-child(9n+7) { background-color: #5b5656; }
-.carousel__cell:nth-child(9n+8) { background-color: #6f5a7e; }
+.carousel__cell:nth-child(9n+8) { background-color: #dd2c00; }
 .carousel__cell:nth-child(9n+0) { background-color: #8105d8; }
 
 .carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(15vh); }
