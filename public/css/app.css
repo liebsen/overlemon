@@ -35,7 +35,13 @@ textarea {
 a {
   color: white;
   text-decoration: none;
+  transition: color 0.15s linear;
 }
+
+a:hover {
+  color: #f0a500;
+}
+
 
 a.active {
   color: #666;
@@ -123,7 +129,7 @@ footer p {
   right: 0;
   z-index: 98;
   height: 5rem;
-  transition: background-color 0.25 linear;
+  transition: background-color 0.25s linear;
 }
 
 #menu .burger {
@@ -239,7 +245,9 @@ footer p {
 }
 
 #menu .links a {
+  font-family: 'Calistoga';
   font-size: 1.25rem;
+  font-weight: 300;
   margin: 0 0.5rem;
   display: block;
 }
@@ -272,7 +280,7 @@ footer p {
   background-color: #333;
   border: 2px solid white;
   color: white;
-  transition: background-color 0.25 linear;
+  transition: background-color 0.25s linear;
 }
 
 .button:hover {
