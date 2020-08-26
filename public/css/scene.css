@@ -1,7 +1,7 @@
 .scene {
   margin: 1rem auto;
   position: relative;
-  transform: scale(1) perspective(1040px) rotateY(2deg) rotateX(2deg) rotate(-1deg) translateX(1em);
+  transform: scale(1) perspective(1040px) rotateY(2deg) rotateX(2deg) rotate(-1deg);
   width: 90vw;
   height: 90vh;
   perspective: 1000px;

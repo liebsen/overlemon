@@ -96,27 +96,27 @@ footer p {
 
 .logo {
   position: absolute;
-  top: 2vh;
+  top: 5vh;
   left: 4vh;
   z-index: 10;
   transform: scale(1) perspective(1040px) rotateY(2deg) rotateX(2deg) rotate(-1deg) translateX(1em);
-  width: 300px;
-  height: 75px;
+  width: 200px;
+  height: 50px;
   background-image: url(/img/monogram.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .logo h1 {
+  font-size: 1.5rem;
   text-align: left;
-  margin-left: 5.5rem;
-  margin-bottom: 0;
+  margin: 0.5rem 3.5rem 0;
 }
 
 .logo h6 {
   text-align: left;
-  margin-left: 5.75rem;
-  margin-top: 0;
+  margin: 0.1rem 3.7rem 0;
+  white-space: nowrap;
   line-height: 0;
 }
 
@@ -260,7 +260,7 @@ footer p {
 }
 
 #menu.fs .items {
-  transform: scale(1) perspective(1040px) rotateY(2deg) rotateX(2deg) rotate(-1deg) translateX(1em) translateY(0);
+  transform: scale(1) perspective(1040px) rotateY(2deg) rotateX(2deg) rotate(-1deg) translateX(1em) translateY(0) translateZ(4em);
   pointer-events: auto;
   opacity: 1;
 }
@@ -302,8 +302,8 @@ footer p {
 
 #works > li {
   float: left;
-  width: 125px;
-  height: 125px;
+  width: 115px;
+  height: 115px;
   display: inline-grid;
 }
 
@@ -315,7 +315,7 @@ footer p {
 }
 
 .work .is-background-img {
-  height: 125px;
+  height: 135px;
 }
 
 #team {
@@ -334,6 +334,7 @@ footer p {
 #team > li > span {
   padding-top: 0.25rem;
 }
+
 #team > li > small {
   font-size: 13px;
 }
@@ -361,6 +362,12 @@ footer p {
   color: rgba(0,0,0,.65);
 }
 
+@media screen and (max-width:480px) {
+  .work .is-background-img {
+    display: none;
+  }
+}
+
 @media screen and (max-width:768px) {
   .is-mobile {
     display: block;
@@ -381,6 +388,8 @@ footer p {
   }
   #team > li > span {
     font-size: 14px;
+    padding-top: 0;
+    line-height: 0;
   }
   #team > li > small {
     font-size: 10px;
@@ -392,7 +401,7 @@ footer p {
     display: block;
   }
   .logo {
-    top: 6vh;
-    left: 12vh;
+    top: 8vh;
+    left: 10vh;
   }
 }

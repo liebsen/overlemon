@@ -3,6 +3,7 @@ let app = document.getElementById('app')
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // alert(window.screen.availWidth + ' ' + window.screen.availHeight)
   document.getElementById('menu').addEventListener('click', () => {
     document.getElementById('menu').classList.toggle('fs')
     document.getElementById('menu').querySelector('.burger').classList.toggle('cross')
