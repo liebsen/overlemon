@@ -2,7 +2,7 @@ let touchstartX = 0;
 let touchstartY = 0;
 let touchendX = 0;
 let touchendY = 0;
-
+const touchOffset = 20
 const gestureZone = document.getElementById('gestureZone');
 gestureZone.addEventListener('touchstart', function(event) {
     touchstartX = event.changedTouches[0].screenX;
@@ -16,25 +16,32 @@ gestureZone.addEventListener('touchend', function(event) {
 }, false); 
 
 function handleGesture() {
-    if (touchendX <= touchstartX) {
-        console.log('Swiped left');
-        carouselNext()
+    const absX = Math.abs(touchstartX - touchendX)
+    const absY = Math.abs(touchstartY - touchendY)
+
+    if (absX > touchOffset) {
+        if (touchendX <= touchstartX) {
+            // console.log('Swiped left');
+            carouselNext()
+        }
+        
+        if (touchendX >= touchstartX) {
+            // console.log('Swiped right');
+            carouselPrev()
+        }
     }
-    
-    if (touchendX >= touchstartX) {
-        console.log('Swiped right');
-        carouselPrev()
-    }
-    
-    if (touchendY <= touchstartY) {
-        console.log('Swiped up');
-    }
-    
-    if (touchendY >= touchstartY) {
-        console.log('Swiped down');
+
+    if (absY > touchOffset) {
+        if (touchendY <= touchstartY) {
+            // console.log('Swiped up');
+        }
+        
+        if (touchendY >= touchstartY) {
+            // console.log('Swiped down');
+        }
     }
     
     if (touchendY === touchstartY) {
-        console.log('Tap');
+        // console.log('Tap');
     }
 }

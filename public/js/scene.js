@@ -22,6 +22,11 @@ function rotateCarousel() {
     e.classList.remove('active')
   })
   cells[i].classList.add('active')
+  setTimeout(() => {
+    if (canPlaySwapSound) {
+      playSound('rotate.mp3')
+    }
+  }, 175)
 }
 
 let carouselPrev = () => {

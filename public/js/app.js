@@ -1,10 +1,38 @@
 let spinner = document.getElementById('spinner')
 let app = document.getElementById('app')
+var canPlaySwapSound = false
+var playSound = (audio, vol) => {
+  if (vol === undefined) vol = 1
+  if (audio === undefined) audio = 'bell.mp3'
+
+  const pref = JSON.parse(localStorage.getItem('player')) || {}
+  const sound = new Audio('/sound/' + audio)
+  sound.vol = vol
+
+  var playPromise = sound.play()
+
+  if (playPromise !== undefined) {
+    playPromise.then(_ => {
+      // Automatic playback started!
+      // Show playing UI.
+    })
+    .catch(error => {
+      console.log(error)
+    // Auto-play was prevented
+    // Show paused UI.
+    })
+  }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
 
   // alert(window.screen.availWidth + ' ' + window.screen.availHeight)
   document.getElementById('menu').addEventListener('click', () => {
+    if (!document.getElementById('menu').classList.contains('fs')) {
+      setTimeout(() => {
+        playSound('menu.mp3')
+      }, 175)
+    }
     document.getElementById('menu').classList.toggle('fs')
     document.getElementById('menu').querySelector('.burger').classList.toggle('cross')
   })
@@ -14,9 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
     spinner.classList.add('animated', 'fadeOut')
     setTimeout(() => {
       spinner.remove()
-      app.classList.add('animated', 'flipInX')
+      app.classList.add('animated', 'flipInY')
+      playSound('start.mp3')
       setTimeout(() => {
         changeCarousel()
+        setTimeout(() => {
+          canPlaySwapSound = true
+        }, 500)
       }, 1000)
     }, 1000)
   }, 1000)
@@ -42,6 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
     <p><strong>Description</strong> ${work.text}</p>
     <div class="is-background-img" style="background-image: url(${work.screen})"></div>
   </div>`)
+        setTimeout(() => {
+          playSound('pop.mp3')
+        }, 75)
         swal({
           title: work.title,
           buttons: ['Cancel', 'Go to app'],
