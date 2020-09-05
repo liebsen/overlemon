@@ -44,16 +44,16 @@
     "tech": ["PHP", "MySQL", "VueJS"],
     "text": "Would you like to make a change in your life, but can’t seem to make it happen? This tool will help you get unstuck"
   },{
-    "title": "SkyHub",
+    "title": "IceHub",
     "slogan": "Your private meeting hub",
     "company": "Overlemon",
     "url": "https://hub.overlemon.com/",
-    "image": "\/img\/works\/skyhub.png",
-    "screen": "\/img\/works\/screen\/skyhub.jpg",
+    "image": "\/img\/works\/icehub.png",
+    "screen": "\/img\/works\/screen\/icehub.jpg",
     "country": "",
     "arch": ["app"],
     "tech": ["WebRTC", "Javascript", "Coturn"],
-    "text": "SkyHub is a platform for making video calls completely free and private."
+    "text": "IceHub is a platform for making video calls completely free and private."
   },{
     "title": "Verusados",
     "slogan": "Verified cars with mechanical guarantee",
