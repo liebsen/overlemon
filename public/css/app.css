@@ -6,7 +6,7 @@ body {
   margin: 0;
   text-align: center;
   overflow: hidden;
-  font-family: 'Rubik';
+  font-family: 'Asap';
   background-color: #333;
   color: white;
 }
@@ -17,9 +17,9 @@ h3 {
   font-family: 'Calistoga';
 }
 
-input,
-textarea {
-  font-family: 'Rubik';
+.input,
+.textarea {
+  font-family: 'Asap';
   font-weight: 400;
   font-size: 1rem;
   min-width: 300px;
@@ -32,6 +32,11 @@ textarea {
   cursor: text;
 }
 
+.input:focus,
+.textarea:focus {
+  background-color: rgba(0,0,0,0.25);
+}
+
 a {
   color: white;
   text-decoration: none;
@@ -39,12 +44,11 @@ a {
 }
 
 a:hover {
-  color: #f0a500;
+  color: #ffed00;
 }
 
-
 a.active {
-  color: #666;
+  color: #ffed00;
 }
 
 footer {
