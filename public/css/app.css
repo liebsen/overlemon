@@ -8,6 +8,7 @@ body {
   overflow: hidden;
   font-family: 'Asap';
   background-color: #333;
+  font-weight: 800;
   color: white;
 }
 
@@ -17,10 +18,13 @@ h3 {
   font-family: 'Calistoga';
 }
 
+strong {
+  color: #999;
+}
+
 .input,
 .textarea {
   font-family: 'Asap';
-  font-weight: 400;
   font-size: 1rem;
   min-width: 300px;
   background-color: transparent;
@@ -73,7 +77,6 @@ footer p {
   font-size: 0.75rem;
   background-color: #333;
   color: white;
-  font-weight: 500;
   padding: 2px 4px;
   border-radius: 3px;
   margin-right: 4px;
@@ -251,7 +254,7 @@ footer p {
 #menu .links a {
   font-family: 'Calistoga';
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0 0.5rem;
   display: block;
 }
