@@ -59,11 +59,16 @@ document.addEventListener('DOMContentLoaded', () => {
       let works = document.getElementById('works')
       let li = document.createElement('li')
       let a = document.createElement('a')
+      work.repo = ''
       a.href = '#'
       a.style.backgroundImage = `url('${work.image}')`
       li.append(a)
       works.append(li)
-
+      if (work.github) {
+        Object.keys(work.github).forEach(function(key) {
+          work.repo+= `<span><a href="${work.github[key]}" class="has-text-dark" target="_blank">${key} <span class="mdi mdi-github"></span></a></span>&nbsp;`
+        })
+      }
       a.onclick = e => {
         const template = (`
   <div class="work has-text-left">
@@ -72,26 +77,23 @@ document.addEventListener('DOMContentLoaded', () => {
     <p><strong>Architecture</strong> <span class="tag">${work.arch.join('</span><span class="tag">')}</span></p>
     <p><strong>Company</strong> ${work.company} ${work.country}</p>
     <p><strong>Description</strong> ${work.text}</p>
-    <div class="is-background-img" style="background-image: url(${work.screen})"></div>
+    <a href="${work.url}" target="_blank" title="Go to application"><div class="is-background-img" style="background-image: url(${work.screen})"></div></a>
+    <p>${work.repo}</p>
   </div>`)
+        console.log(work)
         setTimeout(() => {
           playSound('pop.mp3')
         }, 75)
         swal({
           title: work.title,
-          buttons: ['Cancel', 'Go to app'],
+          // buttons: ['Cancel', 'Go to app'],
           content: {
             element: 'div',
             attributes: {
               innerHTML: `${template}`
             }
           }
-        }).then(accept => {
-          if (accept) {
-            window.open(work.url, '_blank')
-          }
         })
-        e.preventDefault()
       }
     })
   })

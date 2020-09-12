@@ -20,7 +20,11 @@
     "country": "🇦🇷",
     "arch": ["app", "api", "panel"],
     "tech": ["NodeJS", "MongoDB", "VueJS", "Webpack", "Google Maps", "Mapbox"],
-    "text": "FletsApp is a platform for door-to-door delivering services."
+    "text": "FletsApp is a platform for door-to-door delivering services.",
+    "github": {
+        "app": "https://github.com/liebsen/fletsapp.git",
+        "api": "https://github.com/liebsen/fletsapi.git"
+    }
   },{    
     "title": "Flitz",
     "slogan": "Play Online Chess",
@@ -31,7 +35,11 @@
     "country": "",
     "arch": ["app", "api"],
     "tech": ["NodeJS", "MongoDB", "VueJS", "Webpack", "StockfishJS"],
-    "text": "Flitz is an platform for playing chess online"
+    "text": "Flitz is an platform for playing chess online",
+    "github": {
+        "app": "https://github.com/liebsen/flitz.git",
+        "api": "https://github.com/liebsen/flitzapi.git"
+    }
   },{
     "title": "Refocus",
     "slogan": "Change your focus, change your life",
@@ -45,7 +53,7 @@
     "text": "Would you like to make a change in your life, but can’t seem to make it happen? This tool will help you get unstuck"
   },{
     "title": "IceHub",
-    "slogan": "Your private meeting hub",
+    "slogan": "Safe and anonymous meetings",
     "company": "Overlemon",
     "url": "https://hub.overlemon.com/",
     "image": "\/img\/works\/icehub.png",
@@ -76,5 +84,20 @@
     "arch": ["app", "admin"],
     "tech": ["PHP", "MySQL", "VueJS", "Tinting"],
     "text": "Puntoweberplast is a private managment and selling tool built especially for Weber company"
+  },{
+    "title": "Projective",
+    "slogan": "Workplanning made easy",
+    "company": "Overlemon",
+    "url": "https://projective.herokuapp.com",
+    "image": "\/img\/works\/projective.png",
+    "screen": "\/img\/works\/screen\/projective.jpg",
+    "country": "",
+    "arch": ["app", "api"],
+    "tech": ["NodeJS", "MongoDB", "VueJS", "Webpack"],
+    "text": "Create your team, plan and organize your digital projects",
+    "github": {
+        "app": "https://github.com/liebsen/projective.git",
+        "api": "https://github.com/liebsen/projectiveapi.git"
+    }
   }
 ]

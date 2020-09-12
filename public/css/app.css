@@ -94,6 +94,10 @@ footer p {
   text-align: left;
 }
 
+.has-text-dark {
+  color: #333;
+}
+
 .is-background-img {
   background-color: transparent;
   background-repeat: no-repeat;
@@ -358,6 +362,15 @@ footer p {
   width: 30px;
   height: 30px;
   display: inline-grid;
+}
+
+.swal-modal {
+  border-radius: 10px;
+}
+
+.swal-button {
+  background-color: #0e2140;
+  border-radius: 30px;
 }
 
 .swal-title {
