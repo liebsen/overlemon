@@ -99,5 +99,19 @@
         "app": "https://github.com/liebsen/projective.git",
         "api": "https://github.com/liebsen/projectiveapi.git"
     }
+  },{
+    "title": "Free Cat Radio",
+    "slogan": "Freedom Cats Radio",
+    "company": "Free Cat Radio",
+    "url": "https://freecatradio.com",
+    "image": "\/img\/works\/freecatradio.jpg",
+    "screen": "\/img\/works\/screen\/freecatradio.jpg",
+    "country": "",
+    "arch": ["app"],
+    "tech": ["Icecast2", "Ices", "Javascript"],
+    "text": "Delivering spiritual, scientific disclosure and music",
+    "github": {
+        "app": "https://github.com/liebsen/freecatradio.git"
+    }
   }
 ]
