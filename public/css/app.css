@@ -329,6 +329,14 @@ footer p {
   height: 135px;
 }
 
+.work p {
+  margin: 0.25rem;
+}
+
+.work a:hover {
+  color: #407088;
+}
+
 #team {
   list-style: none;
   padding: 0;

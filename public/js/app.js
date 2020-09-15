@@ -66,19 +66,19 @@ document.addEventListener('DOMContentLoaded', () => {
       works.append(li)
       if (work.github) {
         Object.keys(work.github).forEach(function(key) {
-          work.repo+= `<span><a href="${work.github[key]}" class="has-text-dark" target="_blank">${key} <span class="mdi mdi-github"></span></a></span>&nbsp;`
+          work.repo+= `<span><span class="mdi mdi-github"></span> <a href="${work.github[key]}" class="has-text-dark" target="_blank">${key}</a></span>&nbsp;`
         })
       }
       a.onclick = e => {
         const template = (`
   <div class="work has-text-left">
-    <p>${work.slogan}</p>
+    <p><strong>Slogan</strong> ${work.slogan}</p>
     <p><strong>Technologies</strong> <span class="tag">${work.tech.join('</span><span class="tag">')}</span></p>
     <p><strong>Architecture</strong> <span class="tag">${work.arch.join('</span><span class="tag">')}</span></p>
     <p><strong>Company</strong> ${work.company} ${work.country}</p>
     <p><strong>Description</strong> ${work.text}</p>
-    <a href="${work.url}" target="_blank" title="Go to application"><div class="is-background-img" style="background-image: url(${work.screen})"></div></a>
     <p>${work.repo}</p>
+    <a href="${work.url}" target="_blank" title="Go to application"><div class="is-background-img" style="background-image: url(${work.screen})"></div></a>
   </div>`)
         console.log(work)
         setTimeout(() => {
