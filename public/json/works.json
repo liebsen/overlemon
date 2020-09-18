@@ -113,5 +113,19 @@
     "github": {
         "app": "https://github.com/liebsen/freecatradio.git"
     }
+  },{
+    "title": "Studio Nuna",
+    "slogan": "Difusión de contenido",
+    "company": "Studio Nuna",
+    "url": "https://studionuna.com.ar",
+    "image": "\/img\/works\/studionuna.jpg",
+    "screen": "\/img\/works\/screen\/studionuna.jpg",
+    "country": "🇦🇷",
+    "arch": ["webapp"],
+    "tech": ["Javascript"],
+    "text": "Studio Nuna Radio. ",
+    "github": {
+        "webapp": "https://github.com/liebsen/studionuna.git"
+    }
   }
 ]
