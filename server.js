@@ -16,7 +16,7 @@ const allowedOrigins = [
   'http://ol.com',
   'https://overlemon.com',
   'https://freecatradio.com',
-  'https://hub.overlemon.com'
+  'https://ice.overlemon.com'
 ]
 
 app.use(cors({
@@ -37,6 +37,17 @@ app.use(cors({
     return callback(null, true)
   }
 }))
+
+var log = (text) => {
+  let now = new Date().toISOString()
+  fs.appendFile('debug.log', `${now} ${text}\n`, (err) => {
+    if (err) throw err;
+  })
+}
+
+app.post('/debug', (req, res) => {
+  log(`${req.ip} error: ${req.body.err}`)
+})
 
 app.post('/contact', (req, res) => {
   console.log(req.body)
