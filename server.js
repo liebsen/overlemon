@@ -15,6 +15,7 @@ app.use(express.urlencoded())
 const allowedOrigins = [
   'http://ol.com',
   'https://overlemon.com',
+  'https://freecatradio.com',
   'https://hub.overlemon.com'
 ]
 
