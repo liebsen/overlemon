@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const fs = require('fs')
 const bodyParser = require('body-parser')
 var cors = require('cors')
 var path = require('path')
@@ -38,9 +39,9 @@ app.use(cors({
   }
 }))
 
-var log = (text) => {
+var log = str => {
   let now = new Date().toISOString()
-  fs.appendFile('debug.log', `${now} ${text}\n`, (err) => {
+  fs.appendFile('debug.log', `${now} ${str}\n`, err => {
     if (err) throw err;
   })
 }
