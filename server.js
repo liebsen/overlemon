@@ -13,6 +13,7 @@ app.use(bodyParser.json({ type: 'application/json' }))
 app.use(express.json())
 app.use(express.urlencoded())
 
+/*
 const allowedOrigins = [
   'http://ol.com',
   'https://overlemon.com',
@@ -38,6 +39,8 @@ app.use(cors({
     return callback(null, true)
   }
 }))
+*/
+
 
 var log = str => {
   let now = new Date().toISOString()
@@ -48,6 +51,7 @@ var log = str => {
 
 app.post('/debug', (req, res) => {
   log(`${req.ip} error: ${req.body.err}`)
+  res.sendStatus(200)
 })
 
 app.post('/contact', (req, res) => {
