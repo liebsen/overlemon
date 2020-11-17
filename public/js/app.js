@@ -1,6 +1,6 @@
 let spinner = document.getElementById('spinner')
 let app = document.getElementById('app')
-var canPlaySwapSound = false
+var canPlaySound = false
 var playSound = (audio, vol) => {
   if (vol === undefined) vol = 1
   if (audio === undefined) audio = 'bell.mp3'
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         changeCarousel()
         setTimeout(() => {
-          canPlaySwapSound = true
+          canPlaySound = true
         }, 500)
       }, 1000)
     }, 1000)

@@ -13,6 +13,8 @@ app.use(bodyParser.json({ type: 'application/json' }))
 app.use(express.json())
 app.use(express.urlencoded())
 
+app.use(cors())
+
 /*
 const allowedOrigins = [
   'http://ol.com',
@@ -41,7 +43,6 @@ app.use(cors({
 }))
 */
 
-
 var log = str => {
   let now = new Date().toISOString()
   fs.appendFile('debug.log', `${now} ${str}\n`, err => {
@@ -57,20 +58,21 @@ app.post('/debug', (req, res) => {
 app.post('/contact', (req, res) => {
   console.log(req.body)
   email.send({
-    to:process.env.EMAIL_PRIMARY,
-    subject:'Contacto desde la web',
-    data:{
-      title:'Contacto desde la web',
+    to: process.env.EMAIL_PRIMARY,
+    subject: 'Contacto desde la web',
+    data: {
+      title: 'Contacto desde la web',
       message: 'Nombre: ' + req.body.name + '<br>Teléfono : ' + req.body.phone + '<br>Email: ' + req.body.email + '<br>Comments : ' + req.body.comment + '<br>',
       link: '',
       linkText: ''
     },
     templatePath:path.join(__dirname,'/email/template.html')
-  }).then(function(){
-    res.sendStatus(200)
-  }).catch(function(err){
+  }).then(() => {
+    console.log('sent')
+    return res.json({ status: 'success', message: 'The message was successfully sent. Thank you for your contact. We will respond ASAP.' })
+  }).catch(err => {
     if(err) console.log(err)
-    res.sendStatus(200)
+    return res.json({ status: 'error', message: `Error: ${err}` })
   })
 })
 

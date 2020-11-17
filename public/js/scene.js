@@ -21,9 +21,12 @@ function rotateCarousel() {
   cells.forEach(e => {
     e.classList.remove('active')
   })
+  cells[i].style.display = 'block'
   cells[i].classList.add('active')
+  document.querySelector('.animatedlogo').classList.remove('pulse')
   setTimeout(() => {
-    if (canPlaySwapSound) {
+    document.querySelector('.animatedlogo').classList.add('pulse')
+    if (canPlaySound) {
       playSound('rotate.mp3')
     }
   }, 175)
