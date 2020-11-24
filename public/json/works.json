@@ -34,7 +34,7 @@
     "screen": "\/img\/works\/screen\/flitz.jpg",
     "country": "",
     "arch": ["app", "api"],
-    "tech": ["NodeJS", "MongoDB", "VueJS", "Webpack", "StockfishJS"],
+    "tech": ["NodeJS", "MongoDB", "VueJS", "Webpack", "Socket.io", "StockfishJS"],
     "text": "Flitz is an platform for playing chess online",
     "github": {
         "app": "https://github.com/liebsen/flitz.git",
@@ -60,7 +60,7 @@
     "screen": "\/img\/works\/screen\/icehub.jpg",
     "country": "",
     "arch": ["app"],
-    "tech": ["WebRTC", "Javascript", "Coturn"],
+    "tech": ["WebRTC", "Javascript", "Socket.io", "Coturn"],
     "text": "IceHub is a platform for making video calls completely free and private."
   },{
     "title": "Verusados",
@@ -93,7 +93,7 @@
     "screen": "\/img\/works\/screen\/projective.jpg",
     "country": "",
     "arch": ["app", "api"],
-    "tech": ["NodeJS", "MongoDB", "VueJS", "Webpack"],
+    "tech": ["NodeJS", "MongoDB", "VueJS", "Socket.io", "Webpack"],
     "text": "Create your team, plan and organize your digital projects",
     "github": {
         "app": "https://github.com/liebsen/projective.git",
@@ -113,5 +113,16 @@
     "github": {
         "app": "https://github.com/liebsen/freecatradio.git"
     }
+  },{
+    "title": "YACABRON",
+    "slogan": "Inspired by Mexican cuisine",
+    "company": "YACABRON",
+    "url": "https://yacabron.com",
+    "image": "\/img\/works\/yacabron.jpg",
+    "screen": "\/img\/works\/screen\/yacabron.jpg",
+    "country": "",
+    "arch": ["app", "api", "admin"],
+    "tech": ["NodeJS", "MongoDB", "VueJS", "Socket.io", "Webpack"],
+    "text": "Order your yacabron box and add whatever you like"
   }
 ]
