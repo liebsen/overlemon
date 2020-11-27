@@ -85,19 +85,18 @@
     "tech": ["PHP", "MySQL", "VueJS", "Tinting"],
     "text": "Puntoweberplast is a private managment and selling tool built especially for Weber company"
   },{
-    "title": "Projective",
-    "slogan": "Workplanning made easy",
+    "title": "Chess Diagram",
+    "slogan": "Show your chess like a boss",
     "company": "Overlemon",
-    "url": "https://projective.herokuapp.com",
-    "image": "\/img\/works\/projective.png",
-    "screen": "\/img\/works\/screen\/projective.jpg",
+    "url": "https://chessdiagram.herokuapp.com",
+    "image": "\/img\/works\/chessdiagram.png",
+    "screen": "\/img\/works\/screen\/chessdiagram.jpg",
     "country": "",
-    "arch": ["app", "api"],
-    "tech": ["NodeJS", "MongoDB", "VueJS", "Socket.io", "Webpack"],
-    "text": "Create your team, plan and organize your digital projects",
+    "arch": ["widget"],
+    "tech": ["Chessboard.js", "Widget", "Webpack"],
+    "text": "Chess widget to show your best games with comments",
     "github": {
-        "app": "https://github.com/liebsen/projective.git",
-        "api": "https://github.com/liebsen/projectiveapi.git"
+        "app": "https://github.com/liebsen/chessdiagram.git"
     }
   },{
     "title": "Free Cat Radio",
