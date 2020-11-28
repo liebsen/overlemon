@@ -46,6 +46,7 @@
   font-size: 2rem;
   margin-bottom: 0.5rem;
   line-height: 1;
+  letter-spacing: -2px;
 }
 
 .carousel__cell p {
@@ -57,8 +58,8 @@
 .carousel__cell:nth-child(9n+3) { background-color: #394989; }
 .carousel__cell:nth-child(9n+4) { background-color: #2b580c; }
 .carousel__cell:nth-child(9n+5) { background-color: #3b6978; }
-.carousel__cell:nth-child(9n+6) { background-color: #3e206d; }
-.carousel__cell:nth-child(9n+7) { background-color: #5b5656; }
+.carousel__cell:nth-child(9n+6) { background-color: #34a853; }
+.carousel__cell:nth-child(9n+7) { background-color: #ff9900; }
 .carousel__cell:nth-child(9n+8) { background-color: #511845; }
 .carousel__cell:nth-child(9n+0) { background-color: #8105d8; }
 
@@ -96,5 +97,5 @@
   .carousel__cell h1 {
     font-size: 4rem;
   }
-}
+} 
 

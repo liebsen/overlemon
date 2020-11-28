@@ -288,16 +288,17 @@ footer p {
 	padding: 0.5rem 1rem;
 	border-radius: 2rem;
 	cursor: pointer;
-  background-color: #333;
+  background-color: #ff9900;
   border: 2px solid white;
   color: white;
   transition: background-color 0.25s linear;
+  min-width: 10rem;
 }
 
 .button:hover {
-  background-color: white;
-  border: 2px solid #333;
-  color: #333;
+  background-color: #fff6;
+  border: 2px solid #666;
+  color: #666;
 }
 
 .is-mobile, 
