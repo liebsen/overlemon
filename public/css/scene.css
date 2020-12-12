@@ -25,7 +25,7 @@
   height: 90vh;
   /*left: 10px;
   top: 10px; */
-  border: 8px solid #333;
+  border: 8px solid #fff3;
   border-radius: 1rem;
   font-size: 18px;
   font-weight: bold;
@@ -35,7 +35,7 @@
 }
 
 .carousel__cell.active {
-  opacity: 1;
+  opacity: 0.925;
 }
 
 .carousel__cell__content {

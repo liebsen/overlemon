@@ -6,7 +6,7 @@ body {
   margin: 0;
   text-align: center;
   overflow: hidden;
-  font-family: 'Asap';
+  font-family: 'Rubik';
   background-color: #333;
   font-weight: 800;
   color: white;
@@ -22,9 +22,12 @@ strong {
   color: #999;
 }
 
+.calistoga {
+  font-family: 'Calistoga'; 
+}
 .input,
 .textarea {
-  font-family: 'Asap';
+  font-family: 'Rubik';
   font-size: 1rem;
   min-width: 300px;
   background-color: transparent;
@@ -129,6 +132,15 @@ footer p {
   margin: 0.1rem 3.7rem 0;
   white-space: nowrap;
   line-height: 0;
+}
+
+#myVideo {
+  position: fixed;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 /* menu */
