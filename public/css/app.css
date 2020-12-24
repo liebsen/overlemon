@@ -268,7 +268,7 @@ footer p {
 }
 
 #menu .links a {
-  font-family: 'avenir bold';
+  font-family: 'avenir black';
   font-size: 1.25rem;
   font-weight: 400;
   margin: 0 0.5rem;
@@ -365,7 +365,7 @@ footer p {
 
 #team > li > span {
   padding-top: 0.25rem;
-  font-family: 'avenir bold';
+  font-family: 'avenir black';
 }
 
 #team > li > small {
@@ -397,7 +397,7 @@ footer p {
 
 .swal-title {
   margin: 0;
-  font-family: 'avenir bold'
+  font-family: 'avenir black'
 }
 
 .swal-content {
