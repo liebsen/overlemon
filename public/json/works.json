@@ -120,7 +120,7 @@
     "image": "\/img\/works\/geotiendas.jpg",
     "screen": "\/img\/works\/screen\/geotiendas.jpg",
     "country": "",
-    "arch": ["app", "api", "shop", "panel", "community" "admin"],
+    "arch": ["app", "api", "shop", "panel", "community", "admin"],
     "tech": ["NodeJS", "MongoDB", "VueJS", "Socket.io", "Webpack"],
     "text": "Ecommerce. Online shops platform."
   }
