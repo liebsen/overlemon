@@ -6,7 +6,7 @@ body {
   margin: 0;
   text-align: center;
   overflow: hidden;
-  font-family: 'Rubik';
+  font-family: 'avenir medium', sans-serif;
   background-color: #333;
   font-weight: 800;
   color: white;
@@ -15,7 +15,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: 'Calistoga';
+  font-family: 'avenir black', sans-serif;
 }
 
 strong {
@@ -23,11 +23,11 @@ strong {
 }
 
 .calistoga {
-  font-family: 'Calistoga'; 
+  font-family: 'avenir black', sans-serif; 
 }
 .input,
 .textarea {
-  font-family: 'Rubik';
+  font-family: 'avenir medium', sans-serif;
   font-size: 1rem;
   min-width: 300px;
   background-color: transparent;
@@ -268,7 +268,7 @@ footer p {
 }
 
 #menu .links a {
-  font-family: 'Calistoga';
+  font-family: 'avenir bold';
   font-size: 1.25rem;
   font-weight: 400;
   margin: 0 0.5rem;
@@ -365,7 +365,7 @@ footer p {
 
 #team > li > span {
   padding-top: 0.25rem;
-  font-family: 'Calistoga';
+  font-family: 'avenir bold';
 }
 
 #team > li > small {
@@ -397,7 +397,7 @@ footer p {
 
 .swal-title {
   margin: 0;
-  font-family: 'Calistoga'
+  font-family: 'avenir bold'
 }
 
 .swal-content {
