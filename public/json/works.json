@@ -113,15 +113,15 @@
         "app": "https://github.com/liebsen/freecatradio.git"
     }
   },{
-    "title": "YACABRON",
-    "slogan": "Inspired by Mexican cuisine",
-    "company": "YACABRON",
-    "url": "https://yacabron.com",
-    "image": "\/img\/works\/yacabron.jpg",
-    "screen": "\/img\/works\/screen\/yacabron.jpg",
+    "title": "geotiendas",
+    "slogan": "Sell wherever you like",
+    "company": "geotiendas",
+    "url": "https://geotiendas.com",
+    "image": "\/img\/works\/geotiendas.jpg",
+    "screen": "\/img\/works\/screen\/geotiendas.jpg",
     "country": "",
-    "arch": ["app", "api", "admin"],
+    "arch": ["app", "api", "shop", "panel", "community" "admin"],
     "tech": ["NodeJS", "MongoDB", "VueJS", "Socket.io", "Webpack"],
-    "text": "Order your yacabron box and add whatever you like"
+    "text": "Ecommerce. Online shops platform."
   }
 ]
