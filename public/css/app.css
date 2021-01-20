@@ -76,6 +76,19 @@ footer p {
   bottom: 0;
 }
 
+#start {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.is-clickable {
+  cursor: pointer;
+}
+
 .tag {
   font-size: 0.75rem;
   background-color: #333;
@@ -111,30 +124,33 @@ footer p {
 .logo {
   position: absolute;
   top: 5vh;
-  left: 4vh;
+  left: 2vh;
   z-index: 10;
   transform: scale(1) perspective(1040px) rotateY(2deg) rotateX(2deg) rotate(-1deg) translateX(1em);
   width: 200px;
-  height: 50px;
+  height: 75px;
   background-image: url(/img/monogram.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .logo h1 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   text-align: left;
-  margin: 0.5rem 3.5rem 0;
+  margin: 0.5rem 5rem 0;
 }
 
 .logo h6 {
+  font-size: 0.75rem;
   text-align: left;
-  margin: 0.1rem 3.7rem 0;
+  margin: 0.1rem 5.5rem 0;
   white-space: nowrap;
   line-height: 0;
 }
 
-#myVideo {
+#bgVideo {
+  filter: hue-rotate(180deg) contrast(200%);
+  opacity: 0;
   position: fixed;
   z-index: -1;
   right: 0;
@@ -297,20 +313,24 @@ footer p {
 }
 
 .button {
+  font-family: 'avenir black', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
 	padding: 0.5rem 1rem;
 	border-radius: 2rem;
 	cursor: pointer;
-  background-color: #ff9900;
-  border: 2px solid white;
+  background-color: #0003;
+  border: 3px solid white;
   color: white;
   transition: background-color 0.25s linear;
   min-width: 10rem;
 }
 
 .button:hover {
-  background-color: #fff6;
-  border: 2px solid #666;
-  color: #666;
+  background-color: #0006;
+  border-color: #fff9;
+  color: #fff6;
 }
 
 .is-mobile, 
@@ -354,6 +374,22 @@ footer p {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+#team > li:nth-child(1) > div {
+  background-image: url('/img/team/marcia.jpg')
+}
+
+#team > li:nth-child(2) > div {
+  background-image: url('/img/team/guido.jpg')
+}
+
+#team > li:nth-child(3) > div {
+  background-image: url('/img/team/facundo.jpg')
+}
+
+#team > li:nth-child(4) > div {
+  background-image: url('/img/team/martin.jpg')
 }
 
 #team > li {

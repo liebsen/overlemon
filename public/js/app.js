@@ -1,4 +1,5 @@
 let spinner = document.getElementById('spinner')
+let start = document.getElementById('start')
 let app = document.getElementById('app')
 var canPlaySound = false
 var playSound = (audio, vol) => {
@@ -24,6 +25,21 @@ var playSound = (audio, vol) => {
   }
 }
 
+var startapp = () => {
+  start.classList.add('animated', 'fadeOut')
+  setTimeout(() => {
+    const bgvideo = document.getElementById('bgVideo')
+    app.classList.add('animated', 'flipInY')
+    start.remove()
+    playSound('start.mp3')
+    setTimeout(() => {
+      bgvideo.classList.add('animated', 'fadeIn', 'delay')
+      bgvideo.setAttribute('src', 'http://localhost:5000/bg_video')
+      bgvideo.play()
+    }, 1000)
+  }, 1000)
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // alert(window.screen.availWidth + ' ' + window.screen.availHeight)
@@ -42,14 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     spinner.classList.add('animated', 'fadeOut')
     setTimeout(() => {
       spinner.remove()
-      app.classList.add('animated', 'flipInY')
-      playSound('start.mp3')
-      setTimeout(() => {
-        changeCarousel()
-        setTimeout(() => {
-          canPlaySound = true
-        }, 500)
-      }, 1000)
+      start.classList.add('animated', 'fadeIn')
     }, 1000)
   }, 1000)
 
@@ -80,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>${work.repo}</p>
     <a href="${work.url}" target="_blank" title="Go to application"><div class="is-background-img" style="background-image: url(${work.screen})"></div></a>
   </div>`)
-        console.log(work)
         setTimeout(() => {
           playSound('pop.mp3')
         }, 75)

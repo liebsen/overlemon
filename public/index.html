@@ -21,7 +21,10 @@
   <title>Overlemon</title>
 </head>
 <body>
-  <lottie-player id="spinner" src="/json/loading-charging.json" background="transparent" speed="1" style="height: 100vh;" loop autoplay></lottie-player>    
+  <lottie-player id="spinner" src="/json/loading-charging.json" background="transparent" speed="1" style="height: 100vh;" loop autoplay></lottie-player>
+  <div id="start">
+    <span class="button is-clickable" onclick="startapp()">Start</span>
+  </div>
   <div id="app" class="is-transparent">
     <div id="menu">
       <div class="burger">
@@ -100,8 +103,7 @@
         <div class="carousel__cell landing">
           <div class="carousel__cell__content">
             <h4>The digital agency</h4>
-            <h1>Which lifts your business into new heights</h1>
-            <p>And we do it while navigating the interstellar lemon bubbles.</p>
+            <h1>Which lifts your business up to new heights</h1>
           </div>
         </div>
         <div class="carousel__cell strategy">
@@ -135,22 +137,22 @@
             <p>We are a team specialized in web development oriented to provide consulting and solutions in short time.</p>
             <ul id="team">
               <li>
-                <div style="background-image: url('/img/team/marcia.jpg')"></div>
+                <div></div>
                 <span>Marcia Carrizo</span>
                 <small>Q&A Genius</small>                
               </li>
               <li>
-                <div style="background-image: url('/img/team/guido.jpg')"></div>
+                <div></div>
                 <span>Guido Cigliutti</span>
                 <small>Sales Champion</small>
               </li>
               <li>
-                <div style="background-image: url('/img/team/facundo.jpg')"></div>
+                <div></div>
                 <span>Facundo Oviedo</span>
                 <small>Data Analysis Master</small>
               </li>
               <li>
-                <div style="background-image: url('/img/team/martin.jpg')"></div>
+                <div></div>
                 <span>Martin Frith</span>
                 <small>Software Engineer Ninja</small>                
               </li>
@@ -161,8 +163,8 @@
           <div class="carousel__cell__content">
             <h1>Special tasks</h1>
             <p>We deliver special services like server installs and configurations, mailservers, fileservers, turnservers, automatizations, optiimizations, scale-ups and devops.</p>
-            <p>We also consultants about e-commerce solutions and optimization.</p>
-            <p>Real time communications platforms and web-radios are part of our dayly skills as well.</p>
+            <p>We also consultants on e-commerce solutions and optimization.</p>
+            <p>Real time communications platforms and media servers are part of our dayly skills as well.</p>
             <p>We work hard everyday to improve our skills and make the web simpler and easier to browse.</p>
           </div>
         </div>
@@ -273,9 +275,7 @@
     </p>
   </footer>
   <div class="ui-snackbar ui-snackbar--is-inactive"></div>
-  <video autoplay muted loop id="myVideo">
-    <source src="/video/EdGN6CWUEAAe7Xn.mp4" type="video/mp4">
-  </video>
+  <video id="bgVideo" autoplay loop class="animated fadeIn delay2" type="video/mp4"></video>
   <script src="/js/app.js"></script>
   <script src="/js/lottie.js"></script>
   <script src="/js/scene.js"></script>
