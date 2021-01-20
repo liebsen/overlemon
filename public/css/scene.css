@@ -60,7 +60,7 @@
 .carousel__cell:nth-child(9n+5) { background-color: #3b6978; }
 .carousel__cell:nth-child(9n+6) { background-color: #34a853; }
 .carousel__cell:nth-child(9n+7) { background-color: #5b5656; }
-.carousel__cell:nth-child(9n+8) { background-color: #ff9900; }
+.carousel__cell:nth-child(9n+8) { background-color: #ff9900; padding-top: 3rem; }
 .carousel__cell:nth-child(9n+0) { background-color: #8105d8; }
 
 .carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(15vh); }
