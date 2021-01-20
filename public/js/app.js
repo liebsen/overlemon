@@ -34,7 +34,7 @@ var startapp = () => {
     playSound('start.mp3')
     setTimeout(() => {
       bgvideo.classList.add('animated', 'fadeIn', 'delay')
-      bgvideo.setAttribute('src', 'http://localhost:5000/bg_video')
+      bgvideo.setAttribute('src', 'https://api.overlemon.com/bg_video')
       bgvideo.play()
     }, 1000)
   }, 1000)

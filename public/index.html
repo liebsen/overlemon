@@ -294,8 +294,8 @@
       formData.forEach(function(value, key){
         data[key] = value
       })
-      // axios.post(`https://api.overlemon.com/contact`, json).then(res => {
-      axios.post(`http://localhost:5000/contact`, data).then(res => {
+      // axios.post(`http://localhost:5000/contact`, json).then(res => {
+      axios.post(`https://api.overlemon.com/contact`, data).then(res => {
         form.reset()
         form.style.opacity = 1
         form.querySelector('input[type="submit"]').value = 'Send'
