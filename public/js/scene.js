@@ -21,7 +21,7 @@ function rotateCarousel() {
   cells.forEach(e => {
     e.classList.remove('active')
   })
-  cells[i].style.display = 'block'
+  cells[i].style.display = 'flex'
   cells[i].classList.add('active')
   document.querySelector('.animatedlogo').classList.remove('pulse')
   setTimeout(() => {
