@@ -80,10 +80,10 @@ app.get('/bg_video', function(req, res) {
   var files = fs.readdirSync(path.join(__dirname,'/videos'))
   /* now files is an Array of the name of the files in the folder and you can pick a random name inside of that array */
   const chosenFile = files[Math.floor(Math.random() * files.length)] 
-  const file = path.join(__dirname,`/videos/${chosenFile}`)
+  const filePath = path.join(__dirname,`/videos/${chosenFile}`)
   console.log(chosenFile)
   // const path = chosenFile
-  const stat = fs.statSync(file)
+  const stat = fs.statSync(filePath)
   const fileSize = stat.size
   const range = req.headers.range
 
@@ -100,7 +100,7 @@ app.get('/bg_video', function(req, res) {
     }
     
     const chunksize = (end-start)+1
-    const file = fs.createReadStream(file, {start, end})
+    const file = fs.createReadStream(filePath, {start, end})
     const head = {
       'Content-Range': `bytes ${start}-${end}/${fileSize}`,
       'Accept-Ranges': 'bytes',
@@ -116,7 +116,7 @@ app.get('/bg_video', function(req, res) {
       'Content-Type': 'video/mp4',
     }
     res.writeHead(200, head)
-    fs.createReadStream(file).pipe(res)
+    fs.createReadStream(filePath).pipe(res)
   }
 })
 
