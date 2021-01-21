@@ -56,7 +56,6 @@ app.post('/debug', (req, res) => {
 })
 
 app.post('/contact', (req, res) => {
-  console.log(req.body)
   email.send({
     to: process.env.EMAIL_PRIMARY,
     subject: 'Contacto desde la web',
@@ -78,12 +77,13 @@ app.post('/contact', (req, res) => {
 
 app.get('/bg_video', function(req, res) {
 
-  var files = fs.readdirSync('/videos/')
+  var files = fs.readdirSync(path.join(__dirname,'/videos'))
   /* now files is an Array of the name of the files in the folder and you can pick a random name inside of that array */
   const chosenFile = files[Math.floor(Math.random() * files.length)] 
+  const file = path.join(__dirname,`/videos/${chosenFile}`)
   console.log(chosenFile)
-  const path = chosenFile
-  const stat = fs.statSync(path)
+  // const path = chosenFile
+  const stat = fs.statSync(file)
   const fileSize = stat.size
   const range = req.headers.range
 
@@ -100,7 +100,7 @@ app.get('/bg_video', function(req, res) {
     }
     
     const chunksize = (end-start)+1
-    const file = fs.createReadStream(path, {start, end})
+    const file = fs.createReadStream(file, {start, end})
     const head = {
       'Content-Range': `bytes ${start}-${end}/${fileSize}`,
       'Accept-Ranges': 'bytes',
@@ -116,7 +116,7 @@ app.get('/bg_video', function(req, res) {
       'Content-Type': 'video/mp4',
     }
     res.writeHead(200, head)
-    fs.createReadStream(path).pipe(res)
+    fs.createReadStream(file).pipe(res)
   }
 })
 
