@@ -75,7 +75,7 @@ app.post('/contact', (req, res) => {
   })
 })
 
-app.get('/bgvideo.mp4', function(req, res) {
+app.get('/bgvideo', function(req, res) {
 
   var files = fs.readdirSync(path.join(__dirname,'/videos'))
   /* now files is an Array of the name of the files in the folder and you can pick a random name inside of that array */
