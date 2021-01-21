@@ -8,10 +8,10 @@ var emailHelper = require('./email/helper')
 var email = emailHelper()
 var server = require('http').Server(app)
 
-app.use(bodyParser.urlencoded({ extended: false}))
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json({ type: 'application/json' }))
 app.use(express.json())
-app.use(express.urlencoded())
+app.use(express.urlencoded({ extended: true }))
 
 app.use(cors())
 
@@ -168,4 +168,6 @@ app.get('/range_video', function(req, res) {
   }
 })
 
-server.listen(process.env.PORT || 5000)
+server.listen(process.env.PORT || 5000, () => {
+  console.log(`Server up & running`)
+})
