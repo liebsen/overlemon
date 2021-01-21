@@ -77,7 +77,12 @@ app.post('/contact', (req, res) => {
 })
 
 app.get('/bg_video', function(req, res) {
-  const path = 'video.mp4'
+
+  var files = fs.readdirSync('/videos/')
+  /* now files is an Array of the name of the files in the folder and you can pick a random name inside of that array */
+  const chosenFile = files[Math.floor(Math.random() * files.length)] 
+  console.log(chosenFile)
+  const path = chosenFile
   const stat = fs.statSync(path)
   const fileSize = stat.size
   const range = req.headers.range
