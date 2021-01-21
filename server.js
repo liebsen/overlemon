@@ -139,6 +139,7 @@ app.get('/range_video', function(req, res) {
       : fileSize-1
 
     console.log(chosenFile)
+    console.log(range)
     console.log(`${start} - ${end}`)
 
     if(start >= fileSize) {
