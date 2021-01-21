@@ -81,8 +81,6 @@ app.get('/bg_video', function(req, res) {
   /* now files is an Array of the name of the files in the folder and you can pick a random name inside of that array */
   const chosenFile = files[Math.floor(Math.random() * files.length)] 
   const filePath = path.join(__dirname,`/videos/${chosenFile}`)
-  console.log(chosenFile)
-  console.log(req.headers.range)
   // const path = chosenFile
   const stat = fs.statSync(filePath)
   const fileSize = stat.size
@@ -128,8 +126,6 @@ app.get('/range_video', function(req, res) {
   /* now files is an Array of the name of the files in the folder and you can pick a random name inside of that array */
   const chosenFile = files[Math.floor(Math.random() * files.length)] 
   const filePath = path.join(__dirname,`/videos/${chosenFile}`)
-  console.log(chosenFile)
-  console.log(req.headers.range)
   // const path = chosenFile
   const stat = fs.statSync(filePath)
   const fileSize = stat.size
@@ -141,6 +137,9 @@ app.get('/range_video', function(req, res) {
     const end = parts[1]
       ? parseInt(parts[1], 10)
       : fileSize-1
+
+    console.log(chosenFile)
+    console.log(`${start} - ${end}`)
 
     if(start >= fileSize) {
       res.status(416).send('Requested range not satisfiable\n'+start+' >= '+fileSize);
