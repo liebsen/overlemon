@@ -82,6 +82,7 @@ app.get('/bg_video', function(req, res) {
   const chosenFile = files[Math.floor(Math.random() * files.length)] 
   const filePath = path.join(__dirname,`/videos/${chosenFile}`)
   console.log(chosenFile)
+  console.log(req.headers.range)
   // const path = chosenFile
   const stat = fs.statSync(filePath)
   const fileSize = stat.size

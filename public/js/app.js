@@ -59,7 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
     spinner.classList.add('animated', 'fadeOut')
     setTimeout(() => {
       spinner.remove()
-      start.classList.add('animated', 'fadeIn')
+      start.classList.add('animated', 'fadeIn', 'delay')
+      playSound('ready.mp3')
     }, 1000)
   }, 1000)
 

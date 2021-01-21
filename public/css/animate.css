@@ -21,12 +21,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .animated.hinge {
-  -webkit-animation-duration: 2s;
+  -webkit-animation-duration: 2s!important;
   animation-duration: 2s;
 }
 
 .animated.slow {
-  -webkit-animation-duration: 5s;
+  -webkit-animation-duration: 5s!important;
   animation-duration: 5s;
 }
 
