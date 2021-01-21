@@ -27,9 +27,9 @@ function rotateCarousel() {
   setTimeout(() => {
     document.querySelector('.animatedlogo').classList.add('pulse')
     if (canPlaySound) {
-      playSound('rotate.mp3')
+      playSound('rotate.mp3', 0.25)
     }
-  }, 175)
+  }, 200)
 }
 
 let carouselPrev = () => {
@@ -86,9 +86,18 @@ var simulateClick = (elem) => {
 
 document.onkeydown = e => {
   switch (e.which) {
+
+    case 32: 
+
+      if (document.getElementById('startbtn')) {
+        document.getElementById('startbtn').click()
+      }
+      break;
     case 37: // left
       if (document.querySelector('.wrapper.active').previousElementSibling) {
         document.querySelector('.wrapper.active').previousElementSibling.click()
+      } else {
+        document.querySelector('#links > a:last-child').click()
       }
       break
 
@@ -98,6 +107,8 @@ document.onkeydown = e => {
     case 39: // right
       if (document.querySelector('.wrapper.active').nextElementSibling) {
         document.querySelector('.wrapper.active').nextElementSibling.click()
+      } else {
+        document.querySelector('#links > a:first-child').click()
       }
       break
 

@@ -23,7 +23,7 @@
 <body>
   <lottie-player id="spinner" src="/json/loading-charging.json" background="transparent" speed="1" style="height: 100vh;" loop autoplay></lottie-player>
   <div id="start">
-    <span class="button is-clickable" onclick="startapp()">Start</span>
+    <span id="startbtn" class="button is-clickable" onclick="startapp()">Start</span>
   </div>
   <div id="app" class="is-transparent">
     <div id="menu">
@@ -275,7 +275,7 @@
     </p>
   </footer>
   <div class="ui-snackbar ui-snackbar--is-inactive"></div>
-  <video id="bgVideo" autoplay loop class="animated fadeIn delay2" type="video/mp4"></video>
+  <video id="bgVideo" autoplay loop type="video/mp4"></video>
   <script src="/js/app.js"></script>
   <script src="/js/lottie.js"></script>
   <script src="/js/scene.js"></script>

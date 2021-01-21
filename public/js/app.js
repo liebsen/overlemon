@@ -8,7 +8,7 @@ var playSound = (audio, vol) => {
 
   const pref = JSON.parse(localStorage.getItem('player')) || {}
   const sound = new Audio('/sound/' + audio)
-  sound.vol = vol
+  sound.volume = vol
 
   var playPromise = sound.play()
 
@@ -33,7 +33,7 @@ var startapp = () => {
     start.remove()
     playSound('start.mp3')
     setTimeout(() => {
-      bgvideo.classList.add('animated', 'fadeIn', 'slow', 'delay5')
+      bgvideo.classList.add('animated', 'hyperslow', 'fadeIn')
       bgvideo.setAttribute('src', 'https://api.overlemon.com/bg_video')
       bgvideo.play()
       canPlaySound = true
