@@ -136,6 +136,10 @@ app.get('/range_video', function(req, res) {
   const fileSize = stat.size
   const range = req.headers.range
 
+  console.log("range")
+  console.log(chosenFile)
+  console.log(range)
+  
   if (range) {
     const parts = range.replace(/bytes=/, "").split("-")
     const start = parseInt(parts[0], 10)
@@ -143,9 +147,6 @@ app.get('/range_video', function(req, res) {
       ? parseInt(parts[1], 10)
       : fileSize-1
 
-    console.log("range")
-    console.log(chosenFile)
-    console.log(range)
     console.log(`${start} - ${end}`)
 
     if(start >= fileSize) {
