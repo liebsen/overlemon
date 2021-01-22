@@ -29,7 +29,7 @@ strong {
 .textarea {
   font-family: 'avenir medium', sans-serif;
   font-size: 1rem;
-  min-width: 300px;
+  min-width: 220px;
   background-color: transparent;
   border: none;
   border-bottom: 2px solid white;
@@ -441,13 +441,16 @@ footer p {
   color: rgba(0,0,0,.65);
 }
 
-.letsworktogether_result {
+.hidden {
   display: none;
 }
 
 @media screen and (max-width:480px) {
   .work .is-background-img {
     display: none;
+  }
+  .logo h1 {
+    font-size: 1.75rem;
   }
 }
 
@@ -488,3 +491,4 @@ footer p {
     left: 10vh;
   }
 }
+

@@ -83,9 +83,18 @@
   cursor: pointer;
 }
 
+@media screen and (max-width:480px) {
+  .carousel__cell {  
+    border-width: 1.5rem; 
+    padding-top: 3rem;
+  }
+  .carousel__cell p {
+    font-size: 1rem;
+  }
+}
+
 @media screen and (min-width:769px) {
   .carousel__cell h1 {
     font-size: 4rem;
   }
-} 
-
+}

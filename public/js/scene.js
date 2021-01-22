@@ -1,5 +1,5 @@
 var carousel = document.querySelector('.carousel')
-var cells = carousel.querySelectorAll('.carousel__cell')
+var cells = carousel.querySelectorAll('.carousel__cell:not(.hidden)')
 var cellCount = cells.length
 var selectedIndex = 0
 var cellWidth = carousel.offsetWidth
