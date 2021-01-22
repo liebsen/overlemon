@@ -54,10 +54,6 @@ a:hover {
   color: #ffed00;
 }
 
-a.active {
-  color: #ffed00;
-}
-
 footer {
   position: absolute;
   right: 1rem;
@@ -423,6 +419,14 @@ footer p {
   display: inline-grid;
 }
 
+#links a.active .mdi:before {
+  content: "\F012F";
+}
+
+.links a.active .mdi:before {
+  content: "\F012F";
+}
+
 .swal-modal {
   border-radius: 10px;
 }
@@ -446,6 +450,14 @@ footer p {
 }
 
 @media screen and (max-width:480px) {
+  #works {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  #team {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
   .work .is-background-img {
     display: none;
   }
