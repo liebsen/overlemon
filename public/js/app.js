@@ -51,7 +51,7 @@ let playVideo = () => {
   }
   curvideo++
   console.log(`playing ${videos[curvideo]}`)
-  bgvideo.setAttribute('src', `${endpoint}/${videos[curvideo]}`)
+  bgvideo.setAttribute('src', `${endpoint}/v/${videos[curvideo]}`)
   setTimeout(() => {
     bgvideo.play()
   }, 5000)  
