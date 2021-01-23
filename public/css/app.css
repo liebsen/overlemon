@@ -64,12 +64,21 @@ footer p {
   font-size: 13px;
 }
 
-#app {
+/* #app {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+} */
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column-reverse;
+  overflow: hidden;
 }
 
 #start {
@@ -120,8 +129,8 @@ footer p {
 
 .logo {
   position: absolute;
-  top: 5vh;
-  left: 2vh;
+  top: 1rem;
+  left: 0;
   z-index: 10;
   transform: scale(1) perspective(1040px) rotateY(2deg) rotateX(2deg) rotate(-1deg) translateX(1em);
   width: 200px;
@@ -147,7 +156,8 @@ footer p {
 }
 
 #bgVideo {
-  filter: hue-rotate(30deg) contrast(200%);
+  /*filter: hue-rotate(30deg) contrast(200%); */
+  filter: contrast(200%) brightness(0.25);
   position: fixed;
   z-index: -1;
   right: 0;
@@ -161,7 +171,7 @@ footer p {
 #menu {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -1rem;
   right: 0;
   z-index: 98;
   height: 5rem;
@@ -498,9 +508,4 @@ footer p {
   .is-desktop {
     display: block;
   }
-  .logo {
-    top: 8vh;
-    left: 10vh;
-  }
 }
-
