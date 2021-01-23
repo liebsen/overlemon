@@ -7,6 +7,7 @@ var cellHeight = carousel.offsetHeight
 var isHorizontal = true
 var rotateFn = isHorizontal ? 'rotateY' : 'rotateX'
 var radius, theta
+var canPlaySound = false
 
 function rotateCarousel() {
   var angle = theta * selectedIndex * -1
