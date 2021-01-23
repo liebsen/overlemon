@@ -90,12 +90,12 @@ app.get('/list_videos', function(req, res) {
   return res.json(shuffle(fs.readdirSync(path.join(__dirname,'/videos'))))
 })
 
-app.get('/v/{video}', function(req, res) {
+app.get('/v/:video', function(req, res) {
 
   // var files = fs.readdirSync(path.join(__dirname,'/videos'))
   /* now files is an Array of the name of the files in the folder and you can pick a random name inside of that array */
   // const chosenFile = files[Math.floor(Math.random() * files.length)] 
-  const filePath = path.join(__dirname,`/videos/${video}`)
+  const filePath = path.join(__dirname,`/videos/${req.params.video}`)
   // const path = chosenFile
   const stat = fs.statSync(filePath)
   const fileSize = stat.size
