@@ -92,17 +92,13 @@ app.get('/list_videos', function(req, res) {
 
 app.get('/v/:video', function(req, res) {
 
-  // var files = fs.readdirSync(path.join(__dirname,'/videos'))
-  /* now files is an Array of the name of the files in the folder and you can pick a random name inside of that array */
-  // const chosenFile = files[Math.floor(Math.random() * files.length)] 
   const filePath = path.join(__dirname,`/videos/${req.params.video}`)
-  // const path = chosenFile
   const stat = fs.statSync(filePath)
   const fileSize = stat.size
   const range = req.headers.range
 
   console.log("video")
-  console.log(chosenFile)
+  console.log(filePath)
   console.log(range)
 
   if (range) {
@@ -111,57 +107,6 @@ app.get('/v/:video', function(req, res) {
     const end = parts[1]
       ? parseInt(parts[1], 10)
       : fileSize-1
-
-    if(start >= fileSize) {
-      res.status(416).send('Requested range not satisfiable\n'+start+' >= '+fileSize);
-      return
-    }
-    
-    const chunksize = (end-start)+1
-    const file = fs.createReadStream(filePath, {start, end})
-    const head = {
-      'Content-Range': `bytes ${start}-${end}/${fileSize}`,
-      'Accept-Ranges': 'bytes',
-      'Content-Length': chunksize,
-      'Content-Type': 'video/mp4',
-    }
-
-    res.writeHead(206, head)
-    file.pipe(res)
-  } else {
-    const head = {
-      'Content-Length': fileSize,
-      'Content-Type': 'video/mp4',
-    }
-    res.writeHead(200, head)
-    fs.createReadStream(filePath).pipe(res)
-  }
-})
-
-
-app.get('/range_video', function(req, res) {
-
-  var files = fs.readdirSync(path.join(__dirname,'/videos'))
-  /* now files is an Array of the name of the files in the folder and you can pick a random name inside of that array */
-  const chosenFile = files[Math.floor(Math.random() * files.length)] 
-  const filePath = path.join(__dirname,`/videos/${chosenFile}`)
-  // const path = chosenFile
-  const stat = fs.statSync(filePath)
-  const fileSize = stat.size
-  const range = req.headers.range
-
-  console.log("range")
-  console.log(chosenFile)
-  console.log(range)
-  
-  if (range) {
-    const parts = range.replace(/bytes=/, "").split("-")
-    const start = parseInt(parts[0], 10)
-    const end = parts[1]
-      ? parseInt(parts[1], 10)
-      : fileSize-1
-
-    console.log(`${start} - ${end}`)
 
     if(start >= fileSize) {
       res.status(416).send('Requested range not satisfiable\n'+start+' >= '+fileSize);
