@@ -158,7 +158,7 @@ footer p {
 
 #bgVideo {
   /*filter: hue-rotate(30deg) contrast(200%); */
-  filter: contrast(200%) brightness(0.25);
+  filter: contrast(200%);
   position: fixed;
   z-index: -1;
   right: 0;

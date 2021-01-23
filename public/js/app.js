@@ -1,6 +1,9 @@
-let spinner = document.getElementById('spinner')
-let start = document.getElementById('start')
-let app = document.getElementById('app')
+const spinner = document.getElementById('spinner')
+const start = document.getElementById('start')
+const app = document.getElementById('app')
+const bgvideo = document.getElementById('bgVideo')
+let videos = []
+let curvideo = 0
 var canPlaySound = false
 var playSound = (audio, vol) => {
   if (vol === undefined) vol = 1
@@ -28,17 +31,28 @@ var playSound = (audio, vol) => {
 var startapp = () => {
   start.classList.add('animated', 'fadeOut')
   setTimeout(() => {
-    const bgvideo = document.getElementById('bgVideo')
     app.classList.add('animated', 'flipInY')
     start.remove()
     playSound('start.mp3')
-    setTimeout(() => {
-      bgvideo.classList.add('animated', 'hyperslow', 'fadeIn')
-      bgvideo.setAttribute('src', 'https://api.overlemon.com/bg_video')
-      bgvideo.play()
+    axios.get('/list_videos').then(res => {
+      if (res.data) {
+        videos = res.data
+        playVideo()
+      }
+      bgvideo.addEventListener('ended', playVideo, false)
       canPlaySound = true
-    }, 1000)
+    })
   }, 1000)
+}
+
+let playVideo = () => {
+  if (curvideo + 1 <= videos.length) {
+    curvideo = -1
+  }
+  curvideo++
+  console.log(`playing ${videos[curvideo]}`)
+  bgvideo.setAttribute('src', `https://api.overlemon.com/${videos[curvideo]}`)
+  bgvideo.play()
 }
 
 document.addEventListener('DOMContentLoaded', () => {

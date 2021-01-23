@@ -75,6 +75,10 @@ app.post('/contact', (req, res) => {
   })
 })
 
+app.get('/list_videos', function(req, res) {
+  return res.json(fs.readdirSync(path.join(__dirname,'/videos')))
+})
+
 app.get('/bg_video', function(req, res) {
 
   var files = fs.readdirSync(path.join(__dirname,'/videos'))
