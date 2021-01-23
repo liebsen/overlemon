@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('menu').addEventListener('click', () => {
     if (!document.getElementById('menu').classList.contains('fs')) {
       setTimeout(() => {
-        playSound('menu.mp3')
+        playSound('rotate.mp3')
       }, 175)
     }
     document.getElementById('menu').classList.toggle('fs')

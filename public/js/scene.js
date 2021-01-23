@@ -68,7 +68,7 @@ let changeCarousel = () => {
   for ( var i=0; i < cells.length; i++ ) {
     var cell = cells[i]
     var cellAngle = theta * i
-    cell.style.transform = rotateFn + '(' + cellAngle + 'deg) translateZ(' + radius + 'px)'
+    cell.style.transform = rotateFn + '(' + cellAngle + 'deg) translateZ(' + radius + 'px) translateX(1%)'
   }
   rotateCarousel()
 }
