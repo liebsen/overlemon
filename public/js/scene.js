@@ -23,9 +23,9 @@ function rotateCarousel() {
   })
   cells[i].style.display = 'flex'
   cells[i].classList.add('active')
-  document.querySelector('.animatedlogo').classList.remove('pulse')
+  // document.querySelector('.animatedlogo').classList.remove('pulse')
   setTimeout(() => {
-    document.querySelector('.animatedlogo').classList.add('pulse')
+    // document.querySelector('.animatedlogo').classList.add('pulse')
     if (canPlaySound) {
       playSound('rotate.mp3', 0.25)
     }
