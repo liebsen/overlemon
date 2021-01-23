@@ -43,6 +43,14 @@ app.use(cors({
 }))
 */
 
+var shuffle = a => {
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    [a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
 var log = str => {
   let now = new Date().toISOString()
   fs.appendFile('debug.log', `${now} ${str}\n`, err => {
@@ -76,7 +84,7 @@ app.post('/contact', (req, res) => {
 })
 
 app.get('/list_videos', function(req, res) {
-  return res.json(fs.readdirSync(path.join(__dirname,'/videos')))
+  return res.json(shuffle(fs.readdirSync(path.join(__dirname,'/videos'))))
 })
 
 app.get('/bg_video', function(req, res) {
