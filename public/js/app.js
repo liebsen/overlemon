@@ -2,6 +2,7 @@ const spinner = document.getElementById('spinner')
 const start = document.getElementById('start')
 const app = document.getElementById('app')
 const bgvideo = document.getElementById('bgVideo')
+const endpoint = 'https://api.overlemon.com'
 let videos = []
 let curvideo = 0
 var canPlaySound = false
@@ -34,7 +35,7 @@ var startapp = () => {
     app.classList.add('animated', 'flipInY')
     start.remove()
     playSound('start.mp3')
-    axios.get('/list_videos').then(res => {
+    axios.get(`${endpoint}/list_videos`).then(res => {
       if (res.data) {
         videos = res.data
         playVideo()
@@ -46,13 +47,15 @@ var startapp = () => {
 }
 
 let playVideo = () => {
-  if (curvideo + 1 <= videos.length) {
+  if (curvideo + 1 >= videos.length) {
     curvideo = -1
   }
   curvideo++
   console.log(`playing ${videos[curvideo]}`)
-  bgvideo.setAttribute('src', `https://api.overlemon.com/${videos[curvideo]}`)
-  bgvideo.play()
+  bgvideo.setAttribute('src', `${endpoint}/${videos[curvideo]}`)
+  setTimeout(() => {
+    bgvideo.play()
+  }, 5000)  
 }
 
 document.addEventListener('DOMContentLoaded', () => {
