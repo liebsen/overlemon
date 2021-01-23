@@ -4,7 +4,7 @@ const app = document.getElementById('app')
 const bgvideo = document.getElementById('bgVideo')
 const endpoint = 'https://api.overlemon.com'
 let videos = []
-let curvideo = 0
+let curvideo = -1
 var playSound = (audio, vol) => {
   if (vol === undefined) vol = 1
   if (audio === undefined) audio = 'bell.mp3'
