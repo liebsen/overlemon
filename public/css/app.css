@@ -307,7 +307,7 @@ footer p {
 }
 
 #menu.fs .items {
-  transform: scale(1) perspective(1040px) rotateY(2deg) rotateX(2deg) rotate(-1deg) translateX(1em) translateY(0) translateZ(4em);
+  transform: scale(1) perspective(1040px) rotateY(2deg) rotateX(2deg) rotate(-1deg) translateX(0) translateY(0) translateZ(4em);
   pointer-events: auto;
   opacity: 1;
 }
