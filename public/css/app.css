@@ -558,7 +558,7 @@ footer p {
     margin-left: 3.75rem;
   }
   .carousel__cell__content {
-    max-width: 320px;
+    max-width: 240px!important;
   }
 }
 
@@ -607,4 +607,27 @@ footer p {
   .is-desktop {
     display: block;
   }
+}
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #fff9;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff9;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff9;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #fff9;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #fff9;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color:    #fff9;
 }

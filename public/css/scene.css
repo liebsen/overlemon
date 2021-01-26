@@ -90,12 +90,13 @@
 
 @media screen and (max-width:480px) {
   .scene {
-    transform: scale(1) perspective(1040px) rotateY(2deg) rotateX(2deg) rotate(-1deg) translateY(-1.5rem);  
+    transform: scale(1) translateY(-21px) translateX(-3px);
   }
   .scene, .carousel__cell {
     width: 100vw;
     height: 100vh;
     border-width: 1.5rem; 
+    border-radius: 0;
   }
   .carousel__cell p {
     font-size: 1rem;
