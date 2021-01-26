@@ -381,20 +381,6 @@ footer p {
   display: none;
 }
 
-/* #works {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#works > li {
-  float: left;
-  width: 115px;
-  height: 115px;
-  display: inline-grid;
-}
-*/
-
 .splide__arrow {
   background: transparent!important;
   width: 4em!important;
@@ -416,7 +402,6 @@ footer p {
     right: -4em;
 }
 
-
 #works .splide__slide {
   margin-right: 27px;
   border-radius: 1.5rem;
@@ -432,18 +417,14 @@ footer p {
   border-radius: 0.25rem;
 }
 
-.work p {
-  margin: 0.5rem;
+.works_detail {
+  margin-bottom: 1rem;
 }
-
-.work a:hover {
-  color: #407088;
-}
-
-
 .work .is-background-img {
-  height: 135px;
+  border-radius: 1.5rem;
+  height: 8rem;
 }
+
 #team {
   list-style: none;
   padding: 0;

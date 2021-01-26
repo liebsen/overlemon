@@ -1,5 +1,5 @@
 var carousel = document.querySelector('.carousel')
-var cells = carousel.querySelectorAll('.carousel__cell:not(.hidden)')
+var cells = carousel.querySelectorAll('.carousel__cell')
 var cellCount = cells.length
 var selectedIndex = 0
 var cellWidth = carousel.offsetWidth
@@ -14,7 +14,6 @@ function rotateCarousel() {
   carousel.style.transform = 'translateZ(' + -radius + 'px) ' + 
     rotateFn + '(' + angle + 'deg)'
   let i = selectedIndex%cellCount
-
   if (i < 0) {
     i+= cellCount
   }
@@ -53,6 +52,7 @@ let onHashChange = () => {
     document.querySelectorAll(`a`).forEach(a => {
       a.classList.remove('active')
     })
+    document.querySelector(`.${section}`).classList.remove('hidden')
     document.querySelectorAll(`a[href="#${section}"]`).forEach(a => {
       a.classList.toggle('active')
     })
@@ -95,7 +95,7 @@ document.onkeydown = e => {
       }
       break;
     case 37: // left
-      if (document.querySelector('.wrapper.active').previousElementSibling) {
+      if (document.querySelector('.wrapper.active') && document.querySelector('.wrapper.active').previousElementSibling) {
         document.querySelector('.wrapper.active').previousElementSibling.click()
       } else {
         document.querySelector('#links > a:last-child').click()
@@ -106,7 +106,7 @@ document.onkeydown = e => {
       break
 
     case 39: // right
-      if (document.querySelector('.wrapper.active').nextElementSibling) {
+      if (document.querySelector('.wrapper.active') && document.querySelector('.wrapper.active').nextElementSibling) {
         document.querySelector('.wrapper.active').nextElementSibling.click()
       } else {
         document.querySelector('#links > a:first-child').click()

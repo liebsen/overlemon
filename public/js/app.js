@@ -5,6 +5,7 @@ const bgvideo = document.getElementById('bgVideo')
 const endpoint = 'https://api.overlemon.com'
 let videos = []
 let curvideo = -1
+
 var playSound = (audio, vol) => {
   if (vol === undefined) vol = 1
   if (audio === undefined) audio = 'bell.mp3'
@@ -57,6 +58,29 @@ let playVideo = () => {
   }, 5000)  
 }
 
+/* letsworktogether */
+
+let sendMessage = form => {
+  form.style.opacity = 0.5
+  form.querySelector('button[type="submit"]').innerHTML = 'Sending...'
+  const formData = new FormData(form)
+  var data = {}
+  formData.forEach(function(value, key){
+    data[key] = value
+  })
+  // axios.post(`http://localhost:5000/contact`, json).then(res => {
+  axios.post(`https://api.overlemon.com/contact`, data).then(res => {
+    form.reset()
+    form.style.opacity = 1
+    form.querySelector('button[type="submit"]').innerHTML = 'Send'
+    document.querySelector('.letsworktogether_status').innerHTML = res.data.status
+    document.querySelector('.letsworktogether_message').innerHTML = res.data.message
+    location.href = '#letsworktogether_result'
+    // snackbar(res.data.status, res.data.message)
+  })
+  return false
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // alert(window.screen.availWidth + ' ' + window.screen.availHeight)
@@ -82,53 +106,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000)
   }, 1000)
 
+
   /* works */
   axios.get('/json/works.json').then(res => {
-    res.data.forEach(work => {
+    let works = res.data
+    res.data.forEach((work, i) => {
       let ul = document.getElementById('works').querySelector('ul')
       let li = document.createElement('li')
       // let a = document.createElement('a')
-      work.repo = ''
+      repo = ''
       // a.href = '#'
       li.style.backgroundImage = `url('${work.image}')`
       li.className = 'splide__slide'
-      // li.innerHTML = `<h4>${work.title}</h4>`
+      li.setAttribute('dataindex', i)
       ul.append(li)
       if (work.github) {
         Object.keys(work.github).forEach(function(key) {
-          work.repo+= `<span><span class="mdi mdi-github"></span> <a href="${work.github[key]}" class="has-text-dark" target="_blank">${key}</a></span>&nbsp;`
+          repo+= `<span><span class="mdi mdi-github"></span> <a href="${work.github[key]}" target="_blank">${key}</a></span>&nbsp;`
         })
       }
-      li.onclick = e => {
-        const template = (`
-  <div class="work has-text-left">
-    <p><strong>Slogan</strong> ${work.slogan}</p>
-    <p><strong>Technologies</strong> <span class="tag">${work.tech.join('</span><span class="tag">')}</span></p>
-    <p><strong>Architecture</strong> <span class="tag">${work.arch.join('</span><span class="tag">')}</span></p>
-    <p><strong>Company</strong> ${work.company} ${work.country}</p>
-    <p><strong>Description</strong> ${work.text}</p>
-    <p>${work.repo}</p>
-    <a href="${work.url}" target="_blank" title="Go to application"><div class="is-background-img" style="background-image: url(${work.screen})"></div></a>
-  </div>`)
-        setTimeout(() => {
-          playSound('pop.mp3')
-        }, 75)
-        swal({
-          title: work.title,
-          // buttons: ['Cancel', 'Go to app'],
-          content: {
-            element: 'div',
-            attributes: {
-              innerHTML: `${template}`
-            }
-          }
-        })
-      }
+      works[i].repo = repo
     })
 
     setTimeout(() => {
-      console.log(document.getElementById('works'))
-      new Splide( '#works', {
+      const splide = new Splide( '#works', {
         type   : 'loop',
         gap: '1rem',
         focus  : 'center',
@@ -138,6 +139,23 @@ document.addEventListener('DOMContentLoaded', () => {
         fixedWidth     : '8rem',
         fixedHeight     : '8rem'
       } ).mount()
+
+      splide.on('click', slide => {
+        const i = slide.slide.getAttribute('dataindex')
+        const work = works[i]
+        const template = (`
+<div class="work has-text-left">
+  <h1>${work.title}</h1>
+  <a href="${work.url}" target="_blank" title="Go to application"><div class="is-background-img" style="background-image: url(${work.screen})"></div></a>
+  <p><strong>Slogan</strong> ${work.slogan}</p>
+  <p><strong>Description</strong> ${work.text}</p>
+  <p><span class="tag">${work.tech.join('</span><span class="tag">')}</span><span class="tag">${work.arch.join('</span><span class="tag">')}</span></p>
+  <p><strong>Company</strong>${work.country} ${work.company}</p>
+  <p>${work.repo}</p>
+</div>`)
+        document.querySelector('.works_detail').innerHTML = `${template}`
+        location.href = '#work'
+      })
     }, 1000)
   })
 })
