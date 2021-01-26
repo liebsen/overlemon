@@ -543,15 +543,16 @@ footer p {
     height: 50px;
     margin-top: 0.5rem;
   }
-
   .logo h1 {
     font-size: 1.75rem;
     margin-left: 3.5rem;
     margin-top: 0.25rem;
   }
-
   .logo h6 {
     margin-left: 3.75rem;
+  }
+  .carousel__cell__content {
+    max-width: 320px;
   }
 }
 

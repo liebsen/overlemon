@@ -12,7 +12,10 @@ gestureZone.addEventListener('touchstart', function(event) {
 gestureZone.addEventListener('touchend', function(event) {
     touchendX = event.changedTouches[0].screenX;
     touchendY = event.changedTouches[0].screenY;
-    handleGesture();
+    console.log(event.target)
+    if (event.target.className && event.target.className.indexOf('splide') > -1) { } else {
+        handleGesture();
+    }
 }, false); 
 
 function handleGesture() {

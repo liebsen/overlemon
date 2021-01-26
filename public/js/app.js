@@ -132,6 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         type   : 'loop',
         gap: '1rem',
         focus  : 'center',
+        arrows: false,
         pagination: false,
         perPage    : 1,
         fixedWidth     : '10rem',
