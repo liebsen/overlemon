@@ -7,7 +7,7 @@ body {
   text-align: center;
   overflow: hidden;
   font-family: 'avenir medium', sans-serif;
-  background-color: #333;
+  background-color: black;
   font-weight: 800;
   color: white;
 }
@@ -381,7 +381,7 @@ footer p {
   display: none;
 }
 
-#works {
+/* #works {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -393,16 +393,43 @@ footer p {
   height: 115px;
   display: inline-grid;
 }
+*/
 
-#works > li > a {
-  background-color: white;
-  background-repeat: no-repeat;
-  background-position: center; 
-  background-size: cover;
+.splide__arrow {
+  background: transparent!important;
+  width: 4em!important;
+  height: 4em!important;
+  transition: all 0.25s linear; 
 }
 
-.work .is-background-img {
-  height: 135px;
+.splide__arrow svg {
+  fill: white;
+  width: 4em!important;
+  height: 4em!important;
+}
+
+.splide__arrow--prev {
+    left: -3em;
+}
+
+.splide__arrow--next {
+    right: -4em;
+}
+
+
+#works .splide__slide {
+  margin-right: 27px;
+  border-radius: 1.5rem;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center center; 
+  background-size: cover;
+  cursor: pointer;
+}
+
+#works .splide__slide h4 {
+  background-color: black;
+  border-radius: 0.25rem;
 }
 
 .work p {
@@ -413,6 +440,10 @@ footer p {
   color: #407088;
 }
 
+
+.work .is-background-img {
+  height: 135px;
+}
 #team {
   list-style: none;
   padding: 0;

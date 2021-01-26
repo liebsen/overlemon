@@ -76,27 +76,30 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       spinner.remove()
       start.classList.add('animated', 'fadeIn', 'delay')
-      playSound('ready.mp3')
+      setTimeout(() => {
+        playSound('ready.mp3')  
+      }, 700)
     }, 1000)
   }, 1000)
 
   /* works */
   axios.get('/json/works.json').then(res => {
     res.data.forEach(work => {
-      let works = document.getElementById('works')
+      let ul = document.getElementById('works').querySelector('ul')
       let li = document.createElement('li')
-      let a = document.createElement('a')
+      // let a = document.createElement('a')
       work.repo = ''
-      a.href = '#'
-      a.style.backgroundImage = `url('${work.image}')`
-      li.append(a)
-      works.append(li)
+      // a.href = '#'
+      li.style.backgroundImage = `url('${work.image}')`
+      li.className = 'splide__slide'
+      // li.innerHTML = `<h4>${work.title}</h4>`
+      ul.append(li)
       if (work.github) {
         Object.keys(work.github).forEach(function(key) {
           work.repo+= `<span><span class="mdi mdi-github"></span> <a href="${work.github[key]}" class="has-text-dark" target="_blank">${key}</a></span>&nbsp;`
         })
       }
-      a.onclick = e => {
+      li.onclick = e => {
         const template = (`
   <div class="work has-text-left">
     <p><strong>Slogan</strong> ${work.slogan}</p>
@@ -122,6 +125,19 @@ document.addEventListener('DOMContentLoaded', () => {
         })
       }
     })
+
+    setTimeout(() => {
+      console.log(document.getElementById('works'))
+      new Splide( '#works', {
+        type   : 'loop',
+        gap: '1rem',
+        focus  : 'center',
+        pagination: false,
+        perPage    : 1,
+        fixedWidth     : '10rem',
+        fixedHeight     : '10rem'
+      } ).mount()
+    }, 1000)
   })
 })
 

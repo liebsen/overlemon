@@ -17,6 +17,7 @@
   <link rel="stylesheet" type="text/css" href="/css/animate.css" />
   <link rel="stylesheet" type="text/css" href="/css/snackbar.css" />
   <link rel="stylesheet" type="text/css" href="/css/tooltip.css" />
+  <link rel="stylesheet" href="/css/splide.min.css">
   <link rel="stylesheet" type="text/css" href="/css/materialdesignicons.min.css" />
   <title>Overlemon</title>
 </head>
@@ -128,7 +129,11 @@
           <div class="carousel__cell__content">
             <h1>Our Work</h1>
             <p class="is-desktop">These are some of our works which we are proud of.</p>
-            <ul id="works"></ul>
+            <div class="splide" id="works">
+              <div class="splide__track">
+                <ul class="splide__list"></ul>
+              </div>
+            </div>
           </div>
         </div>
         <div class="carousel__cell team">
@@ -284,6 +289,7 @@
   <script src="/js/axios.min.js"></script>
   <script src="/js/status.js"></script>
   <script src="/js/snackbar.js"></script>
+  <script src="/js/splide.min.js"></script>
   <script src="/js/sweetalert.min.js"></script>
   <script>
     let sendMessage = form => {

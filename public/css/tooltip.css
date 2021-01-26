@@ -46,6 +46,7 @@
 }
 
 /* CSS Triangles - see Trevor's post */
+/*
 .wrapper .tooltip:after {
   border-left: solid transparent 10px;
   border-right: solid transparent 10px;
@@ -58,7 +59,7 @@
   position: absolute;
   width: 0;
 }
-
+*/
 .wrapper:hover .tooltip {
   opacity: 1;
   pointer-events: auto;
