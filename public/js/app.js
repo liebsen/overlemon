@@ -38,7 +38,7 @@ var startapp = () => {
     axios.get(`${endpoint}/list_videos`).then(res => {
       if (res.data) {
         videos = res.data
-        // playVideo()
+        playVideo()
       }
       bgvideo.addEventListener('ended', playVideo, false)
       canPlaySound = true
