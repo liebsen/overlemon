@@ -97,7 +97,7 @@ footer p {
 }
 
 .tag {
-  font-size: 0.75rem;
+  font-size: 1rem;
   background-color: #333;
   color: white;
   padding: 2px 4px;
@@ -125,7 +125,7 @@ footer p {
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 }
 
 .logo {
@@ -423,6 +423,7 @@ footer p {
 .work .is-background-img {
   border-radius: 1.5rem;
   height: 8rem;
+  height: 14rem;
 }
 
 #team {

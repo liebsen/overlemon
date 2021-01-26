@@ -147,11 +147,11 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="work has-text-left">
   <h1>${work.title}</h1>
   <a href="${work.url}" target="_blank" title="Go to application"><div class="is-background-img" style="background-image: url(${work.screen})"></div></a>
-  <p><strong>Slogan</strong> ${work.slogan}</p>
-  <p><strong>Description</strong> ${work.text}</p>
-  <p><span class="tag">${work.tech.join('</span><span class="tag">')}</span><span class="tag">${work.arch.join('</span><span class="tag">')}</span></p>
-  <p><strong>Company</strong>${work.country} ${work.company}</p>
-  <p>${work.repo}</p>
+  <p>${work.slogan}<br>
+  ${work.text}<br>
+  <span class="tag">${work.tech.join('</span><span class="tag">')}</span><br>
+  ${work.country} ${work.company}<br>
+  ${work.repo}</p>
 </div>`)
         document.querySelector('.works_detail').innerHTML = `${template}`
         location.href = '#work'
@@ -159,6 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000)
   })
 })
+
+/* <span class="tag">${work.arch.join('</span><span class="tag">')}</span><br> */
 
 window.onerror = function (msg, url, lineNo, columnNo, error) {
   alert(`error: ${msg}:${lineNo}`)
