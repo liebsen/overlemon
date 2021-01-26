@@ -146,9 +146,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const template = (`
 <div class="work has-text-left">
   <h1>${work.title}</h1>
+  <p>${work.slogan}</p>
   <a href="${work.url}" target="_blank" title="Go to application"><div class="is-background-img" style="background-image: url(${work.screen})"></div></a>
-  <p>${work.slogan}<br>
-  ${work.text}<br>
+  <p>${work.text}<br>
   <span class="tag">${work.tech.join('</span><span class="tag">')}</span><br>
   ${work.country} ${work.company}<br>
   ${work.repo}</p>
