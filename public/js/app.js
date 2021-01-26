@@ -38,7 +38,7 @@ var startapp = () => {
     axios.get(`${endpoint}/list_videos`).then(res => {
       if (res.data) {
         videos = res.data
-        playVideo()
+        // playVideo()
       }
       bgvideo.addEventListener('ended', playVideo, false)
       canPlaySound = true
@@ -73,9 +73,16 @@ let sendMessage = form => {
     form.reset()
     form.style.opacity = 1
     form.querySelector('button[type="submit"]').innerHTML = 'Send'
-    document.querySelector('.letsworktogether_status').innerHTML = res.data.status
-    document.querySelector('.letsworktogether_message').innerHTML = res.data.message
-    location.href = '#letsworktogether_result'
+    const template = (`
+<div>
+  <div class="works_detail">
+    <h1 class="letsworktogether_status">${res.data.status}</h1>
+    <p class="letsworktogether_message">${res.data.message}</p>
+  </div>
+  <a href="#landing" class="button"><span class="mdi mdi-chevron-left"></span> Back to home</a>
+</div>`)
+    document.querySelector('.entry_contents').innerHTML = `${template}`
+    location.href = '#entry'
     // snackbar(res.data.status, res.data.message)
   })
   return false
@@ -117,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
       repo = ''
       // a.href = '#'
       li.style.backgroundImage = `url('${work.image}')`
-      li.className = 'splide__slide'
+      li.className = 'splide__slide is-hoverable'
       li.setAttribute('dataindex', i)
       ul.append(li)
       if (work.github) {
@@ -130,31 +137,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(() => {
       const splide = new Splide( '#works', {
-        type   : 'loop',
+        type: 'loop',
         gap: '1rem',
-        focus  : 'center',
         arrows: false,
+        focus: 'center',
         pagination: false,
-        perPage    : 1,
-        fixedWidth     : '8rem',
-        fixedHeight     : '8rem'
+        fixedWidth: '9rem',
+        fixedHeight: '9rem'
       } ).mount()
-
       splide.on('click', slide => {
         const i = slide.slide.getAttribute('dataindex')
         const work = works[i]
         const template = (`
-<div class="work has-text-left">
-  <h1>${work.title}</h1>
-  <p>${work.slogan}</p>
-  <a href="${work.url}" target="_blank" title="Go to application"><div class="is-background-img" style="background-image: url(${work.screen})"></div></a>
-  <p>${work.text}<br>
-  <span class="tag">${work.tech.join('</span><span class="tag">')}</span><br>
-  ${work.country} ${work.company}<br>
-  ${work.repo}</p>
+<div class="works_detail">
+  <div class="work has-text-left">
+    <h1>${work.title}</h1>
+    <p>${work.slogan}</p>
+    <a href="${work.url}" target="_blank" title="Go to application"><div class="is-background-img is-hoverable" style="background-image: url(${work.screen})"></div></a>
+    <p>${work.text}<br>
+    <span class="tag">${work.tech.join('</span><span class="tag">')}</span><br>
+    ${work.country} ${work.company}<br>
+    ${work.repo}</p>
+  </div>
+  <a href="#works" class="button"><span class="mdi mdi-chevron-left"></span> Back to works</a>
 </div>`)
-        document.querySelector('.works_detail').innerHTML = `${template}`
-        location.href = '#work'
+        document.querySelector('.entry_contents').innerHTML = `${template}`
+        location.href = '#entry'
       })
     }, 1000)
   })

@@ -417,13 +417,27 @@ footer p {
   border-radius: 0.25rem;
 }
 
+#works-track {
+  padding-bottom: 1rem;
+}
+
 .works_detail {
   margin-bottom: 1rem;
 }
+
 .work .is-background-img {
   border-radius: 1.5rem;
-  height: 8rem;
-  height: 14rem;
+  height: 9rem;
+  width: 14rem;
+}
+
+.is-hoverable {
+  box-shadow: 1rem 1rem 0 #0003;
+  transition: all 0.15s linear;
+}
+
+.is-hoverable:hover {
+  filter: contrast(130%);
 }
 
 #team {
@@ -450,15 +464,15 @@ footer p {
 
 #team > li {
   float: left;
-  width: 8rem;
-  height: 8rem;
+  width: 9rem;
+  height: 9rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   display: inline-grid;
 }
 
 #team > li > span {
-  padding-top: 0.25rem;
+  padding-top: 1.25rem;
   font-family: 'avenir black';
 }
 
@@ -472,7 +486,7 @@ footer p {
   background-repeat: no-repeat;
   background-position: center; 
   background-size: cover;
-  height: 8rem;
+  height: 9rem;
 }
 
 #links a {

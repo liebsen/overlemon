@@ -55,7 +55,7 @@
 .carousel__cell:nth-child(9n+2), .wrapper:nth-child(9n+2) .tooltip { background-color: #cf1b1b; }
 .carousel__cell:nth-child(9n+3), .wrapper:nth-child(9n+3) .tooltip { background-color: #394989; }
 .carousel__cell:nth-child(9n+4), .wrapper:nth-child(9n+4) .tooltip { background-color: #2b580c; }
-.carousel__cell:nth-child(9n+5), .wrapper:nth-child(9n+5) .tooltip { background-color: #3b6978; }
+.carousel__cell:nth-child(9n+5), .wrapper:nth-child(9n+5) .tooltip { background-color: #21209c; }
 .carousel__cell:nth-child(9n+6), .wrapper:nth-child(9n+6) .tooltip { background-color: #34a853; }
 .carousel__cell:nth-child(9n+7), .wrapper:nth-child(9n+7) .tooltip { background-color: #5b5656; }
 .carousel__cell:nth-child(9n+8), .wrapper:nth-child(9n+8) .tooltip { background-color: #ff9900; }
