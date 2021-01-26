@@ -468,8 +468,10 @@ footer p {
 
 #team > li {
   float: left;
-  width: 160px;
-  height: 160px;
+  width: 8rem;
+  height: 8rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   display: inline-grid;
 }
 
@@ -483,11 +485,12 @@ footer p {
 }
 
 #team > li > div {
+  border-radius: 1.5rem;
   background-color: white;
   background-repeat: no-repeat;
   background-position: center; 
   background-size: cover;
-  height: 160px;
+  height: 8rem;
 }
 
 #links a {
@@ -527,6 +530,9 @@ footer p {
 }
 
 @media screen and (max-width:480px) {
+  #app > .logo {
+    display: none;
+  }
   #works {
     margin-left: -1rem;
     margin-right: -1rem;

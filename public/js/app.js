@@ -75,10 +75,10 @@ document.addEventListener('DOMContentLoaded', () => {
     spinner.classList.add('animated', 'fadeOut')
     setTimeout(() => {
       spinner.remove()
-      start.classList.add('animated', 'fadeIn', 'delay')
+      start.classList.add('animated', 'rotateInUpLeft')
       setTimeout(() => {
         playSound('ready.mp3')  
-      }, 700)
+      }, 1000)
     }, 1000)
   }, 1000)
 
@@ -135,8 +135,8 @@ document.addEventListener('DOMContentLoaded', () => {
         arrows: false,
         pagination: false,
         perPage    : 1,
-        fixedWidth     : '10rem',
-        fixedHeight     : '10rem'
+        fixedWidth     : '8rem',
+        fixedHeight     : '8rem'
       } ).mount()
     }, 1000)
   })
