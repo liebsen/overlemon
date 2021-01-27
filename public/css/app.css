@@ -92,6 +92,40 @@ footer p {
   width: 100vw;
 }
 
+.columns {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  margin-top: -0.75rem;
+}
+
+.columns:last-child {
+  margin-bottom: -0.75rem;
+}
+
+.columns:not(:last-child) {
+  margin-bottom: calc(1.5rem - 0.75rem);
+}
+
+.columns.is-centered {
+  justify-content: center;
+}
+
+.columns.is-multiline {
+  flex-wrap: wrap;
+}
+
+.columns.is-vcentered {
+  align-items: center;
+}
+
+.column {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 0.75rem;
+}
+
 .is-clickable {
   cursor: pointer;
 }
@@ -318,6 +352,10 @@ footer p {
 
 .field {
 	padding: 0.5rem;
+}
+
+.b-spaced {
+  margin-bottom: 1.5rem;
 }
 
 .button,
@@ -596,6 +634,9 @@ footer p {
 }
 
 @media screen and (min-width:769px) {
+  .columns {
+    display: flex
+  }
   #menu .items .logo {
     top: 5%;
     left: 5%;

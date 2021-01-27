@@ -151,13 +151,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const template = (`
 <div class="works_detail">
   <div class="work has-text-left">
-    <h1>${work.title}</h1>
-    <p>${work.slogan}</p>
-    <a href="${work.url}" target="_blank" title="Go to application"><div class="is-background-img is-hoverable" style="background-image: url(${work.screen})"></div></a>
-    <p>${work.text}<br>
-    <span class="tag">${work.tech.join('</span><span class="tag">')}</span><br>
-    ${work.country} ${work.company}<br>
-    ${work.repo}</p>
+    <div class="columns">
+      <div class="column">
+        <h1>${work.title}</h1>
+        <p>${work.slogan}</p>
+        <p>${work.text}<br>
+        <i>Built for</i> ${work.country} ${work.company}<br></p>
+      </div>
+      <div class="column">
+        <a href="${work.url}" target="_blank" title="Go to application"><div class="is-background-img is-hoverable b-spaced" style="background-image: url(${work.screen})"></div></a>
+        <span class="tag">${work.tech.join('</span><span class="tag">')}</span>
+      </div>
+    </div>
   </div>
   <a href="#works" class="button"><span class="mdi mdi-chevron-left"></span> Back to works</a>
 </div>`)
@@ -168,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 })
 
-/* <span class="tag">${work.arch.join('</span><span class="tag">')}</span><br> */
+/* <span class="tag">${work.arch.join('</span><span class="tag">')} ${work.repo}</span><br> */
 
 window.onerror = function (msg, url, lineNo, columnNo, error) {
   alert(`error: ${msg}:${lineNo}`)
