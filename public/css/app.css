@@ -466,11 +466,11 @@ footer p {
 .work .is-background-img {
   border-radius: 1.5rem;
   height: 9rem;
-  width: 14rem;
+  width: 16rem;
 }
 
 .is-hoverable {
-  box-shadow: 1rem 1rem 0 #0003;
+  box-shadow: 0.75rem 0.75rem 0 #0003;
   transition: all 0.15s linear;
 }
 
@@ -592,7 +592,7 @@ footer p {
     margin-left: 3.75rem;
   }
   .carousel__cell__content {
-    max-width: 240px!important;
+    max-width: 100%!important;
   }
 }
 
