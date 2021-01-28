@@ -123,6 +123,7 @@ footer p {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
+  width: 50%;
   padding: 0.75rem;
 }
 
@@ -134,9 +135,11 @@ footer p {
   font-size: 1rem;
   background-color: #333;
   color: white;
-  padding: 2px 4px;
-  border-radius: 3px;
-  margin-right: 4px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  margin-right: 0.25rem;
+  display: inline-block;
+  margin-bottom: 0.25rem;
 }
 
 .is-transparent {

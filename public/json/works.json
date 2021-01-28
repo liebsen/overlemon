@@ -34,7 +34,7 @@
     "screen": "\/img\/works\/screen\/flitz.jpg",
     "country": "",
     "arch": ["app", "api"],
-    "tech": ["NodeJS", "MongoDB", "VueJS", "Webpack", "Socket.io", "StockfishJS"],
+    "tech": ["NodeJS", "MongoDB", "VueJS", "StockfishJS", "ChessJS", "ChessboardJS", "Webpack", "Socket.io"],
     "text": "Flitz is an platform for playing chess online",
     "github": {
         "app": "https://github.com/liebsen/flitz.git",

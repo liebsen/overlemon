@@ -137,10 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(() => {
       const splide = new Splide( '#works', {
-        type: 'loop',
         gap: '1rem',
         arrows: false,
-        focus: 'center',
         pagination: false,
         fixedWidth: '9rem',
         fixedHeight: '9rem'
@@ -156,12 +154,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <h1>${work.title}</h1>
         <h4>${work.slogan}</h4>
         <p class="b-spaced">${work.text}</p>
-        <p class="b-spaced"><span class="tag">${work.tech.join('</span><span class="tag">')}</span></p>
         <i>Built for</i> ${work.country} ${work.company}<br></p>
         <a href="#works" class="button"><span class="mdi mdi-chevron-left"></span> works</a>
       </div>
       <div class="column">
-        <a href="${work.url}" target="_blank" title="Go to application"><div class="is-background-img is-hoverable" style="background-image: url(${work.screen})"></div></a>        
+        <a href="${work.url}" target="_blank" title="Go to application"><div class="is-background-img is-hoverable b-spaced" style="background-image: url(${work.screen})"></div></a>
+        <p><span class="tag">${work.tech.join('</span><span class="tag">')}</span></p>
       </div>
     </div>
   </div>  
