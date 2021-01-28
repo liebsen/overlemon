@@ -92,7 +92,7 @@ app.get('/list_videos', function(req, res) {
 
 app.get('/v/:video', function(req, res) {
 
-  const filePath = path.join(__dirname,`/videos/${req.params.video}.mp4`)
+  const filePath = path.join(__dirname,`/videos/${req.params.video}`)
   const stat = fs.statSync(filePath)
   const fileSize = stat.size
   const range = req.headers.range
