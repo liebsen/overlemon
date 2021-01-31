@@ -123,5 +123,16 @@
     "arch": ["app", "api", "shop", "panel", "community", "admin"],
     "tech": ["NodeJS", "MongoDB", "VueJS", "Socket.io", "Webpack"],
     "text": "Ecommerce. Online shops platform."
+  },{
+    "title": "YACABRON",
+    "slogan": "Inspired by Mexican cuisine",
+    "company": "YACABRON",
+    "url": "https://yacabron.com",
+    "image": "\/img\/works\/yacabron.jpg",
+    "screen": "\/img\/works\/screen\/yacabron.jpg",
+    "country": "",
+    "arch": ["app", "api", "admin"],
+    "tech": ["NodeJS", "MongoDB", "VueJS", "Socket.io", "Webpack"],
+    "text": "Order your yacabron box and add whatever you like"
   }
 ]
