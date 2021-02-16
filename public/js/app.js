@@ -32,13 +32,13 @@ var playSound = (audio, vol) => {
 var startapp = () => {
   start.classList.add('animated', 'fadeOut')
   setTimeout(() => {
-    app.classList.add('animated', 'flipInY')
+    app.classList.add('animated', 'fadeIn')
     start.remove()
     playSound('start.mp3')
     axios.get(`${endpoint}/list_videos`).then(res => {
       if (res.data) {
         videos = res.data
-        playVideo()
+        // playVideo()
       }
       bgvideo.addEventListener('ended', playVideo, false)
       canPlaySound = true
@@ -106,13 +106,12 @@ document.addEventListener('DOMContentLoaded', () => {
     spinner.classList.add('animated', 'fadeOut')
     setTimeout(() => {
       spinner.remove()
-      start.classList.add('animated', 'rotateInUpLeft')
+      start.classList.add('animated', 'fadeIn')
       setTimeout(() => {
         playSound('ready.mp3')  
       }, 1000)
     }, 1000)
   }, 1000)
-
 
   /* works */
   axios.get('/json/works.json').then(res => {
@@ -120,19 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
     res.data.forEach((work, i) => {
       let ul = document.getElementById('works').querySelector('ul')
       let li = document.createElement('li')
-      // let a = document.createElement('a')
-      repo = ''
-      // a.href = '#'
       li.style.backgroundImage = `url('${work.image}')`
       li.className = 'splide__slide is-hoverable'
       li.setAttribute('dataindex', i)
       ul.append(li)
-      if (work.github) {
-        Object.keys(work.github).forEach(function(key) {
-          repo+= `<span><span class="mdi mdi-github"></span> <a href="${work.github[key]}" target="_blank">${key}</a></span>&nbsp;`
-        })
-      }
-      works[i].repo = repo
     })
 
     setTimeout(() => {

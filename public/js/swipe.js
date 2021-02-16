@@ -25,22 +25,24 @@ function handleGesture() {
     if (absX > touchOffset) {
         if (touchendX <= touchstartX) {
             // console.log('Swiped left');
-            carouselNext()
+            
         }
         
         if (touchendX >= touchstartX) {
             // console.log('Swiped right');
-            carouselPrev()
+            
         }
     }
 
     if (absY > touchOffset) {
         if (touchendY <= touchstartY) {
             // console.log('Swiped up');
+            carouselPrev()
         }
         
         if (touchendY >= touchstartY) {
             // console.log('Swiped down');
+            carouselNext()
         }
     }
     

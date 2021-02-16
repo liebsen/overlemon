@@ -6,8 +6,10 @@ body {
   margin: 0;
   text-align: center;
   overflow: hidden;
+  height: 100vh;
   font-family: 'avenir medium', sans-serif;
-  background-color: black;
+  background: rgb(38,38,38);
+  background: radial-gradient(circle, rgba(20,20,20,1) 0%, rgba(0,0,0,1) 100%);
   font-weight: 800;
   color: white;
 }
@@ -64,20 +66,14 @@ footer p {
   font-size: 13px;
 }
 
-/* #app {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-} */
-
 #app {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  flex-direction: column-reverse;
+  min-height: 100vh;
+  width: 100vw;
+  flex-direction: row;
   overflow: hidden;
 }
 
@@ -123,7 +119,6 @@ footer p {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  width: 50%;
   padding: 0.75rem;
 }
 
@@ -416,7 +411,6 @@ footer p {
   width: 150%;
 }
 
-
 .is-mobile, 
 .is-desktop {
   display: none;
@@ -436,15 +430,15 @@ footer p {
 }
 
 .splide__arrow--prev {
-    left: -3em;
+  left: -3em;
 }
 
 .splide__arrow--next {
-    right: -4em;
+  right: -4em;
 }
 
 #works .splide__slide {
-  margin-right: 27px;
+  /*margin-right: 27px;*/
   border-radius: 1.5rem;
   background-color: white;
   background-repeat: no-repeat;
@@ -459,6 +453,7 @@ footer p {
 }
 
 #works-track {
+  padding-left: 0.5rem;
   padding-bottom: 1rem;
 }
 
@@ -481,29 +476,29 @@ footer p {
   filter: contrast(130%);
 }
 
-#team {
+#teamlist {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-#team > li:nth-child(1) > div {
+#teamlist > li:nth-child(1) > div {
   background-image: url('/img/team/marcia.jpg')
 }
 
-#team > li:nth-child(2) > div {
+#teamlist > li:nth-child(2) > div {
   background-image: url('/img/team/guido.jpg')
 }
 
-#team > li:nth-child(3) > div {
+#teamlist > li:nth-child(3) > div {
   background-image: url('/img/team/facundo.jpg')
 }
 
-#team > li:nth-child(4) > div {
+#teamlist > li:nth-child(4) > div {
   background-image: url('/img/team/martin.jpg')
 }
 
-#team > li {
+#teamlist > li {
   float: left;
   width: 9rem;
   height: 9rem;
@@ -512,22 +507,27 @@ footer p {
   display: inline-grid;
 }
 
-#team > li > span {
+#teamlist > li > span {
   padding-top: 1.25rem;
   font-family: 'avenir black';
 }
 
-#team > li > small {
+#teamlist > li > small {
   font-size: 13px;
 }
 
-#team > li > div {
+#teamlist > li > div {
   border-radius: 1.5rem;
   background-color: white;
   background-repeat: no-repeat;
   background-position: center; 
   background-size: cover;
   height: 9rem;
+}
+
+#links {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 #links a {
@@ -574,7 +574,7 @@ footer p {
     margin-left: -1rem;
     margin-right: -1rem;
   }
-  #team {
+  #teamlist {
     margin-left: -1rem;
     margin-right: -1rem;
   }
@@ -610,19 +610,19 @@ footer p {
     width: 80px;
     height: 80px;
   }
-  #team > li {
+  #teamlist > li {
     width: 120px;
     height: 180px;
   }
-  #team > li > div {
+  #teamlist > li > div {
     height: 120px!important;
   }
-  #team > li > span {
+  #teamlist > li > span {
     font-size: 14px;
     padding-top: 0;
     line-height: 0;
   }
-  #team > li > small {
+  #teamlist > li > small {
     font-size: 10px;
   }
 }
@@ -638,7 +638,8 @@ footer p {
 
 @media screen and (min-width:769px) {
   .columns {
-    display: flex
+    display: flex;
+    width: 50%;
   }
   #menu .items .logo {
     top: 5%;

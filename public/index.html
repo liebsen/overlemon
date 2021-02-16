@@ -11,14 +11,7 @@
   <meta property="og:url" content="https://overlemon.com" />
   <meta property="og:image" content="https://overlemon.com/img/splash.jpg" />
   <meta property="og:description" content="Your digital agency" /> 
-  <link rel="stylesheet" type="text/css" href="/css/app.css" />
-  <link rel="stylesheet" type="text/css" href="/css/scene.css" />
-  <link rel="stylesheet" type="text/css" href="/css/avenir.css" />
-  <link rel="stylesheet" type="text/css" href="/css/animate.css" />
-  <link rel="stylesheet" type="text/css" href="/css/snackbar.css" />
-  <link rel="stylesheet" type="text/css" href="/css/tooltip.css" />
-  <link rel="stylesheet" type="text/css" href="/css/splide.min.css">
-  <link rel="stylesheet" type="text/css" href="/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/bundle.min.css" />
   <title>Overlemon</title>
 </head>
 <body>
@@ -27,7 +20,7 @@
     <span id="startbtn" class="button is-clickable" onclick="startapp()"><span class="mdi mdi-chevron-right"></span> Start</span>
   </div>
   <div id="app" class="is-transparent">
-    <div id="menu">
+    <div id="menu" class="is-mobile">
       <div class="burger">
         <svg viewBox="0 0 800 600">
           <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
@@ -101,78 +94,6 @@
     </div>
     <div class="scene" id="gestureZone">
       <div class="carousel">
-        <div class="carousel__cell landing">
-          <div class="carousel__cell__content">
-            <h4>The digital agency</h4>
-            <h1>Which lifts your business up to new heights</h1>
-          </div>
-        </div>
-        <div class="carousel__cell strategy">
-          <div class="carousel__cell__content">
-            <h1>Strategy</h1>
-            <p>There is a deep analysis stage in every project we undertake. This involves mainly listening to the client and understand what they need. Afterwards, we focus on the right architecture for the solution to be built.</p>
-          </div>
-        </div>
-        <div class="carousel__cell design">
-          <div class="carousel__cell__content">
-            <h1>Design</h1>
-            <p>We start with a pencil and paper in order to understand the big picture. From there, we keep an open communication with the client to ensure that each iteration get us closer to the desired outcome</p>
-          </div>
-        </div>
-        <div class="carousel__cell code">
-          <div class="carousel__cell__content">
-            <h1>Code</h1>
-            <p>The engineering team takes the lead here. With a high degree of professionalism, collaborating with each other they apply their knowledge combined with best industry practices to fulfill the client’s expectations and deliver high quality software.</p>
-          </div>
-        </div>
-        <div class="carousel__cell works">
-          <div class="carousel__cell__content">
-            <h1>Our Work</h1>
-            <p class="is-desktop">These are some of our works which we are proud of.</p>
-            <div class="splide" id="works">
-              <div class="splide__track">
-                <ul class="splide__list"></ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel__cell team">
-          <div class="carousel__cell__content">
-            <h1>The Team</h1>
-            <p class="is-desktop">We are a team specialized in web development oriented to provide consulting and solutions in short time.</p>
-            <ul id="team">
-              <li>
-                <div class="is-hoverable"></div>
-                <span>Marcia Carrizo</span>
-                <small>Q&A Genius</small>                
-              </li>
-              <li>
-                <div class="is-hoverable"></div>
-                <span>Guido Cigliutti</span>
-                <small>Sales Champion</small>
-              </li>
-              <li>
-                <div class="is-hoverable"></div>
-                <span>Facundo Oviedo</span>
-                <small>Data Analysis Master</small>
-              </li>
-              <li>
-                <div class="is-hoverable"></div>
-                <span>Martin Frith</span>
-                <small>Web Developer Monk</small>                
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="carousel__cell specialtasks">
-          <div class="carousel__cell__content">
-            <h1>Special tasks</h1>
-            <p>We deliver special services like server installs and configurations, mailservers, fileservers, turnservers, automatizations, optimizations, scale-ups and devops.</p>
-            <p>We also consultants on e-commerce solutions and optimization.</p>
-            <p>Real time communications platforms and media servers are part of our dayly tasks as well.</p>
-            <p>We work hard everyday to improve our skills and make the web simpler and easier to browse.</p>
-          </div>
-        </div>
         <div class="carousel__cell letsworktogether">
           <div class="carousel__cell__content">
             <h1>Let’s work together!</h1>
@@ -202,6 +123,78 @@
             </form>
           </div>
         </div>
+        <div class="carousel__cell specialtasks">
+          <div class="carousel__cell__content">
+            <h1>Special tasks</h1>
+            <p>We deliver special services like server installs and configurations, mailservers, fileservers, turnservers, automatizations, optimizations, scale-ups and devops.</p>
+            <p>We also consultants on e-commerce solutions and optimization.</p>
+            <p>Real time communications platforms and media servers are part of our dayly tasks as well.</p>
+            <p>We work hard everyday to improve our skills and make the web simpler and easier to browse.</p>
+          </div>
+        </div>
+        <div class="carousel__cell team">
+          <div class="carousel__cell__content">
+            <h1>The Team</h1>
+            <p class="is-desktop">We are a team specialized in web development oriented to provide consulting and solutions in short time.</p>
+            <ul id="teamlist">
+              <li>
+                <div class="is-hoverable"></div>
+                <span>Marcia Carrizo</span>
+                <small>Q&A Genius</small>                
+              </li>
+              <li>
+                <div class="is-hoverable"></div>
+                <span>Guido Cigliutti</span>
+                <small>Sales Champion</small>
+              </li>
+              <li>
+                <div class="is-hoverable"></div>
+                <span>Facundo Oviedo</span>
+                <small>Data Analysis Master</small>
+              </li>
+              <li>
+                <div class="is-hoverable"></div>
+                <span>Martin Frith</span>
+                <small>Web Developer Monk</small>                
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="carousel__cell works">
+          <div class="carousel__cell__content">
+            <h1>Our Work</h1>
+            <p class="is-desktop">These are some of our works which we are proud of.</p>
+            <div class="splide" id="works">
+              <div class="splide__track">
+                <ul class="splide__list"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel__cell code">
+          <div class="carousel__cell__content">
+            <h1>Code</h1>
+            <p>The engineering team takes the lead here. With a high degree of professionalism, collaborating with each other they apply their knowledge combined with best industry practices to fulfill the client’s expectations and deliver high quality software.</p>
+          </div>
+        </div>
+        <div class="carousel__cell design">
+          <div class="carousel__cell__content">
+            <h1>Design</h1>
+            <p>We start with a pencil and paper in order to understand the big picture. From there, we keep an open communication with the client to ensure that each iteration get us closer to the desired outcome</p>
+          </div>
+        </div>
+        <div class="carousel__cell strategy">
+          <div class="carousel__cell__content">
+            <h1>Strategy</h1>
+            <p>There is a deep analysis stage in every project we undertake. This involves mainly listening to the client and understand what they need. Afterwards, we focus on the right architecture for the solution to be built.</p>
+          </div>
+        </div>
+        <div class="carousel__cell landing">
+          <div class="carousel__cell__content">
+            <h4>The digital agency</h4>
+            <h1>Which lifts your business up to new heights</h1>
+          </div>
+        </div>
         <div class="carousel__cell entry hidden">
           <div class="carousel__cell__content">
             <div class="entry_contents"></div>            
@@ -212,43 +205,13 @@
     <div class="carousel-options animated fadeIn delay3">
       <div class="is-mobile">
         <span class="icon">
-          <span class="mdi mdi-gesture-swipe-horizontal mdi-36px"></span>
+          <span class="mdi mdi-gesture-swipe-vertical mdi-36px"></span>
         </span>
       </div>
       <div class="is-desktop">
         <div id="links">
-          <a class="wrapper active" href="#landing">
-            <div class="tooltip">Landing</div>
-            <span class="icon">
-              <span class="mdi mdi-checkbox-blank-circle-outline"></span>
-            </span>
-          </a>
-          <a class="wrapper" href="#strategy">
-            <div class="tooltip">Strategy</div>
-            <span class="icon">
-              <span class="mdi mdi-checkbox-blank-circle-outline"></span>
-            </span>
-          </a>
-          <a class="wrapper" href="#design">
-            <div class="tooltip">Design</div>
-            <span class="icon">
-              <span class="mdi mdi-checkbox-blank-circle-outline"></span>
-            </span>
-          </a>
-          <a class="wrapper" href="#code">
-            <div class="tooltip">Code</div>
-            <span class="icon">
-              <span class="mdi mdi-checkbox-blank-circle-outline"></span>
-            </span>
-          </a>
-          <a class="wrapper" href="#works">
-            <div class="tooltip">Works</div>
-            <span class="icon">
-              <span class="mdi mdi-checkbox-blank-circle-outline"></span>
-            </span>
-          </a>
-          <a class="wrapper" href="#team">
-            <div class="tooltip">Team</div>
+          <a class="wrapper" href="#letsworktogether">
+            <div class="tooltip">Contact</div>
             <span class="icon">
               <span class="mdi mdi-checkbox-blank-circle-outline"></span>
             </span>
@@ -259,8 +222,38 @@
               <span class="mdi mdi-checkbox-blank-circle-outline"></span>
             </span>
           </a>
-          <a class="wrapper" href="#letsworktogether">
-            <div class="tooltip">Contact</div>
+          <a class="wrapper" href="#team">
+            <div class="tooltip">Team</div>
+            <span class="icon">
+              <span class="mdi mdi-checkbox-blank-circle-outline"></span>
+            </span>
+          </a>
+          <a class="wrapper" href="#works">
+            <div class="tooltip">Works</div>
+            <span class="icon">
+              <span class="mdi mdi-checkbox-blank-circle-outline"></span>
+            </span>
+          </a>
+          <a class="wrapper" href="#code">
+            <div class="tooltip">Code</div>
+            <span class="icon">
+              <span class="mdi mdi-checkbox-blank-circle-outline"></span>
+            </span>
+          </a>
+          <a class="wrapper" href="#design">
+            <div class="tooltip">Design</div>
+            <span class="icon">
+              <span class="mdi mdi-checkbox-blank-circle-outline"></span>
+            </span>
+          </a>
+          <a class="wrapper" href="#strategy">
+            <div class="tooltip">Strategy</div>
+            <span class="icon">
+              <span class="mdi mdi-checkbox-blank-circle-outline"></span>
+            </span>
+          </a>
+          <a class="wrapper active" href="#landing">
+            <div class="tooltip">Landing</div>
             <span class="icon">
               <span class="mdi mdi-checkbox-blank-circle-outline"></span>
             </span>
@@ -276,7 +269,7 @@
     </div>
   </div>
   <footer class="animated fadeIn delay5">
-    <p><span class="calistoga">Overlemon</span> <span>The digital agency</span>
+    <p><span class="calistoga">Overlemon</span>
       <a href="https://github.com/liebsen/overlemon" target="_blank">
         <span class="icon">
           <span class="mdi mdi-github"></span>
@@ -286,14 +279,6 @@
   </footer>
   <div class="ui-snackbar ui-snackbar--is-inactive"></div>
   <video id="bgVideo" type="video/mp4"></video>
-  <script src="/js/app.js"></script>
-  <script src="/js/lottie.js"></script>
-  <script src="/js/scene.js"></script>
-  <script src="/js/swipe.js"></script>
-  <script src="/js/pwa.js"></script>
-  <script src="/js/axios.min.js"></script>
-  <script src="/js/status.js"></script>
-  <script src="/js/snackbar.js"></script>
-  <script src="/js/splide.min.js"></script>
+  <script src="/js/bundle.min.js"></script>
 </body>
 </html>
