@@ -1,6 +1,26 @@
 * { 
   box-sizing: border-box; 
 }
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    #fff9;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #fff9;
+  opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #fff9;
+  opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    #fff9;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color:    #fff9;
+}
+::placeholder { /* Most modern browsers support this now. */
+  color:    #fff9;
+}
 
 body {
   margin: 0;
@@ -8,8 +28,7 @@ body {
   overflow: hidden;
   height: 100vh;
   font-family: 'avenir medium', sans-serif;
-  background: rgb(38,38,38);
-  background: radial-gradient(circle, rgba(38,38,38,1) 0%, rgba(0,0,0,1) 100%);
+  background-color: black;
   background-image: url(/img/0ZxlIKx.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -126,8 +145,20 @@ footer p {
   padding: 0.75rem;
 }
 
+.has-text-centered {
+  text-align: center!important;
+}
+
+.has-margin-auto {
+  margin: auto!important;
+}
+
 .is-clickable {
   cursor: pointer;
+}
+
+.is-flex-none {
+  flex: none;
 }
 
 .tag {
@@ -506,8 +537,6 @@ footer p {
 
 #teamlist > li {
   float: left;
-  width: 9rem;
-  height: 9rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   display: inline-grid;
@@ -528,6 +557,7 @@ footer p {
   background-repeat: no-repeat;
   background-position: center; 
   background-size: cover;
+  width: 9rem;
   height: 9rem;
 }
 
@@ -537,8 +567,8 @@ footer p {
 }
 
 #links a {
-  width: 30px;
-  height: 30px;
+  width: 2rem;
+  height: 2rem;
   display: inline-grid;
 }
 
@@ -576,14 +606,6 @@ footer p {
   #app > .logo {
     display: none;
   }
-  #works {
-    margin-left: -1rem;
-    margin-right: -1rem;
-  }
-  #teamlist {
-    margin-left: -1rem;
-    margin-right: -1rem;
-  }
   .work .is-background-img {
     display: none;
   }
@@ -612,25 +634,6 @@ footer p {
   .is-desktop {
     display: none;
   }
-  #works > li {
-    width: 80px;
-    height: 80px;
-  }
-  #teamlist > li {
-    width: 120px;
-    height: 180px;
-  }
-  #teamlist > li > div {
-    height: 120px!important;
-  }
-  #teamlist > li > span {
-    font-size: 14px;
-    padding-top: 0;
-    line-height: 0;
-  }
-  #teamlist > li > small {
-    font-size: 10px;
-  }
 }
 
 @media screen and (max-width:769px) {
@@ -643,40 +646,14 @@ footer p {
 }
 
 @media screen and (min-width:769px) {
+  .is-desktop {
+    display: block;
+  }
   .columns {
     display: flex;
-  }
-  .column {
-    width: 50%;
   }
   #menu .items .logo {
     top: 5%;
     left: 5%;
   }
-  .is-desktop {
-    display: block;
-  }
-}
-
-
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #fff9;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #fff9;
-   opacity:  1;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #fff9;
-   opacity:  1;
-}
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #fff9;
-}
-::-ms-input-placeholder { /* Microsoft Edge */
-   color:    #fff9;
-}
-
-::placeholder { /* Most modern browsers support this now. */
-   color:    #fff9;
 }

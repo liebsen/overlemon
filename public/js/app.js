@@ -45,9 +45,10 @@ var startapp = () => {
         playVideo()
       }
       bgvideo.addEventListener('ended', playVideo, false)
-      canPlaySound = true
+
     })
     */
+    canPlaySound = true
   }, 1000)
 }
 
@@ -152,8 +153,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <i>Built for</i> ${work.country} ${work.company}<br></p>
         <a href="#works" class="button"><span class="mdi mdi-chevron-left"></span> works</a>
       </div>
-      <div class="column">
-        <a href="${work.url}" target="_blank" title="Go to application"><div class="is-background-img is-hoverable b-spaced" style="background-image: url(${work.screen})"></div></a>
+      <div class="column has-text-centered">
+        <a href="${work.url}" target="_blank" title="Go to application"><div class="is-background-img has-margin-auto is-hoverable b-spaced" style="background-image: url(${work.screen})"></div></a>
         <p><span class="tag">${work.tech.join('</span><span class="tag">')}</span></p>
       </div>
     </div>

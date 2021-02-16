@@ -25,6 +25,7 @@
   opacity: 0.25;
   align-items: center;
   border: 25px solid #fff1;
+  background-color: #ff577f;
   border-radius: 1rem;
   font-size: 18px;
   font-weight: bold;
@@ -53,29 +54,9 @@
   font-weight: 200;
 }
 
-.carousel__cell:nth-child(9n+1), .wrapper:nth-child(9n+1) .tooltip { background-color: #e11d74; }
-.carousel__cell:nth-child(9n+2), .wrapper:nth-child(9n+2) .tooltip { background-color: #cf1b1b; }
-.carousel__cell:nth-child(9n+3), .wrapper:nth-child(9n+3) .tooltip { background-color: #394989; }
-.carousel__cell:nth-child(9n+4), .wrapper:nth-child(9n+4) .tooltip { background-color: #2b580c; }
-.carousel__cell:nth-child(9n+5), .wrapper:nth-child(9n+5) .tooltip { background-color: #21209c; }
-.carousel__cell:nth-child(9n+6), .wrapper:nth-child(9n+6) .tooltip { background-color: #34a853; }
-.carousel__cell:nth-child(9n+7), .wrapper:nth-child(9n+7) .tooltip { background-color: #5b5656; }
-.carousel__cell:nth-child(9n+8), .wrapper:nth-child(9n+8) .tooltip { background-color: #ff9900; }
-.carousel__cell:nth-child(9n+0), .wrapper:nth-child(9n+0) .tooltip { background-color: #8105d8; }
-
 .carousel__cell:nth-child(9n+8) {
   padding-top: 3rem;
 }
-
-.carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(15vh); }
-.carousel__cell:nth-child(2) { transform: rotateY( 40deg) translateZ(15vh); }
-.carousel__cell:nth-child(3) { transform: rotateY( 80deg) translateZ(15vh); }
-.carousel__cell:nth-child(4) { transform: rotateY(120deg) translateZ(15vh); }
-.carousel__cell:nth-child(5) { transform: rotateY(160deg) translateZ(15vh); }
-.carousel__cell:nth-child(6) { transform: rotateY(200deg) translateZ(15vh); }
-.carousel__cell:nth-child(7) { transform: rotateY(240deg) translateZ(15vh); }
-.carousel__cell:nth-child(8) { transform: rotateY(280deg) translateZ(15vh); }
-.carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(15vh); }
 
 .carousel-options {
   transform: scale(1) perspective(1040px) rotateY(2deg) rotateX(2deg) rotate(-1deg);
@@ -89,6 +70,7 @@
 
 .carousel-options span {
   cursor: pointer;
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width:768px) {

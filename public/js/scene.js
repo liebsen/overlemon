@@ -1,5 +1,6 @@
 var carousel = document.querySelector('.carousel')
 var cells = carousel.querySelectorAll('.carousel__cell')
+var wraps = document.querySelectorAll('.wrapper')
 var cellCount = cells.length
 var selectedIndex = 0
 var cellWidth = carousel.offsetWidth
@@ -8,15 +9,17 @@ var isHorizontal = false
 var rotateFn = isHorizontal ? 'rotateY' : 'rotateX'
 var radius, theta
 var canPlaySound = false
-
+var colors = ['790c5a','cf1b1b','394989','007965','21209c','2ec1ac','11698e','8105d8','ff577f','949cdf','a685e2','6155a6','21209c','ea97ad','c24914','ec5858','f05454','e05297','52057b','2d6187','bb2205','2d6187','7579e7','0278ae','8675a9','ac4b1c','065c6f','335d2d','07689f','ec0101','206a5d','e11d74','776d8a','438a5e']
+var filled = []
 function updateCellCount () {
   let prev = cellCount
   cells = carousel.querySelectorAll('.carousel__cell:not(.hidden)')
   cellCount = cells.length
   if (prev !== cellCount) {
-    changeCarousel()
+    prepareCarousel()
   }
 }
+
 function rotateCarousel() {
   updateCellCount()
   var angle = theta * selectedIndex * -1
@@ -37,7 +40,6 @@ function rotateCarousel() {
     }
   }, 200)
 }
-
 
 let carouselPrevDesk = () => {
   if (document.querySelector('.wrapper.active') && document.querySelector('.wrapper.active').nextElementSibling) {
@@ -84,7 +86,7 @@ let onHashChange = () => {
   }
 }
 
-let changeCarousel = () => {
+let prepareCarousel = () => {
   //cellCount = cellsRange.value
   updateCellCount()
   theta = 360 / cellCount
@@ -98,16 +100,29 @@ let changeCarousel = () => {
   rotateCarousel()
 }
 
+let assignColorsCarousel = () => {
+  for ( var i=0; i < cells.length; i++ ) {
+    var color = colors[Math.floor(Math.random() * colors.length)]
+    while(filled.includes(color)) {
+      color = colors[Math.floor(Math.random() * colors.length)]
+    }
+    cells[i].style.backgroundColor = `#${color}`
+    if (wraps[i]) {
+      wraps[i].querySelector('.tooltip').style.backgroundColor = `#${color}`
+      wraps[i].querySelector('.icon').style.color = `#${color}`
+    }
+    filled.push(color)
+  }
+}
+
 document.getElementById('app').addEventListener('wheel', event => {
   Math.sign(event.deltaY) < 0 ? carouselPrevDesk() : carouselNextDesk()
 })
 
-
 document.onkeydown = e => {
+  e.preventDefault()
   switch (e.which) {
-
-    case 32: 
-
+    case 32:
       if (document.getElementById('startbtn')) {
         document.getElementById('startbtn').click()
       }
@@ -128,7 +143,6 @@ document.onkeydown = e => {
 
     default: return
   }
-  e.preventDefault()
 }
 
 window.onresize = e => {
@@ -136,6 +150,6 @@ window.onresize = e => {
 }
 
 window.addEventListener('hashchange', onHashChange, false)
-
 onHashChange()
-changeCarousel()
+assignColorsCarousel()
+prepareCarousel()
