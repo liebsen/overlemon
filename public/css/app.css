@@ -9,7 +9,11 @@ body {
   height: 100vh;
   font-family: 'avenir medium', sans-serif;
   background: rgb(38,38,38);
-  background: radial-gradient(circle, rgba(20,20,20,1) 0%, rgba(0,0,0,1) 100%);
+  background: radial-gradient(circle, rgba(38,38,38,1) 0%, rgba(0,0,0,1) 100%);
+  background-image: url(/img/0ZxlIKx.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   font-weight: 800;
   color: white;
 }
@@ -127,6 +131,7 @@ footer p {
 }
 
 .tag {
+  cursor: pointer;
   font-size: 1rem;
   background-color: #333;
   color: white;
@@ -365,16 +370,17 @@ footer p {
 }
 
 .button {
-  font-family: 'avenir medium', sans-serif;
+  font-family: 'avenir black', sans-serif;
   background: none;
   cursor: pointer;
   border: 3px solid #fff;
-  border-radius: 5px;
+  border-radius: 10px;
   color: #fff;
   display: block;
   font-size: 1.5em;
   font-weight: bold;
-  padding: 0.5em 1.5em;
+  padding: 0.5em 1em;
+  padding-left: 0.75rem;
   position: relative;
   text-transform: uppercase;
 }
@@ -639,6 +645,8 @@ footer p {
 @media screen and (min-width:769px) {
   .columns {
     display: flex;
+  }
+  .column {
     width: 50%;
   }
   #menu .items .logo {

@@ -98,7 +98,7 @@
   .scene, .carousel__cell {
     width: 100vw;
     height: 100vh;
-    border-width: 1.5rem; 
+    border-width: 0; 
     border-radius: 0;
   }
   .carousel__cell {

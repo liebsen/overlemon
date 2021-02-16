@@ -32,7 +32,7 @@ var playSound = (audio, vol) => {
 var startapp = () => {
   start.classList.add('animated', 'fadeOut')
   setTimeout(() => {
-    app.classList.add('animated', 'fadeIn')
+    app.classList.add('animated', 'flipInX')
     start.remove()
     playSound('start.mp3')
     axios.get(`${endpoint}/list_videos`).then(res => {
