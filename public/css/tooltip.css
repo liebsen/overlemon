@@ -6,18 +6,18 @@
 
 .wrapper .tooltip {
   background: #1496bb;
-  right: 100%;
   color: #fff;
   display: block;
-  border-radius: 5px;
-  left: -85px;
-  top: -5px;
+  border-radius: 25px;
+  right: 20px;
+  top: -3px;
   margin-right: 15px;
   opacity: 0;
-  padding: 10px;
+  padding: 7px 15px;
+  white-space: nowrap;
   pointer-events: none;
   position: absolute;
-  width: 5rem;
+  min-width: 5rem;
   -webkit-transform: translateX(10px);
     -moz-transform: translateX(10px);
     -ms-transform: translateX(10px);
@@ -43,7 +43,7 @@
   height: 20px;
   left: 0;
   position: absolute;
-  width: 5rem;
+  min-width: 5rem;
 }
 
 /* CSS Triangles - see Trevor's post */

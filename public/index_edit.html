@@ -14,12 +14,12 @@
   <link rel="stylesheet" type="text/css" href="/css/bundle.min.css" />
   <title>Overlemon</title>
 </head>
-<body>
-  <lottie-player id="spinner" src="/json/loading-charging.json" background="transparent" speed="1" style="height: 100vh;" loop autoplay></lottie-player>
+<body class="body animated fadeIn delay2">
+  <lottie-player id="spinner" class="animated fadeIn delay3" src="/json/loading-charging.json" background="transparent" speed="1" loop autoplay></lottie-player>
   <!--div id="start">
     <span id="startbtn" class="button is-clickable" onclick="startapp()"><span class="mdi mdi-chevron-right"></span> Start</span>
   </div-->
-  <div id="menu" class="is-mobile">
+  <div id="menu" class="mobile-menu animated delay3 is-mobile">
     <div class="burger">
       <svg viewBox="0 0 800 600">
         <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
@@ -87,20 +87,18 @@
       </div>
     </div>
   </div>
-  <div class="logo animated fadeIn delay3">
+  <div class="logo mainlogo animated delay2">
     <h1 class="animated animatedlogo">Overlemon</h1>
     <h6>The Digital Agency</h6>
   </div>
-  <footer class="animated fadeIn delay5">
-    <p>
-      <a href="https://github.com/liebsen/overlemon" target="_blank">
-        <span class="black">Overlemon</span>
-        <span class="icon">
-          <span class="mdi mdi-github"></span>
-        </span>
-      </a>
-    </p>
-  </footer>
+  <div class="footer animated delay3">
+    <a href="https://github.com/liebsen/overlemon" target="_blank">
+      <!--span class="black">Overlemon</span-->
+      <span class="icon">
+        <span class="mdi mdi-github"></span>
+      </span>
+    </a>
+  </div>
   <div class="ui-snackbar ui-snackbar--is-inactive"></div>
   <video id="bgVideo" type="video/mp4"></video>
   <div id="app" class="is-transparent">
@@ -138,9 +136,7 @@
         <div class="carousel__cell specialtasks">
           <div class="carousel__cell__content">
             <h1>Special tasks</h1>
-            <p>We deliver special services like server installs and configurations, mailservers, fileservers, turnservers, automatizations, optimizations, scale-ups and devops.</p>
-            <p>We also consultants on e-commerce solutions and optimization.</p>
-            <p>Real time communications platforms and media servers are part of our dayly tasks as well.</p>
+            <p>We deliver special services like server installs and configurations, mailservers, fileservers, turnservers, automatizations, optimizations, scale-ups and devops. We also consultants on e-commerce solutions and optimization. Real time communications platforms and media servers are part of our dayly tasks as well.</p>
             <p>We work hard everyday to improve our skills and make the web simpler and easier to browse.</p>
           </div>
         </div>
@@ -218,25 +214,25 @@
       <div class="is-desktop">
         <div id="links">
           <a class="wrapper" href="#letsworktogether">
-            <div class="tooltip">Contact</div>
+            <div class="tooltip">Let's work together</div>
             <span class="icon">
               <span class="mdi mdi-checkbox-blank-circle-outline"></span>
             </span>
           </a>
           <a class="wrapper" href="#specialtasks">
-            <div class="tooltip">Special</div>
+            <div class="tooltip">Special tasks</div>
             <span class="icon">
               <span class="mdi mdi-checkbox-blank-circle-outline"></span>
             </span>
           </a>
           <a class="wrapper" href="#team">
-            <div class="tooltip">Team</div>
+            <div class="tooltip">The Team</div>
             <span class="icon">
               <span class="mdi mdi-checkbox-blank-circle-outline"></span>
             </span>
           </a>
           <a class="wrapper" href="#works">
-            <div class="tooltip">Works</div>
+            <div class="tooltip">Our Work</div>
             <span class="icon">
               <span class="mdi mdi-checkbox-blank-circle-outline"></span>
             </span>

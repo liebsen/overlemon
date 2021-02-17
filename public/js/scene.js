@@ -147,10 +147,6 @@ document.onkeydown = e => {
   }
 }
 
-window.onresize = e => {
-  location.href = location.href
-}
-
 window.addEventListener('hashchange', onHashChange, false)
 onHashChange()
 assignColorsCarousel()

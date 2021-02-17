@@ -113,6 +113,9 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       spinner.remove()
       app.classList.add('animated', 'flipInX')
+      document.querySelector('.mainlogo').classList.add('fadeIn')
+      document.querySelector('.footer').classList.add('fadeIn')
+      document.querySelector('.mobile-menu').classList.add('fadeIn')
       if (!location.hash) {
         location.hash = 'landing'
       }
