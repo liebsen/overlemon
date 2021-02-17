@@ -398,7 +398,7 @@ a:hover {
 }
 
 #spinner {
-  opacity: 0;
+  opacity: 0; 
   height: 100vh;
 }
 
@@ -621,10 +621,7 @@ a:hover {
 }
 
 @media screen and (max-width:480px) {
-  .logo {
-    display: none;
-  }
-  .work .is-background-img {
+  .mainlogo {
     display: none;
   }
   /* .logo {

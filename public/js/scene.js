@@ -71,6 +71,10 @@ let elemIndex = e => {
 
 let onHashChange = () => {
   let section = location.hash.replace('#', '')
+  if (document.getElementById('menu').classList.contains('fs')) {
+    document.getElementById('menu').classList.toggle('fs')
+    document.getElementById('menu').querySelector('.burger').classList.toggle('cross')
+  }
   if (section.length && document.querySelector(`.${section}`)) {
     document.querySelectorAll(`a`).forEach(a => {
       a.classList.remove('active')

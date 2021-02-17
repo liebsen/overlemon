@@ -155,12 +155,28 @@ document.addEventListener('DOMContentLoaded', () => {
         <h1>${work.title}</h1>
         <h4>${work.slogan}</h4>
         <p class="b-spaced">${work.text}</p>
-        <i>Built for</i> ${work.country} ${work.company}<br></p>
-        <a href="#works" class="button"><span class="mdi mdi-chevron-left"></span> works</a>
+        <p class="is-desktop"><i>Built for</i> ${work.country} ${work.company}</p>
+        <div class="columns">
+          <div class="column">
+            <a href="${work.url}" class="button" target="_blank" title="Go to application">
+              <span class="mdi mdi-link"></span> 
+              view
+            </a>
+          </div>
+          <div class="column">
+            <a href="#works" class="button">
+              <span class="mdi mdi-chevron-left"></span> works
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="column has-text-centered">
-        <a href="${work.url}" target="_blank" title="Go to application"><div class="is-background-img has-margin-auto is-hoverable b-spaced" style="background-image: url(${work.screen})"></div></a>
-        <p><span class="tag">${work.tech.join('</span><span class="tag">')}</span></p>
+      <div class="column is-desktop has-text-centered">
+        <a href="${work.url}" target="_blank" title="Go to application">
+          <div class="is-background-img has-margin-auto is-hoverable b-spaced" style="background-image: url(${work.screen})"></div>
+        </a>
+        <p>
+          <span class="tag">${work.tech.join('</span><span class="tag">')}</span>
+        </p>
       </div>
     </div>
   </div>  
