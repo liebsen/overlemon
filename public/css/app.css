@@ -625,6 +625,20 @@ footer p {
   .carousel__cell__content {
     max-width: 100%!important;
   }
+  #teamlist > li {
+    margin-bottom: 1rem;
+  }
+  #teamlist > li > span {
+    font-size: 1rem;
+  }
+  #teamlist > li > small {
+    font-size: 12px;
+  }
+  #teamlist > li > div,
+  #works .splide__slide {
+    width: calc(50vw - 2rem)!important;
+    height: calc(50vw - 2rem)!important;
+  }
 }
 
 @media screen and (max-width:768px) {
