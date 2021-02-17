@@ -22,18 +22,17 @@
   color:    #fff9;
 }
 
-body {
+html, body {
   margin: 0;
-  text-align: center;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
-  height: 100vh;
   font-family: 'avenir medium', sans-serif;
   background-color: black;
   background-image: url(/img/0ZxlIKx.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  font-weight: 800;
   color: white;
 }
 
@@ -90,17 +89,16 @@ footer p {
 }
 
 #app {
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  max-height: 100vh;
-  width: 100vw;
-  flex-direction: row;
-  overflow: hidden;
 }
 
 #start {
+  display: none;
   opacity: 0;
   position: absolute;
   z-index: 10;
@@ -603,13 +601,13 @@ footer p {
 }
 
 @media screen and (max-width:480px) {
-  #app > .logo {
+  .logo {
     display: none;
   }
   .work .is-background-img {
     display: none;
   }
-  .logo {
+  /* .logo {
     width: 150px;
     height: 50px;
     margin-top: 0.5rem;
@@ -621,7 +619,7 @@ footer p {
   }
   .logo h6 {
     margin-left: 3.75rem;
-  }
+  } */
   .carousel__cell__content {
     max-width: 100%!important;
   }

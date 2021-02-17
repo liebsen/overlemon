@@ -112,10 +112,12 @@ document.addEventListener('DOMContentLoaded', () => {
     spinner.classList.add('animated', 'fadeOut')
     setTimeout(() => {
       spinner.remove()
-      start.classList.add('animated', 'fadeIn')
-      setTimeout(() => {
-        playSound('ready.mp3')  
-      }, 1000)
+      app.classList.add('animated', 'flipInX')
+      if (!location.hash) {
+        location.hash = 'landing'
+      }
+      playSound('start.mp3')
+      canPlaySound =true
     }, 1000)
   }, 1000)
 
