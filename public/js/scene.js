@@ -15,9 +15,7 @@ function updateCellCount () {
   let prev = cellCount
   cells = carousel.querySelectorAll('.carousel__cell:not(.hidden)')
   cellCount = cells.length
-  if (prev !== cellCount) {
-    prepareCarousel()
-  }
+  distributeCarousel()
 }
 
 function rotateCarousel() {
@@ -41,7 +39,7 @@ function rotateCarousel() {
   }, 200)
 }
 
-let carouselPrevDesk = () => {
+let carouselPrev = () => {
   if (document.querySelector('.wrapper.active') && document.querySelector('.wrapper.active').nextElementSibling) {
     document.querySelector('.wrapper.active').nextElementSibling.click()
   } else {
@@ -49,7 +47,7 @@ let carouselPrevDesk = () => {
   }
 }
 
-let carouselNextDesk = () => {
+let carouselNext = () => {
   if (document.querySelector('.wrapper.active') && document.querySelector('.wrapper.active').previousElementSibling) {
     document.querySelector('.wrapper.active').previousElementSibling.click()
   } else {
@@ -57,12 +55,12 @@ let carouselNextDesk = () => {
   }
 }
 
-let carouselPrev = () => {
+let carouselPrev2 = () => {
   selectedIndex--
   rotateCarousel()
 }
 
-let carouselNext = () => {
+let carouselNext2 = () => {
   selectedIndex++
   rotateCarousel()
 }
@@ -86,9 +84,7 @@ let onHashChange = () => {
   }
 }
 
-let prepareCarousel = () => {
-  //cellCount = cellsRange.value
-  updateCellCount()
+let distributeCarousel = () => {
   theta = 360 / cellCount
   var cellSize = isHorizontal ? carousel.offsetWidth : carousel.offsetHeight
   radius = Math.round( ( cellSize / 2) / Math.tan( Math.PI / cellCount ) )
@@ -97,6 +93,12 @@ let prepareCarousel = () => {
     var cellAngle = theta * i
     cell.style.transform = rotateFn + '(' + cellAngle + 'deg) translateZ(' + radius + 'px)'
   }
+}
+
+let prepareCarousel = () => {
+  //cellCount = cellsRange.value
+  updateCellCount()
+  distributeCarousel()
   rotateCarousel()
 }
 
@@ -116,7 +118,7 @@ let assignColorsCarousel = () => {
 }
 
 document.getElementById('app').addEventListener('wheel', event => {
-  Math.sign(event.deltaY) < 0 ? carouselPrevDesk() : carouselNextDesk()
+  Math.sign(event.deltaY) < 0 ? carouselPrev() : carouselNext()
 })
 
 document.onkeydown = e => {
@@ -131,14 +133,14 @@ document.onkeydown = e => {
       break
 
     case 38: // up
-      carouselPrevDesk()      
+      carouselPrev()      
       break
 
     case 39: // right
       break
 
     case 40: // down
-      carouselNextDesk()
+      carouselNext()
       break
 
     default: return

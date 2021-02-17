@@ -12,7 +12,6 @@ gestureZone.addEventListener('touchstart', function(event) {
 gestureZone.addEventListener('touchend', function(event) {
     touchendX = event.changedTouches[0].screenX;
     touchendY = event.changedTouches[0].screenY;
-    console.log(event.target)
     if (event.target.className && event.target.className.indexOf('splide') > -1) { } else {
         handleGesture();
     }
@@ -37,12 +36,12 @@ function handleGesture() {
     if (absY > touchOffset) {
         if (touchendY <= touchstartY) {
             // console.log('Swiped up');
-            carouselPrev()
+            carouselNext()
         }
         
         if (touchendY >= touchstartY) {
             // console.log('Swiped down');
-            carouselNext()
+            carouselPrev()
         }
     }
     
