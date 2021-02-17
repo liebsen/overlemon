@@ -122,7 +122,7 @@ document.getElementById('app').addEventListener('wheel', event => {
 })
 
 document.onkeydown = e => {
-  e.preventDefault()
+  // e.preventDefault()
   switch (e.which) {
     case 32:
       if (document.getElementById('startbtn')) {
