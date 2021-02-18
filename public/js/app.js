@@ -35,7 +35,8 @@ var startapp = () => {
     app.classList.add('animated', 'flipInX')
     start.remove()
     playSound('start.mp3', 0.25)
-    if (!location.hash) {
+    console.log(location.hash)
+    if (!location.hash || location.hash === 'entry') {
       location.hash = 'landing'
     }
     /* 
@@ -115,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('.mainlogo').classList.add('fadeIn')
       document.querySelector('.footer').classList.add('fadeIn')
       document.querySelector('.mobile-menu').classList.add('fadeIn')
-      if (!location.hash) {
+      if (!location.hash || location.hash === '#entry') {
         location.hash = 'landing'
       }
       playSound('start.mp3', 0.25)

@@ -27,7 +27,7 @@ html, body {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  font-family: 'avenir medium', sans-serif;
+  font-family: 'Graphik', sans-serif;
   background-color: black;
   color: white;
 }
@@ -43,7 +43,7 @@ html, body {
 h1,
 h2,
 h3 {
-  font-family: 'avenir black', sans-serif;
+  font-family: 'Graphik 800', sans-serif;
 }
 
 strong {
@@ -51,11 +51,11 @@ strong {
 }
 
 .calistoga {
-  font-family: 'avenir black', sans-serif; 
+  font-family: 'Graphik 800', sans-serif; 
 }
 .input,
 .textarea {
-  font-family: 'avenir medium', sans-serif;
+  font-family: 'Graphik', sans-serif;
   font-size: 1rem;
   min-width: 220px;
   background-color: transparent;
@@ -92,7 +92,7 @@ a:hover {
   z-index: 11;
   font-size: 14px;
   right: 0.75rem;
-  bottom: 0.25rem;
+  bottom: 0;
 }
 
 .footer .mdi {
@@ -374,7 +374,7 @@ a:hover {
 }
 
 #menu .links a {
-  font-family: 'avenir black';
+  font-family: 'Graphik 800';
   font-size: 1.25rem;
   font-weight: 400;
   margin: 0 0.5rem;
@@ -420,7 +420,7 @@ a:hover {
 }
 
 .button {
-  font-family: 'avenir black', sans-serif;
+  font-family: 'Graphik 800', sans-serif;
   background: none;
   cursor: pointer;
   border: 3px solid #fff;
@@ -563,7 +563,7 @@ a:hover {
 
 #teamlist > li > span {
   padding-top: 1.25rem;
-  font-family: 'avenir black';
+  font-family: 'Graphik 800';
 }
 
 #teamlist > li > small {
@@ -610,7 +610,7 @@ a:hover {
 
 .swal-title {
   margin: 0;
-  font-family: 'avenir black'
+  font-family: 'Graphik 800'
 }
 
 .swal-content {
