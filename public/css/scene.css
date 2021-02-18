@@ -1,7 +1,7 @@
 .scene {
   position: relative;
   transform: scale(1) perspective(1040px) rotateY(2deg) rotateX(2deg) rotate(-1deg);
-  width: 900px;
+  width: 780px;
   height: 500px;
   perspective: 1000px;
 }
@@ -17,7 +17,7 @@
 
 .carousel__cell {
   position: absolute;
-  width: 880px;
+  width: 760px;
   height: 480px;
   left: 10px;
   top: 10px;

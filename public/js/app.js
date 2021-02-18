@@ -34,7 +34,7 @@ var startapp = () => {
   setTimeout(() => {
     app.classList.add('animated', 'flipInX')
     start.remove()
-    playSound('start.mp3')
+    playSound('start.mp3', 0.25)
     if (!location.hash) {
       location.hash = 'landing'
     }
@@ -48,7 +48,6 @@ var startapp = () => {
 
     })
     */
-    canPlaySound = true
   }, 1000)
 }
 
@@ -100,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('menu').addEventListener('click', () => {
     if (!document.getElementById('menu').classList.contains('fs')) {
       setTimeout(() => {
-        playSound('rotate.mp3')
+        playSound('menu.mp3', 0.25)
       }, 175)
     }
     document.getElementById('menu').classList.toggle('fs')
@@ -119,8 +118,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!location.hash) {
         location.hash = 'landing'
       }
-      playSound('start.mp3')
-      canPlaySound =true
+      playSound('start.mp3', 0.25)
+      setTimeout(() => {
+        canPlaySound = true
+      }, 1000)
     }, 1000)
   }, 1000)
 
