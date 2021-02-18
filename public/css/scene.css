@@ -51,7 +51,7 @@
 }
 
 .carousel__cell p {
-  font-weight: 200;
+  font-weight: 500;
 }
 
 .carousel__cell:nth-child(9n+8) {

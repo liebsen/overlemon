@@ -30,6 +30,7 @@ html, body {
   font-family: 'Graphik', sans-serif;
   background-color: black;
   color: white;
+  font-weight: 500;
 }
 
 .body {
@@ -43,16 +44,17 @@ html, body {
 h1,
 h2,
 h3 {
-  font-family: 'Graphik 800', sans-serif;
+  font-family: 'Graphik 900', sans-serif;
 }
 
 strong {
   color: #999;
 }
 
-.calistoga {
-  font-family: 'Graphik 800', sans-serif; 
+p, span {
+  font-weight: 500;
 }
+
 .input,
 .textarea {
   font-family: 'Graphik', sans-serif;
@@ -98,6 +100,10 @@ a:hover {
 .footer .mdi {
   font-size: 2.5rem;
   color: #f8f8f8;
+}
+
+.reader span {
+  display: block;
 }
 
 #app {
@@ -229,6 +235,7 @@ a:hover {
 .logo h6 {
   font-size: 0.75rem;
   text-align: left;
+  font-weight: 500;
   margin: 0.1rem 5.5rem 0;
   white-space: nowrap;
   line-height: 0;
@@ -374,7 +381,6 @@ a:hover {
 }
 
 #menu .links a {
-  font-family: 'Graphik 800';
   font-size: 1.25rem;
   font-weight: 400;
   margin: 0 0.5rem;
@@ -420,7 +426,7 @@ a:hover {
 }
 
 .button {
-  font-family: 'Graphik 800', sans-serif;
+  font-family: 'Graphik', sans-serif;
   background: none;
   cursor: pointer;
   border: 3px solid #fff;
@@ -563,7 +569,6 @@ a:hover {
 
 #teamlist > li > span {
   padding-top: 1.25rem;
-  font-family: 'Graphik 800';
 }
 
 #teamlist > li > small {
@@ -610,7 +615,7 @@ a:hover {
 
 .swal-title {
   margin: 0;
-  font-family: 'Graphik 800'
+  font-family: 'Graphik'
 }
 
 .swal-content {
