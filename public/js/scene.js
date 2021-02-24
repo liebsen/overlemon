@@ -156,13 +156,15 @@ document.onkeydown = e => {
       }
       break;
     case 37: // left
+      carouselPrev()
       break
 
     case 38: // up
-      carouselPrev()      
+      carouselPrev()
       break
 
     case 39: // right
+      carouselNext()
       break
 
     case 40: // down
