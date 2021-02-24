@@ -41,7 +41,6 @@ function rotateCarousel() {
 }
 
 let controlVideoVolume = (i) => {
-  console.log('ask volume', i)
   const video = document.getElementById('bgVideo')
   if (video) {
     fadeVideoVolume(i === cells.length - 1 ? 1 : 0.1)
@@ -52,17 +51,11 @@ let fadeVideoVolume = (volume) => {
   const video =  document.getElementById('bgVideo')
   var fadeAudio = setInterval(() => {
     let v = parseFloat(parseFloat(video.volume.toFixed(1)))
-    console.log('***')
-    console.log(volume)
-    console.log(v)
     if (v < volume) {
-      console.log('a')
       video.volume += 0.1
     } else if (v > volume) {
-      console.log('b')
       video.volume -= 0.1
     } else {
-      console.log('c')
       clearInterval(fadeAudio)
     }      
   }, 50)
