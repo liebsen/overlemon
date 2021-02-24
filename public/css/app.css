@@ -103,9 +103,7 @@ a:hover {
 }
 
 .reader span {
-  text-align: center;
   display: block;
-  width: 100%;
 }
 
 #app {
@@ -177,6 +175,10 @@ a:hover {
 
 .is-flex-none {
   flex: none;
+}
+
+.is-flex-center {
+  justify-content: center;
 }
 
 .is-borderless {

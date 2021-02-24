@@ -18,6 +18,37 @@ function updateCellCount () {
   distributeCarousel()
 }
 
+function findReaders(slide) {
+  slide.querySelectorAll('.reader').forEach(e => {
+    const chunks = e.getAttribute('data-chunks').split(' | ') || []
+    const fx = e.getAttribute('data-fx') || 'fadeIn' 
+    const speed = e.getAttribute('data-speed') || 3
+    if (chunks.length) {
+      // chunks = chunks.filter(e => e.length)
+      if (!e.pos) {
+        e.pos = 0
+      }
+      if (e.clock) {
+        clearInterval(e.clock)
+      }
+      e.clock = setInterval(() => {
+        const span = document.createElement('span')
+        span.classList.add('animated', 'read', fx)
+        e.innerHTML = ''
+        e.appendChild(span)
+        if (e.pos < chunks.length) {
+          span.textContent = chunks[e.pos]
+          e.pos++
+        } else {
+          span.textContent = e.getAttribute('data-empty') || '⠀'
+          e.pos = 0
+          clearInterval(e.clock)
+        }   
+      }, speed * 1000)
+    }
+  })
+}
+
 function rotateCarousel() {
   updateCellCount()
   var angle = theta * selectedIndex * -1
@@ -38,6 +69,9 @@ function rotateCarousel() {
       playSound('rotate.mp3', 0.25)
     }
   }, 200)
+  setTimeout(() => {
+    findReaders(cells[i])
+  }, 750)
 }
 
 let controlVideoVolume = (i) => {

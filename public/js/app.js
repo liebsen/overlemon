@@ -42,7 +42,6 @@ var startapp = () => {
       location.hash = 'landing'
     }
     playSound('start.mp3', 0.25)
-    findReaders()
     startVideos()
     setTimeout(() => {
       canPlaySound = true
@@ -72,35 +71,6 @@ let startVideos = () => {
   })
 }
 
-let findReaders = () => {
-  document.querySelectorAll('.reader').forEach(e => {
-    const chunks = e.getAttribute('data-chunks').split(' | ') || []
-    const fx = e.getAttribute('data-fx') || 'fadeIn' 
-    const speed = e.getAttribute('data-speed') || 3
-    if (chunks.length) {
-      // chunks = chunks.filter(e => e.length)
-      if (!e.pos) {
-        e.pos = 0
-      }
-      if (e.clock) {
-        clearInterval(e.clock)
-      }
-      e.clock = setInterval(() => {
-        const span = document.createElement('span')
-        span.classList.add('animated', 'read', fx)
-        e.innerHTML = ''
-        e.appendChild(span)
-        if (e.pos < chunks.length) {
-          span.textContent = chunks[e.pos]
-          e.pos++
-        } else {
-          span.textContent = e.getAttribute('data-empty') || '⠀'
-          e.pos = 0
-        }   
-      }, speed * 1000)
-    }
-  })
-}
 /* letsworktogether */
 
 let sendMessage = form => {
