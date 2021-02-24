@@ -109,6 +109,7 @@ a:hover {
 }
 
 #app {
+  opacity: 0;
   position: fixed;
   top: 0; bottom: 0; left: 0; right: 0;
   margin: auto;
@@ -118,7 +119,6 @@ a:hover {
 }
 
 #start {
-  display: none;
   opacity: 0;
   position: absolute;
   z-index: 10;
@@ -449,6 +449,7 @@ a:hover {
   padding-left: 0.75rem;
   position: relative;
   text-transform: uppercase;
+  box-shadow: 0 0 5rem #fff3;
 }
 
 .button::before,

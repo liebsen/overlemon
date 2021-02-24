@@ -30,22 +30,23 @@ var playSound = (audio, vol) => {
 }
 
 var startapp = () => {
-  start.classList.add('animated', 'fadeOut')
+  start.classList.remove('flipInX')
+  start.classList.add('fadeOut')
   setTimeout(() => {
-    app.classList.add('animated', 'flipInX')
     start.remove()
-    playSound('start.mp3', 0.25)
-    console.log(location.hash)
-    if (!location.hash || location.hash === 'entry') {
+    app.classList.add('animated', 'fadeIn')
+    document.querySelector('.mainlogo').classList.add('fadeIn')
+    document.querySelector('.footer').classList.add('fadeIn')
+    document.querySelector('.mobile-menu').classList.add('fadeIn')
+    if (!location.hash || location.hash === '#entry') {
       location.hash = 'landing'
     }
-    axios.get(`${endpoint}/list_videos`).then(res => {
-      if (res.data) {
-        videos = res.data
-        playVideo()
-      }
-      bgvideo.addEventListener('ended', playVideo, false)
-    })
+    playSound('start.mp3', 0.25)
+    findReaders()
+    startVideos()
+    setTimeout(() => {
+      canPlaySound = true
+    }, 1000)
   }, 1000)
 }
 
@@ -148,19 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
     spinner.classList.add('animated', 'fadeOut')
     setTimeout(() => {
       spinner.remove()
-      app.classList.add('animated', 'flipInX')
-      document.querySelector('.mainlogo').classList.add('fadeIn')
-      document.querySelector('.footer').classList.add('fadeIn')
-      document.querySelector('.mobile-menu').classList.add('fadeIn')
-      if (!location.hash || location.hash === '#entry') {
-        location.hash = 'landing'
-      }
-      playSound('start.mp3', 0.25)
-      findReaders()
-      startVideos()
-      setTimeout(() => {
-        canPlaySound = true
-      }, 1000)
+      start.classList.add('animated', 'flipInX')
+      playSound('ready.mp3', 0.25)
     }, 1000)
   }, 1000)
 
