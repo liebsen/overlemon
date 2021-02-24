@@ -6,12 +6,13 @@
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#000000"/>
+  <meta name="description" content="Your digital agency">
   <meta property="og:title" content="Overlemon" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://overlemon.com" />
   <meta property="og:image" content="https://overlemon.com/img/splash.jpg" />
   <meta property="og:description" content="Your digital agency" /> 
-  <link rel="stylesheet" type="text/css" href="/css/bundle.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/bundle.min.css" async/>
   <title>Overlemon</title>
 </head>
 <body class="body animated fadeIn delay2">
@@ -102,7 +103,7 @@
     </a>
   </div>
   <div class="ui-snackbar ui-snackbar--is-inactive"></div>
-  <video id="bgVideo" type="video/mp4"></video>
+  <!--video id="bgVideo" type="video/mp4"></video-->
   <div id="app" class="is-transparent">
     <div class="scene" id="gestureZone">
       <div class="carousel">
@@ -199,15 +200,16 @@
             <p>There is a deep analysis stage in every project we undertake. This involves mainly listening to the client and understand what they need. Afterwards, we focus on the right architecture for the solution to be built.</p>
           </div>
         </div>
-        <div class="carousel__cell landing">
-          <div class="carousel__cell__content">
-            <h4>Welcome to Overlemon</h4>
-            <h1 class="reader"
-              data-chunks="The digital agency | Which lifts | your business | up to new | heights"
+        <div class="carousel__cell landing is-borderless">
+          <div class="carousel__cell__content has-text-centered">
+            <!--h4>Welcome to Overlemon</h4-->
+            <h1 class="reader has-margin-auto"
+              data-chunks="The digital agency | Which lifts | your business | up to new | ☁️ | heights | Impact communication | Analyze data | Charming marketing | Improve results"
               data-empty="🚀"
               data-fx="flipInX"
-              data-speed="1">☁️</h1>
+              data-speed="2">🤩</h1>
           </div>
+          <video id="bgVideo" type="video/mp4"></video>
         </div>
         <div class="carousel__cell entry hidden">
           <div class="carousel__cell__content">
@@ -271,6 +273,6 @@
       </div>
     </div>
   </div>
-  <script src="/js/bundle.min.js"></script>
+  <script type="text/javascript" src="/js/bundle.min.js"></script>
 </body>
 </html>

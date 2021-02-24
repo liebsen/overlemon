@@ -39,16 +39,13 @@ var startapp = () => {
     if (!location.hash || location.hash === 'entry') {
       location.hash = 'landing'
     }
-    /* 
     axios.get(`${endpoint}/list_videos`).then(res => {
       if (res.data) {
         videos = res.data
         playVideo()
       }
       bgvideo.addEventListener('ended', playVideo, false)
-
     })
-    */
   }, 1000)
 }
 
@@ -61,7 +58,17 @@ let playVideo = () => {
   bgvideo.setAttribute('src', `${endpoint}/v/${videos[curvideo]}`)
   setTimeout(() => {
     bgvideo.play()
-  }, 5000)  
+  }, 1000)
+}
+
+let startVideos = () => {
+  axios.get(`${endpoint}/list_videos`).then(res => {
+    if (res.data) {
+      videos = res.data
+      playVideo()
+    }
+    bgvideo.addEventListener('ended', playVideo, false)
+  })
 }
 
 let findReaders = () => {
@@ -83,7 +90,6 @@ let findReaders = () => {
         e.innerHTML = ''
         e.appendChild(span)
         if (e.pos < chunks.length) {
-          console.log(chunks[e.pos])
           span.textContent = chunks[e.pos]
           e.pos++
         } else {
@@ -151,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       playSound('start.mp3', 0.25)
       findReaders()
+      startVideos()
       setTimeout(() => {
         canPlaySound = true
       }, 1000)
