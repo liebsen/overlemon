@@ -582,10 +582,12 @@ a:hover {
 
 #teamlist > li > span {
   padding-top: 1.25rem;
+  font-weight: 800;
 }
 
 #teamlist > li > small {
   font-size: 13px;
+  font-weight: 500;
 }
 
 #teamlist > li > div {
