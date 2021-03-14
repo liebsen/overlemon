@@ -144,6 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fixedWidth: '9rem',
         fixedHeight: '9rem'
       } ).mount()
+
       splide.on('click', slide => {
         const i = slide.slide.getAttribute('dataindex')
         const work = works[i]
@@ -184,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.entry_contents').innerHTML = `${template}`
         location.href = '#entry'
       })
-    }, 1000)
+    }, 1)
   })
 })
 
