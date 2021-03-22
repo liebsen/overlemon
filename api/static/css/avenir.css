@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Avenir Light";
+  src: url("https://cdn.geotiendas.com/fonts/avenir/edefe737-dc78-4aa3-ad03-3c6f908330ed.eot?#iefix");
+  src: url("https://cdn.geotiendas.com/fonts/avenir/edefe737-dc78-4aa3-ad03-3c6f908330ed.eot?#iefix") format("eot"), url("https://cdn.geotiendas.com/fonts/avenir/0078f486-8e52-42c0-ad81-3c8d3d43f48e.woff2") format("woff2"), url("https://cdn.geotiendas.com/fonts/avenir/908c4810-64db-4b46-bb8e-823eb41f68c0.woff") format("woff"), url("https://cdn.geotiendas.com/fonts/avenir/4577388c-510f-4366-addb-8b663bcc762a.ttf") format("truetype"), url("https://cdn.geotiendas.com/fonts/avenir/b0268c31-e450-4159-bfea-e0d20e2b5c0c.svg#b0268c31-e450-4159-bfea-e0d20e2b5c0c") format("svg");
+}
+
+@font-face {
+  font-family: "Avenir Roman";
+  src: url("https://cdn.geotiendas.com/fonts/avenir/57bf7902-79ee-4b31-a327-1bbf59a3d155.eot?#iefix");
+  src: url("https://cdn.geotiendas.com/fonts/avenir/57bf7902-79ee-4b31-a327-1bbf59a3d155.eot?#iefix") format("eot"), url("https://cdn.geotiendas.com/fonts/avenir/b290e775-e0f9-4980-914b-a4c32a5e3e36.woff2") format("woff2"), url("https://cdn.geotiendas.com/fonts/avenir/4b978f72-bb48-46c3-909a-2a8cd2f8819c.woff") format("woff"), url("https://cdn.geotiendas.com/fonts/avenir/9bdf0737-f98c-477a-9365-ffc41b9d1285.ttf") format("truetype"), url("https://cdn.geotiendas.com/fonts/avenir/15281d0d-e3c2-46e1-94db-cb681e00bfaa.svg#15281d0d-e3c2-46e1-94db-cb681e00bfaa") format("svg");
+}
+
+@font-face {
+  font-family: "Avenir Heavy";
+  src: url("https://cdn.geotiendas.com/fonts/avenir/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix");
+  src: url("https://cdn.geotiendas.com/fonts/avenir/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix") format("eot"), url("https://cdn.geotiendas.com/fonts/avenir/d513e15e-8f35-4129-ad05-481815e52625.woff2") format("woff2"), url("https://cdn.geotiendas.com/fonts/avenir/61bd362e-7162-46bd-b67e-28f366c4afbe.woff") format("woff"), url("https://cdn.geotiendas.com/fonts/avenir/ccd17c6b-e7ed-4b73-b0d2-76712a4ef46b.ttf") format("truetype"), url("https://cdn.geotiendas.com/fonts/avenir/20577853-40a7-4ada-a3fb-dd6e9392f401.svg#20577853-40a7-4ada-a3fb-dd6e9392f401") format("svg");
+}
+
+@font-face {
+  font-family: "Avenir Book";
+  src: url("https://cdn.geotiendas.com/fonts/avenir/710789a0-1557-48a1-8cec-03d52d663d74.eot?#iefix");
+  src: url("https://cdn.geotiendas.com/fonts/avenir/710789a0-1557-48a1-8cec-03d52d663d74.eot?#iefix") format("eot"), url("https://cdn.geotiendas.com/fonts/avenir/065a6b14-b2cc-446e-9428-271c570df0d9.woff2") format("woff2"), url("https://cdn.geotiendas.com/fonts/avenir/65d75eb0-2601-4da5-a9a4-9ee67a470a59.woff") format("woff"), url("https://cdn.geotiendas.com/fonts/avenir/c70e90bc-3c94-41dc-bf14-caa727c76301.ttf") format("truetype"), url("https://cdn.geotiendas.com/fonts/avenir/0979215b-3a1b-4356-9c76-e90fa4551f1d.svg#0979215b-3a1b-4356-9c76-e90fa4551f1d") format("svg");
+}
+
+@font-face {
+  font-family: "Avenir Oblique";
+  src: url("https://cdn.geotiendas.com/fonts/avenir/1e9b2738-9316-4b0c-97c0-5423b69ea147.eot?#iefix");
+  src: url("https://cdn.geotiendas.com/fonts/avenir/1e9b2738-9316-4b0c-97c0-5423b69ea147.eot?#iefix") format("eot"), url("https://cdn.geotiendas.com/fonts/avenir/1a7173fa-062b-49ad-9915-bc57d3bfc1f5.woff2") format("woff2"), url("https://cdn.geotiendas.com/fonts/avenir/cdda031e-26e9-4269-83d1-5a218caa10db.woff") format("woff"), url("https://cdn.geotiendas.com/fonts/avenir/6d1ce413-19e7-4b43-b328-6cdedc58b35a.ttf") format("truetype"), url("https://cdn.geotiendas.com/fonts/avenir/33fac8ae-e7a5-4903-9ac1-c09a59b4c61d.svg#33fac8ae-e7a5-4903-9ac1-c09a59b4c61d") format("svg");
+}
+
+@font-face {
+  font-family: "Avenir Black Oblique";
+  src: url("https://cdn.geotiendas.com/fonts/avenir/4030caeb-d266-4d36-ac58-a3bb7a5b1bfa.eot?#iefix");
+  src: url("https://cdn.geotiendas.com/fonts/avenir/4030caeb-d266-4d36-ac58-a3bb7a5b1bfa.eot?#iefix") format("eot"), url("https://cdn.geotiendas.com/fonts/avenir/a2477e08-09d9-4d4b-97a9-23a1e22cb44c.woff2") format("woff2"), url("https://cdn.geotiendas.com/fonts/avenir/19d12bba-92b1-43ad-9bab-cd36a4195c2a.woff") format("woff"), url("https://cdn.geotiendas.com/fonts/avenir/5ba5a010-7470-4d9d-8a49-2920dc1be1f8.ttf") format("truetype"), url("https://cdn.geotiendas.com/fonts/avenir/6d4a6a8c-ef50-422f-8456-88d479e0b23d.svg#6d4a6a8c-ef50-422f-8456-88d479e0b23d") format("svg");
+}
+
+@font-face {
+  font-family: "Avenir Medium";
+  src: url("https://cdn.geotiendas.com/fonts/avenir/17b90ef5-b63f-457b-a981-503bb7afe3c0.woff2") format("woff2"), url("https://cdn.geotiendas.com/fonts/avenir/c9aeeabd-dd65-491d-b4be-3e0db9ae47a0.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Avenir Black";
+  src: url("https://cdn.geotiendas.com/fonts/avenir/Avenir-Black.otf");
+}

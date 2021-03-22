@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -z "$1" ] ; then echo 'No IP-address specified'; exit 1; fi
+
+echo -n "$1 "; mmdblookup -f /usr/local/share/GeoIP/GeoLite2-City.mmdb -i $1 \
+| sed -ne 's/<[^>]*>$// ; s/ *$// ; s/[^:{[]$/&,/ ; N ; s/,\(\n\s*[\x5d}]\)/\1/ ; s/,\n\s*$// ; P ; D' \
+| jq -r '[.country.names.es, .country.iso_code, .city.names.es, .subdivisions[0].names.es, .location.latitude, .location.longitude] | @tsv'

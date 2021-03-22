@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta property="og:title" content="{{data.empresa}}" />
+    <meta property="og:description" content="{{data.tagline}}" />
+    <meta property="og:image" content="{{{data.avatar_fa}}}" />
+    <meta property="og:url" content="https://api.festive.com.ar/proveedores/{{data._id}}" />
+    <meta name="twitter:title" content="{{data.empresa}}">
+    <meta name="twitter:description" content="{{data.tagline}}">
+    <meta name="twitter:image" content="{{{data.avatar_fa}}}">
+    <meta name="twitter:url" content="https://api.festive.com.ar/proveedores/{{data._id}}">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Festive</title>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/bulma.css" />
+    <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet"> 
+    <style>
+      body {
+        font-family: 'Catamaran', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container">
+          <img src="/img/logo.svg" width="150">
+          <h1 class="title">
+            API v1.0
+          </h1>
+          <h2 class="subtitle">
+            Redirigiendo...
+          </h2>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script type="text/javascript">
+    setTimeout(() => {
+      location.href = 'https://festive.com.ar/proveedores/{{data._id}}'
+    }, 3000)
+  </script>
+</html>
