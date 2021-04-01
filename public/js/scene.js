@@ -11,6 +11,7 @@ var radius, theta
 var canPlaySound = false
 var colors = ['790c5a','cf1b1b','394989','007965','21209c','2ec1ac','11698e','8105d8','ff577f','949cdf','a685e2','6155a6','21209c','ea97ad','c24914','ec5858','e05297','52057b','2d6187','bb2205','2d6187','7579e7','0278ae','8675a9','ac4b1c','065c6f','335d2d','07689f','ec0101','206a5d','e11d74','776d8a','438a5e']
 var filled = []
+
 function updateCellCount () {
   let prev = cellCount
   cells = carousel.querySelectorAll('.carousel__cell:not(.hidden)')
@@ -183,6 +184,7 @@ document.getElementById('app').addEventListener('wheel', event => {
 
 document.onkeydown = e => {
   // e.preventDefault()
+  // console.log(e.which)
   switch (e.which) {
     case 32:
       if (document.getElementById('startbtn')) {
@@ -203,6 +205,10 @@ document.onkeydown = e => {
 
     case 40: // down
       carouselNext()
+      break
+
+    case 220: // secret key next video
+      seekVideo()
       break
 
     default: return

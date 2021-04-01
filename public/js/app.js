@@ -49,25 +49,35 @@ var startapp = () => {
   }, 1000)
 }
 
-let playVideo = () => {
+let seekVideo = e => {
+  if (e && e.target.classList.includes('mdi-inactive')) {
+    return false
+  }
   if (curvideo + 1 >= videos.length) {
     curvideo = -1
   }
   curvideo++
-  console.log(`playing ${videos[curvideo]}`)
+  let skip = document.querySelector('.carousel__cell__buttons .mdi-skip-next')
   bgvideo.setAttribute('src', `${endpoint}/v/${videos[curvideo]}`)
+  skip.classList.remove('mdi-inactive')
+  skip.classList.add('mdi-inactive')
   setTimeout(() => {
     bgvideo.play()
+    bgvideo.addEventListener('canplaythrough', function (e) {
+      skip.classList.remove('mdi-inactive')
+    })
+    findReaders(document.querySelector('.carousel'))
   }, 1000)
+  console.log(`playing ${videos[curvideo]}`)
 }
 
 let startVideos = () => {
   axios.get(`${endpoint}/list_videos`).then(res => {
     if (res.data) {
       videos = res.data
-      playVideo()
+      seekVideo()
     }
-    bgvideo.addEventListener('ended', playVideo, false)
+    bgvideo.addEventListener('ended', seekVideo, false)
   })
 }
 
