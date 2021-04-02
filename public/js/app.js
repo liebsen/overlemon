@@ -50,7 +50,7 @@ var startapp = () => {
 }
 
 let seekVideo = e => {
-  if (e && e.target.classList.includes('mdi-inactive')) {
+  if (e && e.target.classList.contains('mdi-inactive')) {
     return false
   }
   if (curvideo + 1 >= videos.length) {
