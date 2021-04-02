@@ -60,7 +60,6 @@
 
 .carousel__cell p {
   font-weight: 500;
-  line-height: 1.333rem;
 }
 
 .carousel__cell:nth-child(9n+8) {
@@ -104,6 +103,7 @@
   }
   .carousel__cell p {
     font-size: 1rem;
+    line-height: 1.333rem;
   }
 }
 
@@ -114,5 +114,7 @@
   .carousel__cell h1 {
     font-size: 4rem;
   }
+  .carousel__cell p {
+    line-height: 1.5rem;
+  }
 }
-

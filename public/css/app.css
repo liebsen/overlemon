@@ -102,6 +102,10 @@ a:hover {
   opacity: 0;
 }
 
+.is-space {
+  opacity: 0;
+}
+
 .footer {
   opacity: 0;
   position: absolute;

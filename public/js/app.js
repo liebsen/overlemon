@@ -185,6 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="${work.url}" target="_blank" title="Go to application">
           <div class="is-background-img has-margin-auto is-hoverable b-spaced" style="background-image: url(${work.screen})"></div>
         </a>
+        <hr class="is-space">
         <p>
           <span class="tag">${work.tech.join('</span><span class="tag">')}</span>
         </p>
