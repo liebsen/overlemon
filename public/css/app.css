@@ -236,8 +236,6 @@ a:hover {
 
 .logo {
   position: absolute;
-  top: 1rem;
-  left: 0;
   z-index: 10;
   transform: scale(1) perspective(1040px) rotateY(2deg) rotateX(2deg) rotate(-1deg) translateX(1em);
   width: 200px;
@@ -266,6 +264,8 @@ a:hover {
 .mainlogo {
   cursor: pointer;
   opacity: 0;
+  position: relative;
+  z-index: 14;
 }
 
 #bgVideo {
@@ -411,6 +411,7 @@ a:hover {
   font-weight: 400;
   margin: 0 0.5rem;
   display: block;
+  color: whitesmoke;
 }
 
 #menu.fs .bg {
@@ -616,8 +617,8 @@ a:hover {
 }
 
 #links a {
-  width: 3rem;
-  height: 3rem;
+  width: 2.75rem;
+  height: 2.75rem;
   display: inline-grid;
 }
 
@@ -652,6 +653,11 @@ a:hover {
 }
 
 @media screen and (max-width:480px) {
+  .logo {
+    width: 150px;
+    height: 50px;
+    margin-top: 0.5rem;
+  }
   /* .logo {
     width: 150px;
     height: 50px;
@@ -703,6 +709,11 @@ a:hover {
   }
   #menu .items .logo {
     top: 2rem;
+    background-position: 1.5rem 0.25rem;
+  }
+  .logo {
+    top: 0.5rem;
+    left: 0;
   }
 }
 
@@ -712,6 +723,10 @@ a:hover {
   }
   .columns {
     display: flex;
+  }
+  .logo {
+    top: 1rem;
+    left: 0;
   }
   #bgVideo {
     border-radius: 1rem;

@@ -60,6 +60,7 @@
 
 .carousel__cell p {
   font-weight: 500;
+  line-height: 1.333rem;
 }
 
 .carousel__cell:nth-child(9n+8) {
@@ -78,7 +79,7 @@
 
 .carousel-options span {
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 .mdi-inactive {
