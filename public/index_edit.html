@@ -88,10 +88,17 @@
       </div>
     </div>
   </div>
-  <div class="logo mainlogo animated delay2">
+  <div class="is-desktop">
+    <div class="logo mainlogo animated delay2">
+      <a href="#landing">
+        <h1 class="animated animatedlogo">Overlemon</h1>
+        <h6>The Digital Agency</h6>
+      </a>
+    </div>
+  </div>
+  <div class="is-mobile">
     <a href="#landing">
-      <h1 class="animated animatedlogo">Overlemon</h1>
-      <h6>The Digital Agency</h6>
+      <div class="logo animated delay2"></div>
     </a>
   </div>
   <div class="footer animated delay3">
@@ -115,15 +122,30 @@
               <div class="columns">
                 <div class="column">
                   <div class="field">
-                    <input type="text" class="input" name="name" placeholder="Your name" autofocus required />
+                    <p class="control has-icons-left">
+                      <input class="input" type="text" name="name" placeholder="Your name" autofocus required>
+                      <span class="icon is-left">
+                        <i class="mdi mdi-account"></i>
+                      </span>
+                    </p>
                   </div>
                   <div class="field">
-                    <input type="text" class="input" name="phone" placeholder="Your phone" required />
+                    <p class="control has-icons-left">
+                      <input class="input" type="phone" name="phone" placeholder="Your phone" autofocus required>
+                      <span class="icon is-left">
+                        <i class="mdi mdi-phone"></i>
+                      </span>
+                    </p>
                   </div>
                 </div>
                 <div class="column">
                   <div class="field">
-                    <input type="text" class="input" name="email" placeholder="Your email" required />
+                    <p class="control has-icons-left">
+                      <input class="input" type="email" name="email" placeholder="Your email" required>
+                      <span class="icon is-left">
+                        <i class="mdi mdi-email"></i>
+                      </span>
+                    </p>
                   </div>
                   <div class="field">
                     <textarea class="textarea" name="comment" placeholder="Tell us about your inquiry" required></textarea>

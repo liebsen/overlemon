@@ -63,7 +63,7 @@ p, span {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid white;
-  padding: 0.25rem;
+  padding: 0.75rem 1rem;
   border-radius: 0;
   color: white;
   cursor: text;
@@ -72,6 +72,20 @@ p, span {
 .input:focus,
 .textarea:focus {
   background-color: rgba(0,0,0,0.25);
+}
+
+.has-icons-left {
+  position: relative;
+}
+
+.has-icons-left .input {
+  padding-left: 2.75rem;
+}
+
+.has-icons-left .is-left {
+  position: absolute;
+  left: 1rem;
+  top: 0.666rem;
 }
 
 a {
@@ -253,6 +267,7 @@ a:hover {
   cursor: pointer;
   opacity: 0;
 }
+
 #bgVideo {
   /*filter: hue-rotate(30deg) contrast(200%); 
   filter: saturate(1);*/
@@ -418,10 +433,6 @@ a:hover {
 #spinner {
   opacity: 0; 
   height: 100vh;
-}
-
-.field {
-	padding: 0.5rem;
 }
 
 .b-spaced {
@@ -605,8 +616,8 @@ a:hover {
 }
 
 #links a {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   display: inline-grid;
 }
 
@@ -641,9 +652,6 @@ a:hover {
 }
 
 @media screen and (max-width:480px) {
-  .mainlogo {
-    display: none;
-  }
   /* .logo {
     width: 150px;
     height: 50px;
@@ -657,8 +665,12 @@ a:hover {
   .logo h6 {
     margin-left: 3.75rem;
   } */
+  .input, .textarea {
+    min-width: 100%;
+  }
   .carousel__cell__content {
     max-width: 100%!important;
+    padding: 1.25rem;
   }
   #teamlist > li {
     margin-bottom: 1rem;

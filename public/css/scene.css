@@ -78,7 +78,7 @@
 
 .carousel-options span {
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .mdi-inactive {
@@ -99,6 +99,7 @@
   .carousel__cell {
     top: 0;
     left: 0;
+    padding: 0;
   }
   .carousel__cell p {
     font-size: 1rem;
