@@ -475,6 +475,7 @@ a:hover {
   content: '';
   position: absolute;
   z-index: -1;
+
 }
 
 .button:hover {
@@ -684,6 +685,7 @@ a:hover {
   }
   #teamlist > li {
     margin-bottom: 1rem;
+    margin-left: 0;
   }
   #teamlist > li > span {
     font-size: 1rem;
