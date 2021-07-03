@@ -38,7 +38,7 @@ var startapp = () => {
     document.querySelector('.mainlogo').classList.add('fadeIn')
     document.querySelector('.footer').classList.add('fadeIn')
     document.querySelector('.mobile-menu').classList.add('fadeIn')
-    if (!location.hash || location.hash === '#entry') {
+    if (!location.hash) {
       location.hash = 'landing'
     }
     playSound('start.mp3', 0.25)
@@ -104,15 +104,14 @@ let sendMessage = form => {
   </div>
   <a href="#landing" class="button"><span class="mdi mdi-chevron-left"></span> home</a>
 </div>`)
-    document.querySelector('.entry_contents').innerHTML = `${template}`
-    location.href = '#entry'
+    document.querySelector('.lwt_result_content').innerHTML = `${template}`
+    location.href = '#lwt_result'
     // snackbar(res.data.status, res.data.message)
   })
   return false
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-
   // alert(window.screen.availWidth + ' ' + window.screen.availHeight)
   document.getElementById('menu').addEventListener('click', () => {
     if (!document.getElementById('menu').classList.contains('fs')) {
@@ -158,53 +157,14 @@ document.addEventListener('DOMContentLoaded', () => {
       splide.on('click', slide => {
         const i = slide.slide.getAttribute('dataindex')
         const work = works[i]
-        const template = (`
-<div class="works_detail">
-  <div class="work has-text-left">
-    <div class="columns is-vcentered">
-      <div class="column b-spaced">
-        <h1>${work.title}</h1>
-        <h4>${work.slogan}</h4>
-        <p class="b-spaced">${work.text}</p>
-        <p class="is-desktop"><i>Built for</i> ${work.country} ${work.company}</p>
-        <div class="columns">
-          <div class="column">
-            <a href="${work.url}" class="button" target="_blank" title="Go to application">
-              <span class="mdi mdi-link"></span> 
-              view
-            </a>
-          </div>
-          <div class="column">
-            <a href="#works" class="button">
-              <span class="mdi mdi-chevron-left"></span> works
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="column is-desktop has-text-centered">
-        <a href="${work.url}" target="_blank" title="Go to application">
-          <div class="is-background-img has-margin-auto is-hoverable b-spaced" style="background-image: url(${work.screen})"></div>
-        </a>
-        <hr class="is-space">
-        <p>
-          <span class="tag">${work.tech.join('</span><span class="tag">')}</span>
-        </p>
-      </div>
-    </div>
-  </div>  
-</div>`)
-        document.querySelector('.entry_contents').innerHTML = `${template}`
-        location.href = '#entry'
+        location.href = `#work:${work.slug}`
       })
     }, 1)
   })
 })
 
 /* <span class="tag">${work.arch.join('</span><span class="tag">')} ${work.repo}</span><br> */
-
+/*
 window.onerror = function (msg, url, lineNo, columnNo, error) {
   alert(`error: ${msg}:${lineNo}`)
-}
-
-
-
+}*/

@@ -127,7 +127,7 @@ let elemIndex = e => {
 }
 
 let onHashChange = () => {
-  let section = location.hash.replace('#', '')
+  let section = location.hash.replace('#', '').split(':')[0]
   if (document.getElementById('menu').classList.contains('fs')) {
     document.getElementById('menu').classList.toggle('fs')
     document.getElementById('menu').querySelector('.burger').classList.toggle('cross')
@@ -142,6 +142,49 @@ let onHashChange = () => {
     })
     selectedIndex = elemIndex(document.querySelector(`.${section}`))
     rotateCarousel()
+  }
+  if (location.hash.indexOf('#work:') > -1) {
+    /* work */
+    const slug = location.hash.replace('#work:', '')
+    axios.get('/json/works.json').then(res => {
+      let work = res.data.filter(e => e.slug === slug)[0]
+      const template = (`
+<div class="work_detail">
+<div class="work has-text-left">
+  <div class="columns is-vcentered">
+    <div class="column b-spaced">
+      <h1>${work.title}</h1>
+      <h4>${work.slogan}</h4>
+      <p class="b-spaced">${work.text}</p>
+      <p class="is-desktop"><i>Built for</i> ${work.country} ${work.company}</p>
+      <div class="columns">
+        <div class="column">
+          <a href="${work.url}" class="button" target="_blank" title="Go to application">
+            <span class="mdi mdi-link"></span> 
+            view
+          </a>
+        </div>
+        <div class="column">
+          <a href="#works" class="button">
+            <span class="mdi mdi-chevron-left"></span> works
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="column is-desktop has-text-centered">
+      <a href="${work.url}" target="_blank" title="Go to application">
+        <div class="is-background-img has-margin-auto is-hoverable b-spaced" style="background-image: url(${work.screen})"></div>
+      </a>
+      <hr class="is-space">
+      <p>
+        <span class="tag">${work.tech.join('</span><span class="tag">')}</span>
+      </p>
+    </div>
+  </div>
+</div>  
+</div>`)
+      document.querySelector('.work_contents').innerHTML = `${template}`
+    })
   }
 }
 

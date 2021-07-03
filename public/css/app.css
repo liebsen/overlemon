@@ -372,8 +372,6 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   font-weight: 700 !important;
 }
 
-
-
 .is-background-img {
   background-color: transparent;
   background-repeat: no-repeat;
@@ -691,7 +689,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   padding-bottom: 1rem;
 }
 
-.works_detail {
+.work_detail, .lwt_result {
   margin-bottom: 1rem;
 }
 
@@ -765,8 +763,8 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 }
 
 #links a {
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 2.25rem;
+  height: 2.25rem;
   display: inline-grid;
 }
 
