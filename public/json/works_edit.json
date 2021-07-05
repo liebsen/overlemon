@@ -157,5 +157,17 @@
     "arch": ["app", "api"],
     "tech": ["NodeJS", "MySQL", "PHP", "VueJS", "Webpack"],
     "text": "Custom and post selling digital management"
+  },{
+    "slug": "chatelet",
+    "title": "Châtelet",
+    "slogan": "Sé tu propio modelo de mujer",
+    "company": "Châtelet",
+    "url": "https://chatelet.com.ar",
+    "image": "\/img\/works\/chatelet.jpg",
+    "screen": "\/img\/works\/screen\/chatelet.jpg",
+    "country": "🇦🇷",
+    "arch": ["website", "admin"],
+    "tech": ["MySQL", "CakePHP"],
+    "text": "Women outfit online shop"
   }
 ]
