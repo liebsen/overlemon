@@ -385,7 +385,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   transform: scale(1) perspective(1040px) rotateY(2deg) rotateX(2deg) rotate(-1deg) translateX(1em);
   width: 200px;
   height: 75px;
-  background-image: url(/img/monogram.png);
+  background-image: url(/img/lemon.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -394,14 +394,14 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   font-size: 2rem;
   text-align: left;
   letter-spacing: -0.1rem;
-  margin: 0.5rem 5rem 0;
+  margin: 0.5rem 6rem 0;
 }
 
 .logo h6 {
   font-size: 0.75rem;
   text-align: left;
   font-weight: 500;
-  margin: 0.1rem 5.5rem 0;
+  margin: 0.1rem 6.75rem 0;
   white-space: nowrap;
   line-height: 0;
 }
@@ -856,7 +856,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   }
   #menu .items .logo {
     top: 2rem;
-    background-position: 1.5rem 0.25rem;
+    background-position: 1.25rem;
   }
   .logo {
     top: 0.5rem;
