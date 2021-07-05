@@ -35,7 +35,7 @@
     "company": "Overlemon",
     "image": "\/img\/works\/flitz.png",
     "screen": "\/img\/works\/screen\/flitz.jpg",
-    "country": "",
+    "country": "🍋",
     "arch": ["app", "api"],
     "tech": ["NodeJS", "MongoDB", "VueJS", "StockfishJS", "ChessJS", "ChessboardJS", "Webpack", "Socket.io"],
     "text": "Flitz is an platform for playing chess online",
@@ -63,7 +63,7 @@
     "url": "https://icehub.link",
     "image": "\/img\/works\/icehub.png",
     "screen": "\/img\/works\/screen\/icehub.jpg",
-    "country": "",
+    "country": "🍋",
     "arch": ["app"],
     "tech": ["WebRTC", "Javascript", "Socket.io", "Coturn"],
     "text": "IceHub is a platform for making video calls completely free and private."
@@ -99,7 +99,7 @@
     "url": "https://chessdiagram.herokuapp.com",
     "image": "\/img\/works\/chessdiagram.png",
     "screen": "\/img\/works\/screen\/chessdiagram.jpg",
-    "country": "",
+    "country": "🍋",
     "arch": ["widget"],
     "tech": ["Chessboard.js", "Widget", "Webpack"],
     "text": "Chess widget to show your best games with comments",
@@ -145,5 +145,17 @@
     "arch": ["app", "api", "admin"],
     "tech": ["NodeJS", "MongoDB", "VueJS", "Socket.io", "Webpack"],
     "text": "Order your yacabron box and add whatever you like"
+  },{
+    "slug": "imagecapturetool",
+    "title": "Image Capture Tool",
+    "slogan": "Capture or upload the photos of your vehicle",
+    "company": "Memorable Results",
+    "url": "https://mr.xtramuros.com/wizard/1",
+    "image": "\/img\/works\/imagecapturetool.jpg",
+    "screen": "\/img\/works\/screen\/imagecapturetool.jpg",
+    "country": "🇧🇪",
+    "arch": ["app", "api"],
+    "tech": ["NodeJS", "MySQL", "PHP", "VueJS" "Webpack"],
+    "text": "Custom and post selling digital management"
   }
 ]
