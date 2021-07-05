@@ -820,10 +820,6 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   .input, .textarea {
     min-width: 100%;
   }
-  .carousel__cell__content {
-    max-width: 100%!important;
-    padding: 1.25rem;
-  }
   #teamlist > li {
     margin-bottom: 1rem;
     margin-left: 0;
@@ -847,6 +843,10 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   }
   .is-desktop {
     display: none;
+  }
+  .carousel__cell__content {
+    max-width: 100%!important;
+    padding: 1.25rem;
   }
 }
 
