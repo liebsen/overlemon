@@ -155,6 +155,11 @@ let onHashChange = () => {
     <div class="column b-spaced">
       <h1>${work.title}</h1>
       <h4>${work.slogan}</h4>
+      <div class="column is-mobile has-text-centered">
+        <a href="${work.url}" target="_blank" title="Go to application">
+          <div class="is-background-img has-margin-auto is-hoverable b-spaced" style="background-image: url(${work.screen})"></div>
+        </a>
+      </div>
       <p class="b-spaced">${work.text}</p>
       <p class="is-desktop"><i>Built for</i> ${work.country} ${work.company}</p>
       <div class="columns">
