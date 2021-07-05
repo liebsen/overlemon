@@ -715,7 +715,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 }
 
 #teamlist > li:nth-child(1) > div {
-  background-image: url('/img/team/marcia.jpg')
+  background-image: url('/img/team/martin.jpg')
 }
 
 #teamlist > li:nth-child(2) > div {
@@ -727,7 +727,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 }
 
 #teamlist > li:nth-child(4) > div {
-  background-image: url('/img/team/martin.jpg')
+  background-image: url('/img/team/marcia.jpg')
 }
 
 #teamlist > li {
