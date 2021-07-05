@@ -155,7 +155,7 @@
     "screen": "\/img\/works\/screen\/imagecapturetool.jpg",
     "country": "🇧🇪",
     "arch": ["app", "api"],
-    "tech": ["NodeJS", "MySQL", "PHP", "VueJS" "Webpack"],
+    "tech": ["NodeJS", "MySQL", "PHP", "VueJS", "Webpack"],
     "text": "Custom and post selling digital management"
   }
 ]
