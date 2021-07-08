@@ -861,6 +861,12 @@ a.has-text-danger:hover, a.has-text-danger:focus {
     top: 0.5rem;
     left: 0;
   }
+  .work__button_group {
+    text-align: center;
+  }
+  .work__button_group .column {
+    display: inline-block;
+  }
 }
 
 @media screen and (min-width:769px) {
