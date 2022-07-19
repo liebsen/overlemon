@@ -134,30 +134,6 @@
     "tech": ["NodeJS", "MongoDB", "VueJS", "Socket.io", "Webpack"],
     "text": "Ecommerce. Online shops platform."
   },{
-    "slug": "yacabron",
-    "title": "YACABRON",
-    "slogan": "Inspired by Mexican cuisine",
-    "company": "YACABRON",
-    "url": "https://yacabron.com",
-    "image": "\/img\/works\/yacabron.jpg",
-    "screen": "\/img\/works\/screen\/yacabron.jpg",
-    "country": "🇦🇷",
-    "arch": ["app", "api", "admin"],
-    "tech": ["NodeJS", "MongoDB", "VueJS", "Socket.io", "Webpack"],
-    "text": "Order your yacabron box and add whatever you like"
-  },{
-    "slug": "imagecapturetool",
-    "title": "Image Capture Tool",
-    "slogan": "Capture or upload the photos of your vehicle",
-    "company": "Memorable Results",
-    "url": "https://mr.xtramuros.com/wizard/1",
-    "image": "\/img\/works\/imagecapturetool.jpg",
-    "screen": "\/img\/works\/screen\/imagecapturetool.jpg",
-    "country": "🇧🇪",
-    "arch": ["app", "api"],
-    "tech": ["NodeJS", "MySQL", "PHP", "VueJS", "Webpack"],
-    "text": "Custom and post selling digital management"
-  },{
     "slug": "chatelet",
     "title": "Châtelet",
     "slogan": "Sé tu propio modelo de mujer",
