@@ -595,6 +595,8 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 .button {
   font-family: 'Graphik', sans-serif;
   background: none;
+  line-height: 1;
+  white-space: nowrap;  
   cursor: pointer;
   border: 3px solid #fff;
   border-radius: 10px;
