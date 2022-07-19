@@ -22,7 +22,7 @@
     "country": "🇦🇷",
     "arch": ["app", "api", "panel"],
     "tech": ["NodeJS", "MongoDB", "VueJS", "Webpack", "Google Maps", "Mapbox"],
-    "text": "FletsApp is a platform for door-to-door delivering services.",
+    "text": "FletsApp is a platform for door-to-door delivering services",
     "github": {
         "app": "https://github.com/liebsen/fletsapp.git",
         "api": "https://github.com/liebsen/fletsapi.git"
@@ -66,7 +66,7 @@
     "country": "🍋",
     "arch": ["app"],
     "tech": ["WebRTC", "Javascript", "Socket.io", "Coturn"],
-    "text": "IceHub is a platform for making video calls completely free and private."
+    "text": "IceHub is a platform for making video calls completely free and private"
   },{
     "slug": "verusados",
     "title": "Verusados",
@@ -169,5 +169,17 @@
     "arch": ["app"],
     "tech": ["Vue"],
     "text": "Disfrutá la carta de tu local de forma ágil, dinámica y estetica desde tu celular"
+  },{
+    "slug": "camminus",
+    "title": "Camminus",
+    "slogan": "Estudio de Arquitectura",
+    "company": "Quierolacarta",
+    "url": "https://camminus.net/",
+    "image": "\/img\/works\/camminus.png",
+    "screen": "\/img\/works\/screen\/camminus.jpg",
+    "country": "🇦🇷",
+    "arch": ["website","panel"],
+    "tech": ["PHP","Kirby"],
+    "text": "Nos dedicamos a explorar tus posibilidades para lograr el mejor rendimiento de tus recursos en cuanto a diseño y sistemas constructivos"
   }
 ]
