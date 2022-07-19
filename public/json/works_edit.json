@@ -157,5 +157,17 @@
     "arch": ["website", "admin"],
     "tech": ["MySQL", "Kirby"],
     "text": "ARGENTINEAN ARTIST, DESIGNER & MURALIST BORN IN 1991"
+  },{
+    "slug": "quierolacarta",
+    "title": "Quiero La Carta",
+    "slogan": "Tu portál gastronómico",
+    "company": "Quierolacarta",
+    "url": "https://quierolacarta.com/",
+    "image": "\/img\/works\/quierolacarta.png",
+    "screen": "\/img\/works\/screen\/quierolacarta.jpg",
+    "country": "🇦🇷",
+    "arch": ["app"],
+    "tech": ["Vue"],
+    "text": "Disfrutá la carta de tu local de forma ágil, dinámica y estetica desde tu celular"
   }
 ]
