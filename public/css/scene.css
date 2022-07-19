@@ -55,7 +55,7 @@
   margin-top: 0;
   margin-bottom: 0.5rem;
   line-height: 1;
-  letter-spacing: -2px;
+  letter-spacing: -0.01rem;
 }
 
 .carousel__cell p {
