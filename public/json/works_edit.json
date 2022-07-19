@@ -169,5 +169,17 @@
     "arch": ["website", "admin"],
     "tech": ["MySQL", "CakePHP"],
     "text": "Women outfit online shop"
+  },{
+    "slug": "aquiles",
+    "title": "Aquiles World",
+    "slogan": "Compongo en mi universo abstracto, clásico y moderno",
+    "company": "Aquiles",
+    "url": "https://aquiles.world/",
+    "image": "\/img\/works\/aquiles.png",
+    "screen": "\/img\/works\/screen\/aquiles.jpg",
+    "country": "🇩🇪",
+    "arch": ["website", "admin"],
+    "tech": ["MySQL", "Kirby"],
+    "text": "ARGENTINEAN ARTIST, DESIGNER & MURALIST BORN IN 1991"
   }
 ]
