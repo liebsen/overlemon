@@ -161,7 +161,7 @@ let onHashChange = () => {
         </a>
       </div>
       <p class="b-spaced">${work.text}</p>
-      <p class="is-desktop"><i>Built for</i> ${work.country} ${work.company}</p>
+      <p class="is-desktop"><i>Built for</i> ${work.company} ${work.country}</p>
       <div class="columns work__button_group">
         <div class="column">
           <a href="${work.url}" class="button" target="_blank" title="Go to application">
